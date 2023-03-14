@@ -1,12 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     
-    content: ["./src/**/*.{html,js,jsx,ts,tsx}", "./node_modules/react-tailwindcss-datepicker/dist/index.esm.js"],
+    content: ["./src/**/*.{html,js,jsx,ts,tsx}", "./index.html"],
     theme: {
        
         extend: {
             fontFamily: {
-                
+                mari: ['Mariana'],
+                rah: ['Rahgbok']
             },
         },
     },

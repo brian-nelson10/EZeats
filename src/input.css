@@ -1,4 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* @font-face  */
+@font-face {
+    font-family: "Mariana";
+    src: url("../src/assets/fonts/mariana.ttf");
+}
+@font-face {
+    font-family: "Rahgbok";
+    src: url("../src/assets/fonts/Rahgbok.ttf");
+}
