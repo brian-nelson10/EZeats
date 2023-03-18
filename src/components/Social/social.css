@@ -1,0 +1,13 @@
+.social {
+    bottom: 0;
+    right: 0;
+    
+}
+
+@media screen and (max-width: 768px){
+    .social {
+        top: -18rem;
+        left: .5rem;
+    }
+   
+}

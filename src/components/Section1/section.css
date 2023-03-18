@@ -1,0 +1,11 @@
+.gradient {
+    background: linear-gradient(#D8C29D, .1%, #023047);
+    
+}
+
+.gradient2 {
+    background: linear-gradient( #023047, 50%,#D8C29D);
+    
+}
+
+

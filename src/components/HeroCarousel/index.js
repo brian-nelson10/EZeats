@@ -7,13 +7,13 @@ import Img3 from "../../assets/carousel/3.JPG";
 // import Img5 from "../../assets/carousel/5.JPG";
 
 const HeroCarousel = () => (
-    <div className="w-screen h-screen ">
+    <div className="w-screen h-screen z-10">
     <Carousel 
         interval="6000"
-        className="">
+        className="z-10">
       <img
           draggable="false"
-          className="object-cover"
+          className="object-cover z-10"
           src={Img}
           alt=""
         />
