@@ -23,21 +23,23 @@ export default function Beans() {
     };
     const rotater = {
         initial: {
-            x: 0,
-            y: 0
+            x: -1000,
+            y: 0,
         },
         animate: {
-            rotate: 3,
+            rotate: -360,
+            x: 0,
             transition: {
                 type: "spring",
                 stiffness: 100,
                 damping: 40,
                 restDelta: 0.001,
-                duration: 2
+                duration: .5
             }
         },
         reanimate: {
-            rotate: -5,
+            rotate: -.5,
+            x: -1000,
             transition: {
                 type: "spring",
                 stiffness: 100,

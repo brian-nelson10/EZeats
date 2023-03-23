@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "../Image";
-import webImg from "../../assets/web/onion.webp";
-import img from "../../assets/images/onion.png";
+import webImg from "../../assets/web/ginger.webp";
+import img from "../../assets/images/ginger.png";
 
-export default function Onion() {
+export default function Ginger() {
     const [rotate, setRotate] = useState(false);
     const startRotate = () => {
-        if (window.scrollY >= 1050) {
+        if (window.scrollY >= 450) {
             setRotate(true)
         } else {
             setRotate(false)
@@ -15,42 +15,42 @@ export default function Onion() {
     };
     const rotater = {
         initial: {
-            x: -1050,
-            rotate: -480
+            x: -1000,
+            y: 0,
         },
         animate: {
-            rotate: -.4,
+            rotate: -360,
             x: 0,
             transition: {
                 type: "spring",
                 stiffness: 100,
                 damping: 40,
                 restDelta: 0.001,
+                duration: .5
             }
         },
         reanimate: {
-            rotate: -180,
-            x: -1090,
+            rotate: -.5,
+            x: -1000,
             transition: {
                 type: "spring",
                 stiffness: 100,
                 damping: 40,
-                restDelta: 0.001,
-                duration: 1
+                restDelta: 0.001
             }
         },
     }
     window.addEventListener('scroll', startRotate)
     return (
         <motion.div
-            variants={rotater}
-            initial="initial"
-            animate={rotate ? "animate" : "reanimate"}
-            className="z-30 absolute w-[15%] h-[15%] ml-[10rem] -bottom-[44rem]" >
+        variants={rotater}
+        initial="initial"
+        animate={rotate ? "animate" : "reanimate"}
+            className="z-30 absolute w-[20%] h-[20%] -left-[7rem] top-[38rem]" >
             <Image
                 srcSet={webImg}
                 fallback={img}
-                className="-rotate-[110deg] opacity-[.9]"
+                className=""
             />
         </motion.div>
     )

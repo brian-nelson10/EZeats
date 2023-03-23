@@ -7,5 +7,17 @@
     background: linear-gradient( #023047, 50%,#D8C29D);
     
 }
+.bg-deco {
+    background: url("../../assets/images/bgBlue.png");
+}
 
+.textShadow {
+    text-shadow: 2px, 4px, 4px, black;
+}
+
+.section1-img {
+    background: url("../../assets/carousel/4.JPG");
+    background-size: cover;
+    background-position: fixed !important;
+}
 

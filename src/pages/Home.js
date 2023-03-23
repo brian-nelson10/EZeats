@@ -11,6 +11,9 @@ import Beans from "../components/Beans";
 import Pepper from "../components/Pepper";
 import Section2 from "../components/Section2";
 import Onion from "../components/Onion/Index";
+import { LazyLoadComponent } from "react-lazy-load-image-component";
+import Ginger from "../components/Ginger";
+import Section3 from "../components/Section3";
 const main = {
     initial: {
         clipPath: 'polygon(0 0, 0 0, 0 100%, 0% 100%)',
@@ -49,24 +52,40 @@ const Home = () => {
                 <section className="z-10 relative">
                 <Hero text="EZ EATZ" />
                 </section>
-                <section className="">
+                <section>
+                    <LazyLoadComponent>
                     <Social/>
+                    </LazyLoadComponent>
                 </section>
                 <section>
                 <MenuButton/>
                 </section>
                 <section className="">
+                    <LazyLoadComponent>
+                        <Ginger/>
                     <Beans/>
+                    </LazyLoadComponent>
+                    <LazyLoadComponent>
                     <Onion/>
+                    </LazyLoadComponent>
                 </section>
                 <section className="section-about pt-[200px] pb-[200px]">
-                <div className="">
+                <LazyLoadComponent>
                     <Pepper/>
-                    </div>
+                    </LazyLoadComponent>
+                    <LazyLoadComponent>
                     <Section1/>
+                    </LazyLoadComponent>
                 </section>
                 <section>
+                    <LazyLoadComponent>
                     <Section2/>
+                    </LazyLoadComponent>
+                </section>
+                <section>
+                    <LazyLoadComponent>
+                        <Section3/>
+                    </LazyLoadComponent>
                 </section>
             </motion.section>
         </AnimatePresence>

@@ -51,24 +51,6 @@ const Hero = ({ text }) => {
             },
         },
     };
-    // const heroText = {
-    //     initial: {
-    //         opacity: 1,
-    //         x: 0,
-    //         y: 0
-    //     },
-    //     animate: {
-    //         x: 0,
-    //         y: -1000,
-    //         transition: {
-    //             type: "spring",
-    //             damping: 12,
-    //             stiffness: 100,
-    //             duration: 5,
-    //             delay: 2
-    //         }
-    //     }
-    // }
     const isScroll = () => {
         if (window.scrollY >= 100) {
             setScroll(true)
@@ -78,7 +60,6 @@ const Hero = ({ text }) => {
             setScroll(false)
         }
     }
-    
     window.addEventListener('scroll', isScroll)
    
     return (
@@ -89,9 +70,9 @@ const Hero = ({ text }) => {
                         variants={container}
                         initial="hidden"
                         animate={scroll ? "exit" : "visible"}
-                        className="z-20 absolute inset-0 flex my-2 text-center items-center justify-center mx-[3rem]">
+                        className="z-20 absolute inset-0 flex my-2 text-center items-center justify-center mx-[3rem] heroShadow">
                         {letters.map((letter, index) => (
-                            <motion.span className="font-mari text-[14rem] tracking-wide text-[#D8C29D] hover:cursor-pointer " variants={child} key={index} >
+                            <motion.span className="heroShadow font-mari text-[14rem] tracking-wide text-[#D8C29D] hover:cursor-pointer " variants={child} key={index} >
                                 {letter === " " ? "\u00A0" : letter}
                             </motion.span>
                         ))}

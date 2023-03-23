@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "../Image";
-import webImg from "../../assets/web/pepper2.webp";
-import img from "../../assets/images/pepper2.png";
+import webImg from "../../assets/web/cilantro.webp";
+import img from "../../assets/images/cilantro.png";
 
 export default function Pepper() {
     const [rotate, setRotate] = useState(false);
     const startRotate = () => {
-        if (window.scrollY >= 1600) {
+        if (window.scrollY >= 875) {
             setRotate(true)
         } else {
             setRotate(false)
@@ -15,13 +15,13 @@ export default function Pepper() {
     };
     const rotater = {
         initial: {
-            x: 0,
-            y: 0
+            x: -1000,
+            y: 0,
+            rotate: -360
         },
         animate: {
-            rotate: 5,
-            x: [3, 6, 9],
-            y: [15, 20, 35, 40],
+            rotate: -.5,
+            x: 0,
             transition: {
                 type: "spring",
                 stiffness: 100,
@@ -32,14 +32,15 @@ export default function Pepper() {
             }
         },
         reanimate: {
-            rotate: -4,
-            delay: .1,
+            rotate: -360,
+            x: -1000,
+            delay: 2,
             transition: {
                 type: "spring",
                 stiffness: 100,
                 damping: 40,
-                restDelta: 0.001
-                
+                restDelta: 0.001,
+                duration: 2,
             }
         },
     }
@@ -49,11 +50,11 @@ export default function Pepper() {
         variants={rotater}
         initial="initial"
         animate={rotate ? "animate" : "reanimate"}
-            className="beanImg z-30 absolute w-[30%] h-[30%] mt-[28rem] -right-20">
+            className="beanImg z-30 absolute w-[25%] h-[25%] mt-[14rem] -left-9">
         <Image
             srcSet={webImg}
             fallback={img}
-            className="rotate-[10deg]"
+            className="-rotate-[22deg]"
         />
         </motion.div>
     )
