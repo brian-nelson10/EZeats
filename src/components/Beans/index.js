@@ -31,8 +31,8 @@ export default function Beans() {
             x: 0,
             transition: {
                 type: "spring",
-                stiffness: 100,
-                damping: 40,
+                stiffness: 90,
+                damping: 100,
                 restDelta: 0.001,
                 duration: .5
             }

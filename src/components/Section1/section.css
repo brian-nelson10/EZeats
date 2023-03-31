@@ -1,18 +1,15 @@
 .gradient {
-    background: linear-gradient(#D8C29D, .1%, #023047);
-    
+    background: linear-gradient(#D8C29D, .1%, #07252d); 
 }
-
 .gradient2 {
-    background: linear-gradient( #023047, 50%,#D8C29D);
-    
+    background: linear-gradient( #07252d,#D8C29D, 60%, #07252d );
+}
+.gradient3 {
+    background: #07252d;
 }
 .bg-deco {
-    background: url("../../assets/images/bgBlue.png");
-}
-
-.textShadow {
-    text-shadow: 2px, 4px, 4px, black;
+    background-image: url("../../assets/images/bgBlue.png");
+    background-position: fixed;
 }
 
 .section1-img {
@@ -20,4 +17,41 @@
     background-size: cover;
     background-position: fixed !important;
 }
+.bg-contact {
+    background: url("../../assets/carousel/2.JPG");
+    background-position: fixed;
+    background-size: 60% ;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
 
+.contactImg2 {
+    z-index: 1 !important;
+}
+.contactText {
+    z-index: 2 !important;
+}
+/* .img4 {
+    max-width: 700px;
+    z-index: 1;
+    vertical-align: middle;
+  }
+  .scroll-container {
+    justify-content: space-between;
+    max-width: 1200px;
+    /* This is needed to prevent the image from "jittering" partway through the transition */
+    /* overflow: hidden; */
+  /* } */ 
+  /* .bottom-shadow {
+    background: linear-gradient(90deg, transparent 0%, rgba(2, 48, 71, 1) 20%);
+    z-index: 0;
+  }
+  
+  .top-shadow {
+    background: linear-gradient(90deg, transparent -1%, rgba(2, 48, 71, 1) 20%);
+    z-index: 2;
+  }
+  .head {
+    text-shadow: 2px, 4px, 4px, black;
+  }
+  */

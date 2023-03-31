@@ -1,5 +1,5 @@
-import React from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import React, { useRef } from "react";
+import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
 import Hero from "../components/Hero";
 import OrderButton from "../components/OrderButton";
 import Hamburger from "../components/Hamburger";
@@ -14,6 +14,8 @@ import Onion from "../components/Onion/Index";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 import Ginger from "../components/Ginger";
 import Section3 from "../components/Section3";
+import Section4 from "../components/Section4";
+import Footer from "../components/Footer";
 const main = {
     initial: {
         clipPath: 'polygon(0 0, 0 0, 0 100%, 0% 100%)',
@@ -29,6 +31,9 @@ const main = {
     }
 };
 const Home = () => {
+    React.useState(() => {
+        typeof windows !== "undefined" && window.scrollTo(0, 0);
+      }, []);
     return (
         <AnimatePresence mode="wait" >
             <motion.section
@@ -60,7 +65,10 @@ const Home = () => {
                 <section>
                 <MenuButton/>
                 </section>
-                <section className="">
+                <section 
+                    className="ingredients "
+                
+                >
                     <LazyLoadComponent>
                         <Ginger/>
                     <Beans/>
@@ -82,9 +90,19 @@ const Home = () => {
                     <Section2/>
                     </LazyLoadComponent>
                 </section>
-                <section>
+                <section className="">
                     <LazyLoadComponent>
                         <Section3/>
+                    </LazyLoadComponent>
+                </section>
+                <section className="">
+                    <LazyLoadComponent>
+                        <Section4/>
+                    </LazyLoadComponent>
+                </section>
+                <section className="">
+                    <LazyLoadComponent>
+                        <Footer/>
                     </LazyLoadComponent>
                 </section>
             </motion.section>

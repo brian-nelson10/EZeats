@@ -7,7 +7,7 @@ import img from "../../assets/images/ginger.png";
 export default function Ginger() {
     const [rotate, setRotate] = useState(false);
     const startRotate = () => {
-        if (window.scrollY >= 450) {
+        if (window.scrollY >= 150) {
             setRotate(true)
         } else {
             setRotate(false)

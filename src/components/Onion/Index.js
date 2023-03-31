@@ -7,7 +7,7 @@ import img from "../../assets/images/onion.png";
 export default function Onion() {
     const [rotate, setRotate] = useState(false);
     const startRotate = () => {
-        if (window.scrollY >= 1050) {
+        if (window.scrollY >= 950) {
             setRotate(true)
         } else {
             setRotate(false)
@@ -46,7 +46,7 @@ export default function Onion() {
             variants={rotater}
             initial="initial"
             animate={rotate ? "animate" : "reanimate"}
-            className="z-30 absolute w-[15%] h-[15%] ml-[10rem] -bottom-[44rem]" >
+            className="z-30 absolute w-[13%] h-[13%] ml-[12rem] -bottom-[46rem]" >
             <Image
                 srcSet={webImg}
                 fallback={img}

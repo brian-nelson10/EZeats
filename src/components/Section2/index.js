@@ -28,9 +28,9 @@ const pack2 = {
             y: 0,
             transition: {
                 type: "spring",
-                stiffness: 100,
+                stiffness: 80,
                 damping: 40,
-                restDelta: 0.001,
+                restDelta: 0.01,
                 duration: 1,
 }
 }
@@ -38,24 +38,24 @@ const pack2 = {
 export default function Section2() {
     return (
         <AnimatePresence>
-        <div className="gradient2 w-screen z-50 -mt-[13rem]">
+        <div className="gradient2 w-screen z-50 -mt-[13rem] pb-[6rem]">
             <motion.div className="container flex-wrap">
                 <motion.div className="aboutHero grid w-screen items-center justify-center">
-                    <div className="mt-[5rem] text-center font-mari tracking-widest text-[8rem] text-[#D8C29D]">
+                    <div className="mt-[5rem] -mb-[1.5rem] text-center font-mari tracking-widest text-[8rem] text-[#D8C29D]">
                         <motion.h1
                             variants={pack}
                             initial="initial"
                             whileInView="animate">♦️ MENU ♦️</motion.h1>
                     </div>
                 </motion.div>
-                <section className="container w-5/6 bg-[#D8C29D] shadow-[1px_35px_35px_2px_rgba(0,0,0,0.5)] -mb-[10rem] -mt-[2rem] md:mt-[3rem] md:mx-auto items-center justify-center text-center h-[200rem] md:h-[100rem] md:ml-[15rem] rounded-xl z-50 bg-fixed bg-deco">
-                    <motion.div
+                <section className="container py-[1rem] w-5/6 bg-[#D8C29D] shadow-[1px_35px_35px_2px_rgba(0,0,0,0.5)] -mt-[2rem] md:mt-[3rem] md:mx-auto items-center justify-center text-center h-[220rem] md:h-[100rem] md:ml-[15rem] rounded-xl z-50 bg-fixed bg-deco">
+                    {/* <motion.div
                         variants={pack}
                         initial="initial"
                         whileInView="animate"
                         className="p-2 md:p-5 font-rah text-[3rem] md:text-[5rem] text-[#D8C29D] tracking-wide">
                         Lunch ♦️ Dinner
-                    </motion.div>
+                    </motion.div> */}
 
                     <div className="container my-20 px-6 mx-auto text-xl">
                         <motion.div

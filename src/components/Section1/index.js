@@ -14,9 +14,9 @@ const pack2 = {
             y: 0,
             transition: {
                 type: "spring",
-                stiffness: 100,
+                stiffness: 40,
                 damping: 40,
-                restDelta: 0.001,
+                restDelta: 0.01,
                 duration: 1,
 }
 }

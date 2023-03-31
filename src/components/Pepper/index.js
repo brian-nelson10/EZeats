@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../Section1/section.css";
 import { motion } from "framer-motion";
 import Image from "../Image";
 import webImg from "../../assets/web/cilantro.webp";
@@ -15,32 +16,33 @@ export default function Pepper() {
     };
     const rotater = {
         initial: {
-            x: -1000,
+            x: -200,
             y: 0,
-            rotate: -360
+            rotate: 90
         },
         animate: {
             rotate: -.5,
             x: 0,
             transition: {
                 type: "spring",
-                stiffness: 100,
-                damping: 40,
-                restDelta: 0.001,
-                duration: 2,
+                stiffness: 90,
+                damping: 90,
+                restDelta: 0.01,
+                duration: 2.5,
                 delay: .1
             }
         },
         reanimate: {
-            rotate: -360,
-            x: -1000,
-            delay: 2,
+            
+            
+            
+            opacity: 0,
             transition: {
                 type: "spring",
                 stiffness: 100,
                 damping: 40,
                 restDelta: 0.001,
-                duration: 2,
+                duration: .1,
             }
         },
     }
@@ -50,7 +52,7 @@ export default function Pepper() {
         variants={rotater}
         initial="initial"
         animate={rotate ? "animate" : "reanimate"}
-            className="beanImg z-30 absolute w-[25%] h-[25%] mt-[14rem] -left-9">
+            className="cilImg z-30 absolute w-[25%] h-[20%] mt-[15rem] -left-9">
         <Image
             srcSet={webImg}
             fallback={img}

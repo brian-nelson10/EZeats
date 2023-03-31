@@ -1,76 +1,56 @@
-import React, { useEffect } from "react"
-import { motion } from "framer-motion";
-import SuccessTxt from "../SuccessTxt";
-import cateringWeb from "../../assets/web/12.webp";
-import catering from "../../assets/images/12.JPG";
-// import { useNavigate } from "react-router-dom";
-import Image from "../Image";
+import { motion, useTransform, useScroll, easeIn } from "framer-motion";
+import React, { useEffect, useRef, useState } from "react";
+import img from "../../assets/images/6.JPG";
+import "../Section1/section.css";
 
-const section = {
-    initial: {
-        y: 800,
-        opacity: 0
-    },
-    animate: {
-        opacity: 1,
-        y: 0,
-        x: 0,
-        transition: {
-            type: 'spring',
-            mass: 0.4,
-            damping: 8,
-            duration: .8,
-        }
-    },
-    exit: {
-        opacity: 1,
-        y: 800,
-        transition: {
-            ease: 'easeInOut',
-            duration: .3
-        }
-    }
+const divVariants = {
+    hidden: { opacity: 0, y: -500 },
+    visible: { 
+        opacity: 1, 
+        
+         }
+}
+const containerVar = {
+    visible: { transition: { staggerChildren: .2 }}
 };
 const Section3 = () => {
-    // const navigate = useNavigate();
-    // Scroll user to top to avoid showing the footer
-    React.useState(() => {
-        typeof windows !== "undefined" && window.scrollTo(0, 0);
-      }, []);
-      
-    return (
-        <motion.section 
-            layout
-            variants={section}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            className="mx-[2rem] mt-[7rem]">
-            <div className="container mx-auto py-9 lg:py-12 lg:py-24">
-                <div className="flex flex-col lg:flex-row justify-center items-strech mx-4">
-                    <div className="lg:w-4/12 flex justify-center items-center">
-                        <div>
-                            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-semibold text-gray-900 w-7/12"><SuccessTxt text="Private Events"/></h1>
-                            <p className="lg:w-7/12 lg:w-11/12 xl:w-10/12 mt-4 lg:mt-5 font-roboto font-bold tracking-wide leading-normal text-[#283845]">We can cater your event. Custom menu's available. Hit button below for details. Thank you for supporting our small, local business.</p>
-                            <motion.p 
-                                initial={{opacity: 0}}
-                                whileInView={{opacity: 1, transition: {delay: .5, duration: 1.4}}}
-                                
-                                className="lg:w-7/12 lg:w-11/12 xl:w-10/12 mt-4 lg:mt-5 font-tomatoes text-[2rem] font-bold leading-normal text-[#283845]">- Yaya</motion.p>
-                        </div>
-                    </div>
-                    <div className="lg:w-8/12 mt-6 lg:mt-8 lg:mt-0">
-                        <div className="relative w-full h-full">
-                            <Image
-                                srcset={cateringWeb}
-                                fallback={catering}
-                                alt="cateringagne img"/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </motion.section>
-    );
-};
-export default Section3;
+  const [scrollY, setScrollY] = useState(null);
+  const myRef = useRef(null);
+// const y = useTransform(
+//     scrollY,
+//     [0, window.innerHeight],
+//     ["0%", "-100%"]
+// );
 
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY - 3000);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  const scale = .5;
+  const scale2 = .6
+  return (
+    <motion.section 
+        variants={containerVar}
+        initial="hidden"
+        whileInView="visible"
+        className="gradient3 overflow-hiden grid grid-cols-3 px-[5rem] gap-[2rem] h-[25rem] "
+        ref={myRef} id="myId" >
+      
+        <motion.div 
+            variants={divVariants}
+            className="bottom-0" 
+            style={{y: -scrollY * scale2 }}>
+          <img className="h-auto w-[100%] rounded-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,1)]" src={img} alt="" />
+        </motion.div>
+        <motion.div variants={divVariants} className="" style={{ y: -scrollY * scale }}>
+          <img className="h-auto w-[100%] rounded-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,1)]" src={img} alt="" />
+        </motion.div>
+        <motion.div variants={divVariants} className="" style={{ y: -scrollY * scale2}}>
+          <img className="h-auto w-[100%] rounded-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,1)]" src={img} alt="" />
+        </motion.div>
+    </motion.section>
+  );
+};
+
+export default Section3;
