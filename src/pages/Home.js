@@ -16,6 +16,8 @@ import Ginger from "../components/Ginger";
 import Section3 from "../components/Section3";
 import Section4 from "../components/Section4";
 import Footer from "../components/Footer";
+import Section5 from "../components/Section5";
+
 const main = {
     initial: {
         clipPath: 'polygon(0 0, 0 0, 0 100%, 0% 100%)',
@@ -43,7 +45,7 @@ const Home = () => {
                 animate="animate"
                 exit="exit"
             >
-                <section className="grid grid-cols-3 w-screen z-40 fixed">
+                <section className="grid grid-cols-3 w-screen z-50 fixed">
                     <div className="grid items-center justify-end">
                         <Hamburger/>
                     </div>
@@ -66,9 +68,7 @@ const Home = () => {
                 <MenuButton/>
                 </section>
                 <section 
-                    className="ingredients "
-                
-                >
+                    className="ingredients z-50 relative">
                     <LazyLoadComponent>
                         <Ginger/>
                     <Beans/>
@@ -77,7 +77,7 @@ const Home = () => {
                     <Onion/>
                     </LazyLoadComponent>
                 </section>
-                <section className="section-about pt-[200px] pb-[200px]">
+                <section className="section-about pt-[200px] pb-[200px] z-40 relative">
                 <LazyLoadComponent>
                     <Pepper/>
                     </LazyLoadComponent>
@@ -85,21 +85,31 @@ const Home = () => {
                     <Section1/>
                     </LazyLoadComponent>
                 </section>
-                <section>
+                <section className="z-30 relative">
                     <LazyLoadComponent>
                     <Section2/>
                     </LazyLoadComponent>
                 </section>
-                <section className="">
+                <section className="z-30 relative">
                     <LazyLoadComponent>
                         <Section3/>
                     </LazyLoadComponent>
                 </section>
-                <section className="">
+                <section className="z-20 relative">
                     <LazyLoadComponent>
                         <Section4/>
                     </LazyLoadComponent>
                 </section>
+                <section className="z-20 relative">
+                    <LazyLoadComponent>
+                        <Section5/>
+                    </LazyLoadComponent>
+                </section>
+                {/* <section className="">
+                    <LazyLoadComponent>
+                        <Section6/>
+                    </LazyLoadComponent>
+                </section> */}
                 <section className="">
                     <LazyLoadComponent>
                         <Footer/>

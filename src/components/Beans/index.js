@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "../Image";
 import webImg from "../../assets/web/beans2.webp";
 import img from "../../assets/images/beans2.png";
 
-export default function Beans() {
+const Beans = () => {
     // const x = useMotionValue(0);
     // const { scrollYProgress } = useScroll();
     // const rotate = useSpring(scrollYProgress, {
@@ -14,13 +14,19 @@ export default function Beans() {
     //     restDelta: 0.001
     // });
     const [rotate, setRotate] = useState(false);
+
+    useEffect(() => {  
     const startRotate = () => {
         if (window.scrollY >= 600) {
             setRotate(true)
         } else {
             setRotate(false)
         }
-    };
+    }
+    window.addEventListener('scroll', startRotate);
+    return () => window.removeEventListener('scroll', startRotate);
+}, []);
+
     const rotater = {
         initial: {
             x: -1000,
@@ -48,13 +54,13 @@ export default function Beans() {
             }
         },
     }
-    window.addEventListener('scroll', startRotate)
+    
     return (
         <motion.div
             variants={rotater}
             initial="initial"
             animate={rotate ? "animate" : "reanimate"}
-            className="beanImg z-30 absolute w-[30%] h-[30%] " >
+            className="beanImg z-30 absolute w-[30%] h-[30%]" >
             <Image
                 srcSet={webImg}
                 fallback={img}
@@ -63,3 +69,4 @@ export default function Beans() {
         </motion.div>
     )
 }
+export default Beans;

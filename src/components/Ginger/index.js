@@ -45,8 +45,9 @@ export default function Ginger() {
         <motion.div
         variants={rotater}
         initial="initial"
-        animate={rotate ? "animate" : "reanimate"}
-            className="z-30 absolute w-[20%] h-[20%] -left-[7rem] top-[38rem]" >
+        whileInView="animate"
+        exit="reanimate"
+            className="z-30 absolute w-[20%] h-[20%] -left-[7rem] -top-[28rem]" >
             <Image
                 srcSet={webImg}
                 fallback={img}

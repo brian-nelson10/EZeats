@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import "./social.css";
 
@@ -17,21 +17,26 @@ const log = {
   };
 const Social = () => {
     const [color, setColor] = useState(false)
-    const changeColor = () => {
-      if (window.scrollY >= 1400) {
-        setColor(true)
-      } else {
-        setColor(false)
+    
+    useEffect(() => {
+      const changeColor = () => {
+        if (window.scrollY >= 3200) {
+          setColor(true)
+        } else {
+          setColor(false)
+        }
       }
-    }
-    window.addEventListener('scroll', changeColor)
+      window.addEventListener("scroll", changeColor);
+      return () => window.removeEventListener("scroll", changeColor);
+    }, []);
+    
     return (
 <motion.div 
     layout
     variants={log} 
     initial="initial"
     animate="animate"
-    className={color ? "social text-[#023047] flex flex-col gap-8 fixed z-50" : "social text-[#D8C29D] flex flex-col gap-8 fixed z-50"  }>
+    className= {color ? " invisible" : "social text-[#D8C29D] flex flex-col gap-8 fixed z-50"}>
             <div className="socialText inline-block tracking-5px mb-[2rem] -translate-x-[1px] ">
               <ul>
               <li>

@@ -1,7 +1,6 @@
 import React from "react";
 import "../Section1/section.css";
-
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, StaggerChildren, motion } from "framer-motion";
 // import Image from "../Image";
 // import webImg from "../../assets/web/pepper2.webp";
 // import img from "../../assets/images/pepper2.png";
@@ -35,10 +34,27 @@ const pack2 = {
 }
 }
 }
+const menuVariant = {
+    animate: {
+        transition: {
+            
+            staggerChildren: 0.5,
+            type: "spring",
+            damping: 12,
+            stiffness: 100, 
+        }
+    },
+}
+const menuItem = {
+    animate: {
+   opacity: 1,
+   transition: { duration: 1, ease: "easeInOut"}
+    }
+}
 export default function Section2() {
     return (
         <AnimatePresence>
-        <div className="gradient2 w-screen z-50 -mt-[13rem] pb-[6rem]">
+        <div className="gradient2 w-screen z-50 -mt-[13rem] pb-[16rem]">
             <motion.div className="container flex-wrap">
                 <motion.div className="aboutHero grid w-screen items-center justify-center">
                     <div className="mt-[5rem] -mb-[1.5rem] text-center font-mari tracking-widest text-[8rem] text-[#D8C29D]">
@@ -74,17 +90,77 @@ export default function Section2() {
                                     variants={pack2}
                                     initial="initial"
                                     whileInView="animate" 
-                                    className="block border-solid border-[#023047] border-seperate border-2 rounded-lg shadow-lg my-[3rem] h-[30rem] bg-[#D8C29D]">
+                                    className="block border-solid border-[#023047] border-seperate border-2 rounded-lg shadow-lg py-[1rem] my-[3rem] h-[30rem] bg-[#D8C29D]">
+                                        <motion.div
+                                            variants={pack}
+                                            className="font-mari tracking-wide text-[2rem] mt-[.5rem] text-center text-[#023047]">
+                                                Small Plates
+                                            </motion.div>
 
                                 </motion.div>
                                 <motion.div 
                                     variants={pack2}
                                     initial="initial"
                                     whileInView="animate" 
-                                    className="block col-span-2 border-spacing-[3rem] bg-[#D8C29D] border-seperate border-2 border-solid border-[#023047] rounded-lg shadow-lg h-[40rem]">
+                                    className="block col-span-2 border-spacing-[3rem] bg-[#D8C29D] border-seperate border-2 border-solid border-[#023047] rounded-lg shadow-lg py-[2rem] h-[40rem]">
                                     {/* <div className="p-6 border-black border-gray-300 bordertext-center">
 
                                     </div> */}
+                                     <motion.div
+                                            variants={pack}
+                                            className="font-mari tracking-wide text-[3rem] mt-[.5rem] text-center text-[#023047]">
+                                                Mains
+                                            </motion.div>
+                                            <motion.ul variants={menuVariant} initial="initial" whileInView="animate" className="mx-[2rem] my-[2rem]">
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem]">
+                                                    <div className="text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    Fried Chicken
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                        20$
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem]">
+                                                    <div className="text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    Fried Chicken
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                        20$
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{ opacity: 0 }} className="grid grid-cols-2 mb-[2rem]">
+                                                    <div className="text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    Fried Chicken
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                        20$
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}} className="grid grid-cols-2 mb-[2rem]">
+                                                    <div className="text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    Fried Chicken
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                        20$
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}} className="grid grid-cols-2 mb-[2rem]">
+                                                    <div className="text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    Fried Chicken
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                        20$
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}} className="grid grid-cols-2 mb-[2rem]">
+                                                    <div className="text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    Fried Chicken
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                        20$
+                                                    </div>
+                                                </motion.li>
+                                            </motion.ul>
 
                                 </motion.div>
                             </div>

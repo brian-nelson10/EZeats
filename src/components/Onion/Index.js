@@ -46,7 +46,7 @@ export default function Onion() {
             variants={rotater}
             initial="initial"
             animate={rotate ? "animate" : "reanimate"}
-            className="z-30 absolute w-[13%] h-[13%] ml-[12rem] -bottom-[46rem]" >
+            className="z-30 absolute w-[13%] h-[13%] ml-[20rem] -bottom-[42rem]" >
             <Image
                 srcSet={webImg}
                 fallback={img}

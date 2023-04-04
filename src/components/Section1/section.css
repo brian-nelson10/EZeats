@@ -1,8 +1,8 @@
 .gradient {
-    background: linear-gradient(#D8C29D, .1%, #07252d); 
+    background: linear-gradient(#D8C29D, .1%, #023047); 
 }
 .gradient2 {
-    background: linear-gradient( #07252d,#D8C29D, 60%, #07252d );
+    background: linear-gradient( #023047, 35%, #07252d );
 }
 .gradient3 {
     background: #07252d;
