@@ -1,9 +1,7 @@
 import React from "react";
 import "../Section1/section.css";
-import { AnimatePresence, StaggerChildren, motion } from "framer-motion";
-// import Image from "../Image";
-// import webImg from "../../assets/web/pepper2.webp";
-// import img from "../../assets/images/pepper2.png";
+import { AnimatePresence, motion } from "framer-motion";
+
 const pack = {
     initial: {
         opacity: 0
@@ -52,9 +50,10 @@ const menuItem = {
     }
 }
 export default function Section2() {
+    
     return (
         <AnimatePresence>
-        <div className="gradient2 w-screen z-50 -mt-[13rem] pb-[16rem]">
+        <div className="gradient2 w-screen z-50 -mt-[13rem] pb-[16rem]" id="menuComponent" >
             <motion.div className="container flex-wrap">
                 <motion.div className="aboutHero grid w-screen items-center justify-center">
                     <div className="mt-[5rem] -mb-[1.5rem] text-center font-mari tracking-widest text-[8rem] text-[#D8C29D]">

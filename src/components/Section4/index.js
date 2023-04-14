@@ -1,8 +1,6 @@
 import React from "react";
-import { circOut, motion, useMotionValue, useScroll, useTransform } from "framer-motion";
-// import Image from "../Image";
-// import imgWeb from "../../assets/web/1.webp";
-// import img from "../../assets/carousel/1.JPG";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import garlic from "../../assets/images/garlic.png";
 import arugula from "../../assets/images/arugula.png";
 import cardamom from "../../assets/images/cardamom.png";
@@ -11,7 +9,6 @@ import pcorn from "../../assets/images/peppercorn.png";
 import "../Section1/section.css";
 const Section4 = () => {
   const { scrollYProgress } = useScroll();
-  const x = useMotionValue(10)
   const rotateY = useTransform(scrollYProgress, [0, 1],  [-200, 200]);
   const rotateYcard = useTransform(scrollYProgress, [0.75, 1], [-200, 200]);
   const rotateYarug = useTransform(scrollYProgress, [0.5, 1], [-100, -200]);
@@ -19,8 +16,15 @@ const Section4 = () => {
   const leftX = useTransform(scrollYProgress, [0, 1], [-1400, 0]);
   const rightX = useTransform(scrollYProgress, [0.5, 1], [200, 0]);
   const fallY = useTransform(scrollYProgress, [0, 1], [-2500, 100]);
- 
+  const navigate = useNavigate();
+  function handleContact() {
+      navigate("/contact");
+  }
+  function handleOrder() {
+    navigate("/order");
+  }
   return (
+    
     <>
     <section className="-mt-[25rem] h-[80rem] px-[2rem] gradient3 pt-[6rem] -mb-[7rem]">
         <div className="container mt-[25rem] mx-[2rem] ml-[4rem] items-center justify-center text-center bg-contact bg-fixed z-20 relative">
@@ -31,24 +35,24 @@ const Section4 = () => {
         whileInView={{opacity: [.1,.3,.5,.7,.9,1] , transition: {duration: 1, delay: 1}}}
         className="contactText"
       >
-        <div className="font-mari text-[10rem] tracking-wide text-[#D8C29D] contactText">Contact Us</div>
+        <div onClick={handleContact} className="font-mari text-[10rem] tracking-wide text-[#D8C29D] hover:cursor-pointer contactText">Contact Us</div>
       </motion.div>
 
       <motion.div
         style={{ x: rightX }}
         initial={{opacity: 0}}
         whileInView={{opacity: [.1,.3,.5,.7,.9,1] , transition: {duration: 1, delay: 1}}}
-        className="z-50 contactText text-end"
+        className="z-50 contactText text-end overflow-hidden"
       >
-        <h1 className="font-mari text-[10rem] tracking-wide text-[#D8C29D] overflow-hidden contactText">Order Online</h1>
+        <h1 onClick={handleOrder} className="font-mari text-[10rem] tracking-wide text-[#D8C29D] overflow-hidden contactText hover:cursor-pointer">Order Online</h1>
       </motion.div>
       
       </div>
    
       </section>
       <div className="gradient3 -mt-[45rem] z-10"> 
-      <motion.div className="-mt-[15rem] " style={{y: fallY}}> 
-               <motion.img style={{rotate: rotateYcard}} src={cardamom} className="w-[15%] h-[15%] items-center jusitfy-center ml-[75rem] -mt-[10rem]"
+      <motion.div className="-mt-[15rem]"  style={{y: fallY}}> 
+               <motion.img style={{rotate: rotateYcard}} src={cardamom}  className="w-[15%] h-[15%] items-center jusitfy-center ml-[75rem] -mt-[10rem]"
                 />
                 </motion.div>
                 <motion.div className="-mt-[10rem]" style={{y: fallY}}> 
@@ -68,13 +72,6 @@ const Section4 = () => {
                 />
                 </motion.div>
                 </div> 
-      {/* <motion.div className="contactImg2 -mt-[20rem]" style={{y: rightX}}> 
-            <Image
-                srcSet={imgWeb}
-                fallback={img}
-                className="w-[60%] h-[30%] items-center jusitfy-center ml-[20rem] -mt-[90rem] contactImg2"
-                />
-                </motion.div> */}
     </>
   );
 };

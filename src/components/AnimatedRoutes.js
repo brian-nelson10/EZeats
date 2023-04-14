@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Home from '../pages/Home';
+import Contact from '../pages/Contact';
 
 function AnimatedRoutes() {
     const location = useLocation();
@@ -17,6 +18,11 @@ function AnimatedRoutes() {
               path="/Home"
               element={<Home/>}
               />
+              <Route
+              path="/contact"
+              element={<Contact />}
+              />
+
               
                 {/* <Route 
                 text="Success"

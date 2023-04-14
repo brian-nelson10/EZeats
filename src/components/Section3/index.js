@@ -1,6 +1,8 @@
-import { motion, useTransform, useScroll, easeIn } from "framer-motion";
+import { motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import img from "../../assets/images/6.JPG";
+import truck from "../../assets/images/truck.png";
+import plus from "../../assets/images/plus.png";
 import "../Section1/section.css";
 
 const divVariants = {
@@ -41,13 +43,20 @@ const Section3 = () => {
             variants={divVariants}
             className="bottom-0" 
             style={{y: -scrollY * scale2 }}>
-          <img className="h-auto w-[100%] rounded-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,1)]" src={img} alt="" />
+              
+          <img className="h-auto w-[100%] rounded-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,1)] z-10" src={img} alt="" />
+          <img className="h-auto w-[75%] ml-[4.5rem] -mt-[35rem] rounded-lg z-20 truck" src={truck} alt=""/>
+          <img className="h-auto w-[18%] ml-[14rem] -mt-[15rem] rounded-lg z-20" src={plus} alt=""/>
         </motion.div>
         <motion.div variants={divVariants} className="" style={{ y: -scrollY * scale }}>
           <img className="h-auto w-[100%] rounded-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,1)]" src={img} alt="" />
+          <img className="h-auto w-[75%] ml-[4.5rem] -mt-[35rem] rounded-lg z-20 truck" src={truck} alt=""/>
+          <img className="h-auto w-[18%] ml-[14rem] -mt-[15rem] rounded-lg z-20" src={plus} alt=""/>
         </motion.div>
         <motion.div variants={divVariants} className="" style={{ y: -scrollY * scale2}}>
           <img className="h-auto w-[100%] rounded-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,1)]" src={img} alt="" />
+          <img className="h-auto w-[75%] ml-[4.5rem] -mt-[35rem] rounded-lg z-20 truck" src={truck} alt=""/>
+          <img className="h-auto w-[18%] ml-[14rem] -mt-[15rem] rounded-lg z-20" src={plus} alt=""/>
         </motion.div>
     </motion.section>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+
 const wordVariants = {
     hovered: {
       y: [0, -2, 0, 2, 0],
@@ -22,7 +23,11 @@ const wordVariants = {
           }
       }
   }
-export default function MenuButton() {
+
+export default function MenuButton(props) { 
+    const handleClick = () => {
+        props.setMenuState(!true);
+    };
     return (
         <>
         <motion.div
@@ -30,12 +35,13 @@ export default function MenuButton() {
             initial="initial"
             animate="animate"
             className="absolute top-[65%] z-30 hover:cursor-pointer justify-center items-center left-[42%] text-center ">
-                <motion.div
+                <motion.button
             variants={wordVariants}
             className="text-[4rem] font-rah tracking-widest text-[#D8C29D]"
+            onClick={handleClick}
             >
               ♦️ MENU ♦️
-            </motion.div>
+            </motion.button>
             </motion.div>
             </>
     );
