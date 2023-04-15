@@ -14,7 +14,7 @@ export default function OrderButton() {
         <Image
             srcSet={orderWeb}
             fallback={order}
-            className="w-[70%] h-[70%] order"/>
+            className="w-[70%] h-[70%] order hover:cursor-pointer"/>
             //  </motion.div>
     );
 };

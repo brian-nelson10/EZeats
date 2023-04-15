@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Home from '../pages/Home';
 import Contact from '../pages/Contact';
+import Catering from "../pages/Catering";
 
 function AnimatedRoutes() {
     const location = useLocation();
@@ -22,13 +23,14 @@ function AnimatedRoutes() {
               path="/contact"
               element={<Contact />}
               />
-
-              
-                {/* <Route 
-                text="Success"
-                path="/success"
-                element={<Success/>}
-                /> */}
+              <Route
+              path="/catering"
+              element={<Catering/>}
+              />
+              {/* <Route
+              path="/foodtruck"
+              element={}
+              /> */}
           </Routes>
           </AnimatePresence>
     );

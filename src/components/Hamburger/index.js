@@ -25,6 +25,18 @@ export default function Hamburger() {
   function handleHome() {
     navigate('/home')
   };
+  function handleContact() {
+    navigate('/contact')
+  };
+  function handleCatering() {
+    navigate('/catering')
+  };
+  function handleOrder() {
+    navigate('/order')
+  };
+  function handleFoodTruck() {
+    navigate('/foodtruck')
+  };
   const child1 = {
     visible: {
       opacity: 1,
@@ -161,7 +173,7 @@ export default function Hamburger() {
   
   return (
     <>
-      <nav className="z-50 fixed ml-[8rem] z-50">
+      <nav className="fixed ml-[8rem] z-50">
         <motion.div
           layout
           className="xl:container-fluid xl:pr-6 hover:cursor-pointer"
@@ -206,7 +218,7 @@ export default function Hamburger() {
         </motion.div>
       </nav>
       <motion.nav
-        className="h-screen w-screen fixed flex flex-col items-center justify-center align-center bg-[#023047] z-10"
+        className="h-screen w-screen fixed flex flex-col items-center justify-center align-center bg-[#07252d] z-10"
         initial={false}
         variants={menuVariants}
         animate={isOpen ? "opened" : "closed"}
@@ -283,6 +295,7 @@ export default function Hamburger() {
                   whileHover={{ scale: 1.1 }}
                   onMouseEnter={() => handleDivHover(0)}
                   onMouseLeave={handleDivLeave}
+                  onClick={handleHome}
                   className="text-[#D8C29D] font-mari mb-2 text-[3rem] list-none tracking-wide hover:cursor-pointer" variants={linkVariants}
                 >Home
                 </motion.li>
@@ -291,6 +304,7 @@ export default function Hamburger() {
                   whileHover={{ scale: 1.1 }}
                   onMouseEnter={() => handleDivHover(1)}
                   onMouseLeave={handleDivLeave}
+                  onClick={handleOrder}
                 >Order Online
                 </motion.li>
                 <motion.li
@@ -298,6 +312,7 @@ export default function Hamburger() {
                   whileHover={{ scale: 1.1 }}
                   onMouseEnter={() => handleDivHover(2)}
                   onMouseLeave={handleDivLeave}
+                  onClick={handleCatering}
                 >Catering
                 </motion.li>
                 <motion.li
@@ -305,6 +320,7 @@ export default function Hamburger() {
                   whileHover={{ scale: 1.1 }}
                   onMouseEnter={() => handleDivHover(3)}
                   onMouseLeave={handleDivLeave}
+                  onClick={handleFoodTruck}
                 >Food Truck
                 </motion.li>
                 <motion.li
@@ -312,6 +328,7 @@ export default function Hamburger() {
                   whileHover={{ scale: 1.1 }}
                   onMouseEnter={() => handleDivHover(4)}
                   onMouseLeave={handleDivLeave}
+                  onClick={handleContact}
                 >Contact
                 </motion.li>
               </ul>
