@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/EZeats/static/css/main.68817d49.css",
+    "main.js": "/EZeats/static/js/main.addc0cc6.js",
+    "static/media/1.JPG": "/EZeats/static/media/1.ad5d8f44b22da0eb3e7d.JPG",
+    "static/media/4.JPG": "/EZeats/static/media/4.083ba512d41bac22685f.JPG",
+    "static/media/3.JPG": "/EZeats/static/media/3.b504317308d58980b258.JPG",
+    "static/media/2.JPG": "/EZeats/static/media/2.adad866f3136a0ad7f21.JPG",
+    "static/media/2.webp": "/EZeats/static/media/2.223d85fb2127b8834050.webp",
+    "static/media/6.JPG": "/EZeats/static/media/6.2e0fa3793b3c217e5c8f.JPG",
+    "static/media/bgBlue.png": "/EZeats/static/media/bgBlue.453866ee63112652955d.png",
+    "static/media/arugula.png": "/EZeats/static/media/arugula.c7d308d2a3f39a46b954.png",
+    "static/media/beans2.png": "/EZeats/static/media/beans2.dec1d07f0ef40cd2fe5b.png",
+    "static/media/cardamom.png": "/EZeats/static/media/cardamom.b16be5cc46e6eea70e8e.png",
+    "static/media/herbs.png": "/EZeats/static/media/herbs.e5b8fab44ae653d5ebf6.png",
+    "static/media/cilantro.png": "/EZeats/static/media/cilantro.61189068ded8511499b8.png",
+    "static/media/peppercorn.png": "/EZeats/static/media/peppercorn.d64846d03d6fb6c9a6bd.png",
+    "static/media/Rahgbok.ttf": "/EZeats/static/media/Rahgbok.83389702f1b4d1722352.ttf",
+    "static/media/garlic.png": "/EZeats/static/media/garlic.05b4e28ad0bcf14e9b07.png",
+    "static/media/seed.png": "/EZeats/static/media/seed.eb9474c3368401ce850d.png",
+    "static/media/mariana.ttf": "/EZeats/static/media/mariana.3c2752920f883df58463.ttf",
+    "static/media/ginger.png": "/EZeats/static/media/ginger.3d96b1db0a7091089049.png",
+    "static/media/truck.png": "/EZeats/static/media/truck.40994a64b28956f0a532.png",
+    "static/media/onion.png": "/EZeats/static/media/onion.bb9df5b5d494a478d396.png",
+    "static/media/beans2.webp": "/EZeats/static/media/beans2.1e2b8305fcd0ae0085a9.webp",
+    "static/media/cilantro.webp": "/EZeats/static/media/cilantro.05a462844562d2227e6c.webp",
+    "static/media/ginger.webp": "/EZeats/static/media/ginger.9c5dd421f4b905a18de2.webp",
+    "static/media/onion.webp": "/EZeats/static/media/onion.54385d33189c98cbcd08.webp",
+    "static/media/order.png": "/EZeats/static/media/order.a360396a49fddbf3c910.png",
+    "static/media/order.webp": "/EZeats/static/media/order.c94ddce3d2372c51de07.webp",
+    "index.html": "/EZeats/index.html",
+    "main.68817d49.css.map": "/EZeats/static/css/main.68817d49.css.map",
+    "main.addc0cc6.js.map": "/EZeats/static/js/main.addc0cc6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.68817d49.css",
+    "static/js/main.addc0cc6.js"
+  ]
+}
