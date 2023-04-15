@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../Section1/section.css";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "../Image";
