@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/EZeats/static/css/main.68817d49.css",
-    "main.js": "/EZeats/static/js/main.addc0cc6.js",
+    "main.css": "/EZeats/static/css/main.8f9d64bf.css",
+    "main.js": "/EZeats/static/js/main.14a985e8.js",
     "static/media/1.JPG": "/EZeats/static/media/1.ad5d8f44b22da0eb3e7d.JPG",
     "static/media/4.JPG": "/EZeats/static/media/4.083ba512d41bac22685f.JPG",
     "static/media/3.JPG": "/EZeats/static/media/3.b504317308d58980b258.JPG",
@@ -29,11 +29,11 @@
     "static/media/order.png": "/EZeats/static/media/order.a360396a49fddbf3c910.png",
     "static/media/order.webp": "/EZeats/static/media/order.c94ddce3d2372c51de07.webp",
     "index.html": "/EZeats/index.html",
-    "main.68817d49.css.map": "/EZeats/static/css/main.68817d49.css.map",
-    "main.addc0cc6.js.map": "/EZeats/static/js/main.addc0cc6.js.map"
+    "main.8f9d64bf.css.map": "/EZeats/static/css/main.8f9d64bf.css.map",
+    "main.14a985e8.js.map": "/EZeats/static/js/main.14a985e8.js.map"
   },
   "entrypoints": [
-    "static/css/main.68817d49.css",
-    "static/js/main.addc0cc6.js"
+    "static/css/main.8f9d64bf.css",
+    "static/js/main.14a985e8.js"
   ]
 }
