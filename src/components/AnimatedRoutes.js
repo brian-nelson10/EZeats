@@ -12,7 +12,7 @@ function AnimatedRoutes() {
            
 <Routes location={location} key={location.pathname}>
             <Route
-               path="/EZeats"
+               path="/"
               exact element={<Home/>}
               />
               <Route
