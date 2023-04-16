@@ -16,16 +16,16 @@ function AnimatedRoutes() {
               exact element={<Home/>}
               />
               <Route
-              path="/EZeats/home"
-              element={<Home/>}
+              path="/home"
+              exact element={<Home/>}
               />
               <Route
-              path="/EZeats/contact"
-              element={<Contact />}
+              path="/contact"
+              exact element={<Contact />}
               />
               <Route
-              path="/EZeats/catering"
-              element={<Catering/>}
+              path="/catering"
+              exact element={<Catering/>}
               />
               {/* <Route
               path="/foodtruck"
