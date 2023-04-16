@@ -20,10 +20,9 @@ export default function Hamburger() {
   const handleDivLeave = () => {
     setHoveredDiv(null);
   };
-
   const navigate = useNavigate();
   function handleHome() {
-    navigate('/home')
+    navigate('/')
   };
   function handleContact() {
     navigate('/contact')

@@ -5,7 +5,7 @@ import AnimatedRoutes from './components/AnimatedRoutes';
 
 function App() {
   return (
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router basename="https://brian-nelson10.github.io/EZeats/">
         {/* <ScrollTop /> */}
         <AnimatedRoutes />
       </Router>
