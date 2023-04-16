@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/EZeats/static/css/main.8f9d64bf.css",
-    "main.js": "/EZeats/static/js/main.3167eaa0.js",
+    "main.js": "/EZeats/static/js/main.2fdf30fa.js",
     "static/media/1.JPG": "/EZeats/static/media/1.ad5d8f44b22da0eb3e7d.JPG",
     "static/media/4.JPG": "/EZeats/static/media/4.083ba512d41bac22685f.JPG",
     "static/media/3.JPG": "/EZeats/static/media/3.b504317308d58980b258.JPG",
@@ -30,10 +30,10 @@
     "static/media/order.webp": "/EZeats/static/media/order.c94ddce3d2372c51de07.webp",
     "index.html": "/EZeats/index.html",
     "main.8f9d64bf.css.map": "/EZeats/static/css/main.8f9d64bf.css.map",
-    "main.3167eaa0.js.map": "/EZeats/static/js/main.3167eaa0.js.map"
+    "main.2fdf30fa.js.map": "/EZeats/static/js/main.2fdf30fa.js.map"
   },
   "entrypoints": [
     "static/css/main.8f9d64bf.css",
-    "static/js/main.3167eaa0.js"
+    "static/js/main.2fdf30fa.js"
   ]
 }
