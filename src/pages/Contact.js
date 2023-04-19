@@ -57,11 +57,16 @@ const Contact = () => {
         typeof windows !== "undefined" && window.scrollTo(0, 0);
       }, []);
       const { scrollYProgress } = useScroll();
-      const rotateY = useTransform(scrollYProgress, [0, 1],  [-200, -100]);
-      const rotateYcard = useTransform(scrollYProgress, [0, 1], [-200, -300]);
-      const rotateYarug = useTransform(scrollYProgress, [0, 1], [-100, -200]);
-      const rotateYgar = useTransform(scrollYProgress, [0.1, 1], [-100, -300])
-      const fallY = useTransform(scrollYProgress, [0, 1], [-400, -200]);
+      const rotateY = useTransform(scrollYProgress, [0.2, 1],  [-200, -190]);
+      const rotateYcard = useTransform(scrollYProgress, [0.2, 1], [-200, -150]);
+      const rotateYarug = useTransform(scrollYProgress, [0, 1], [-100, -140]);
+      const rotateYgar = useTransform(scrollYProgress, [0, 1], [20, 32])
+      const fallY = useTransform(scrollYProgress, [0, 1], [-400, -580]);
+    //   const rotateY = useTransform(scrollYProgress, [0.75, 1],  [-200, -140]);
+    //   const rotateYcard = useTransform(scrollYProgress, [0.75, 1], [-200, -150]);
+    //   const rotateYarug = useTransform(scrollYProgress, [0.5, 1], [-100, -180]);
+    //   const rotateYgar = useTransform(scrollYProgress, [0.5, 1], [100, 150]);
+    //   const fallY = useTransform(scrollYProgress, [0, 1], [-400, -300]);
       return(
         <AnimatePresence mode="wait">
             <motion.section
@@ -121,8 +126,8 @@ const Contact = () => {
                         </div>
 
                         <div className="relative flex justify-center mt-[5rem] z-20">
-                            <div className="submit-btn_dec left w-embed mr-3 mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="28.08" height="27.348" viewBox="0 0 28.08 27.348">
+                            <div className="submit-btn_dec left w-embed mr-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="50" viewBox="0 0 28.08 27.348">
   <g id="Group_73" data-name="Group 73" transform="translate(-504.919 -8455.826)">
     <path id="Path_185" data-name="Path 185" d="M26.888,67.463l9.1-1.9-5.829-7.244L21.14,60.25Zm.092-.253,8.392-1.871-8.341,1.724L21.755,60.47Z" transform="translate(476.109 8420.173) rotate(-20)" fill="#D8C29D"></path>
     <path id="Path_186" data-name="Path 186" d="M26.888,67.463l9.1-1.9-5.829-7.244L21.14,60.25Zm.092-.253,8.392-1.871-8.341,1.724L21.755,60.47Z" transform="translate(465.109 8427.01) rotate(-20)" fill="#D8C29D"></path>
@@ -130,9 +135,9 @@ const Contact = () => {
   </g>
 </svg>
 </div>
-<a type="submit" value="SUBMIT" data-back="Sent" data-front="Submit" data-wait="Please wait..." className="btn-flip text-[#D8C29D] font-mari tracking-widest text-[2rem] border-[#D8C29D] hover:cursor-pointer "/>
-<div className="submit-btn_dec right w-embed ml-2 mt-1">
-    <svg xmlns="http://www.w3.org/2000/svg" width="28.08" height="27.348" viewBox="0 0 28.08 27.348">
+<a type="submit" value="SUBMIT" data-back="SENT" data-front="SUBMIT" data-wait="Please wait..." className="btn-flip text-[#D8C29D] font-mari tracking-widest text-[3rem] border-[#D8C29D] hover:cursor-pointer "/>
+<div className="submit-btn_dec right w-embed ml-2">
+    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="50" viewBox="0 0 28.08 27.348">
   <g id="Group_74" data-name="Group 74" transform="translate(0 0)">
     <path id="Path_185" data-name="Path 185" d="M5.748,0l9.1,1.9L9.018,9.148,0,7.213ZM5.84.253l8.392,1.871L5.891.4.615,6.993Z" transform="translate(13.952 20.511) rotate(-160)" fill="#D8C29D"></path>
     <path id="Path_186" data-name="Path 186" d="M5.748,0l9.1,1.9L9.018,9.148,0,7.213ZM5.84.253l8.392,1.871L5.891.4.615,6.993Z" transform="translate(24.952 27.348) rotate(-160)" fill="#D8C29D"></path>
@@ -151,15 +156,15 @@ const Contact = () => {
                <motion.img style={{rotate: rotateY}} src={pcorn} className="w-[15%] h-[15%] items-center jusitfy-center ml-[21.5rem] -mt-[10rem]"
                 />
                 </motion.div>
-                <motion.div className="mt-[29rem] ml-[5rem]" style={{y: fallY}}> 
+                <motion.div className="mt-[29rem] ml-[12rem]" style={{y: fallY}}> 
                <motion.img style={{rotate: rotateY}} src={seeds} className="w-[20%] h-[20%] items-center jusitfy-center ml-[70rem] -mt-[10rem]"
                 />
                 </motion.div>
-      <motion.div className="-mt-[1rem] " style={{y: fallY}}> 
+      <motion.div className="mt-[11rem] " style={{y: fallY}}> 
                <motion.img style={{rotate: rotateYgar}} src={garlic} className="w-[20%] h-[20%] items-center jusitfy-center ml-[8rem] -mt-[9rem]"
                 />
                 </motion.div>
-                <motion.div className="mt-[45rem] top-0 right-0" style={{y: fallY}}> 
+                <motion.div className="mt-[60rem] top-0 right-0" style={{y: fallY}}> 
                <motion.img style={{rotate: rotateYarug}} src={arugula} className=" w-[20%] h-[20%] items-center jusitfy-center ml-[85rem] -mt-[40rem]"
                 />
                 </motion.div>

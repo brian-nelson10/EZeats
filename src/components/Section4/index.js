@@ -9,12 +9,12 @@ import pcorn from "../../assets/images/peppercorn.png";
 import "../Section1/section.css";
 const Section4 = () => {
   const { scrollYProgress } = useScroll();
-  const rotateY = useTransform(scrollYProgress, [0, 1],  [-200, 200]);
-  const rotateYcard = useTransform(scrollYProgress, [0.75, 1], [-200, 200]);
-  const rotateYarug = useTransform(scrollYProgress, [0.5, 1], [-100, -200]);
-  const rotateYgar = useTransform(scrollYProgress, [0.5, 1], [100, -300])
+  const rotateY = useTransform(scrollYProgress, [0.75, 1],  [-200, -140]);
+  const rotateYcard = useTransform(scrollYProgress, [0.75, 1], [-200, -150]);
+  const rotateYarug = useTransform(scrollYProgress, [0.5, 1], [-100, -180]);
+  const rotateYgar = useTransform(scrollYProgress, [0.5, 1], [100, 150]);
   const leftX = useTransform(scrollYProgress, [0, 1], [-1400, 0]);
-  const rightX = useTransform(scrollYProgress, [0.5, 1], [200, 0]);
+  const rightX = useTransform(scrollYProgress, [0.5, 1], [200, -300]);
   const fallY = useTransform(scrollYProgress, [0, 1], [-2500, 100]);
   const navigate = useNavigate();
   function handleContact() {
@@ -28,20 +28,18 @@ const Section4 = () => {
     <>
     <section className="-mt-[25rem] h-[80rem] px-[2rem] gradient3 pt-[6rem] -mb-[7rem]">
         <div className="container mt-[25rem] mx-[2rem] ml-[4rem] items-center justify-center text-center bg-contact bg-fixed z-20 relative">
-           
       <motion.div
         style={{ x: leftX }}
         initial={{opacity: 0}}
-        whileInView={{opacity: [.1,.3,.5,.7,.9,1] , transition: {duration: 1, delay: 1}}}
+        whileInView={{opacity: [.1,.3,.5,.7,.9,1] , transition: {duration: .9, delay: .6}}}
         className="contactText"
       >
         <div onClick={handleContact} className="font-mari text-[10rem] tracking-wide text-[#D8C29D] hover:cursor-pointer contactText">Contact Us</div>
       </motion.div>
-
       <motion.div
         style={{ x: rightX }}
         initial={{opacity: 0}}
-        whileInView={{opacity: [.1,.3,.5,.7,.9,1] , transition: {duration: 1, delay: 1}}}
+        whileInView={{opacity: [.1,.3,.5,.7,.9,1] , transition: {duration: .9, delay: .6}}}
         className="z-50 contactText text-end overflow-hidden"
       >
         <h1 onClick={handleOrder} className="font-mari text-[10rem] tracking-wide text-[#D8C29D] overflow-hidden contactText hover:cursor-pointer">Order Online</h1>
@@ -63,7 +61,7 @@ const Section4 = () => {
                <motion.img style={{rotate: rotateY}} src={seeds} className="w-[20%] h-[20%] items-center jusitfy-center ml-[70rem] -mt-[10rem]"
                 />
                 </motion.div>
-      <motion.div className="-mt-[15rem] " style={{y: fallY}}> 
+      <motion.div className="-mt-[5rem] " style={{y: fallY}}> 
                <motion.img style={{rotate: rotateYgar}} src={garlic} className="w-[20%] h-[20%] items-center jusitfy-center ml-[8rem] -mt-[9rem]"
                 />
                 </motion.div>

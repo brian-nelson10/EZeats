@@ -26,10 +26,10 @@ export default function Section1() {
         <div className="gradient h-[55rem] w-screen z-50 -mt-[15rem]">
             <motion.div className="container flex-wrap">
                 <motion.div className="aboutHero grid grid-cols-2 gap-8 w-screen items-center justify-center">
-                    <div className="mt-[10rem] ml-[20rem] text-start font-rah text-[2.4rem] text-[#D8C29D]">
-                    <p>Better ingredients, better pizza.</p>
-                    <p>better bitches, better cars.</p>
-                    <p>better linecooks, better chefs.</p>
+                    <div className="mt-[9rem] ml-[17rem] text-start font-rah text-[1.5rem] tracking-wide text-[#D8C29D]">
+                    <p>"Welcome to our flavorful and authentic culinary experience.</p>
+                    <p> Using traditional spices and local ingredients...  </p>
+                    <p>Our food reflects the vibrant culture and hospitality of Morocco."</p>
                     <p className="text-end">-Chef YaYa</p>
                     </div>
                     <motion.div 

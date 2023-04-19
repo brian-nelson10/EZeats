@@ -57,10 +57,30 @@ export default function Section2() {
             <motion.div className="container flex-wrap">
                 <motion.div className="aboutHero grid w-screen items-center justify-center">
                     <div className="mt-[5rem] -mb-[1.5rem] text-center font-mari tracking-widest text-[8rem] text-[#D8C29D]">
-                        <motion.h1
+                        <motion.div
+                            className="flex flex-row gap-6"
                             variants={pack}
                             initial="initial"
-                            whileInView="animate">♦️ MENU ♦️</motion.h1>
+                            whileInView="animate">
+                                <svg className="mt-12" version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="64.000000pt" height="64.000000pt" viewBox="0 0 64.000000 64.000000"
+ preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,64.000000) scale(0.100000,-0.100000)"
+fill="#D8C29D" stroke="none">
+<path d="M199 483 c-62 -82 -113 -155 -113 -163 0 -16 222 -310 234 -310 12 0
+234 294 234 310 0 16 -222 310 -234 310 -4 0 -59 -66 -121 -147z"/>
+</g>
+</svg> MENU <svg className="mt-12" version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="64.000000pt" height="64.000000pt" viewBox="0 0 64.000000 64.000000"
+ preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,64.000000) scale(0.100000,-0.100000)"
+fill="#D8C29D" stroke="none">
+<path d="M199 483 c-62 -82 -113 -155 -113 -163 0 -16 222 -310 234 -310 12 0
+234 294 234 310 0 16 -222 310 -234 310 -4 0 -59 -66 -121 -147z"/>
+</g>
+</svg></motion.div>
                     </div>
                 </motion.div>
                 <section className="container py-[1rem] w-5/6 bg-[#D8C29D] shadow-[1px_35px_35px_2px_rgba(0,0,0,0.5)] -mt-[2rem] md:mt-[3rem] md:mx-auto items-center justify-center text-center h-[220rem] md:h-[100rem] md:ml-[15rem] rounded-xl z-50 bg-fixed bg-deco">

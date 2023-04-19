@@ -11,7 +11,10 @@
     background-image: url("../../assets/images/bgBlue.png");
     background-position: fixed;
 }
-
+.bg-deco2 {
+  background-image: url("../../assets/images/bgGreen.png");
+  background-position: fixed;
+}
 .section1-img {
     background: url("../../assets/carousel/4.JPG");
     background-size: cover;
@@ -32,7 +35,7 @@
     z-index: 2 !important;
 }
 .truck {
-  animation: spin 45s linear infinite; 
+  animation: spin 65s linear infinite; 
 }
 
 @keyframes spin{

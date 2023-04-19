@@ -50,7 +50,16 @@ const Social = () => {
                 </li>
                 <li>
                   
-                    <p className='text-[1.8rem] rotate-90 -translate-y-[80px] -translate-x-[70px] font-rah socialText'>♦️</p>
+                    <p className='text-[1.8rem] rotate-90 -translate-y-[80px] -translate-x-[65px] font-rah socialText'><svg className="mb-1" version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="20.000000pt" height="20.000000pt" viewBox="0 0 64.000000 64.000000"
+ preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,64.000000) scale(0.100000,-0.100000)"
+fill="#D8C29D" stroke="none">
+<path d="M199 483 c-62 -82 -113 -155 -113 -163 0 -16 222 -310 234 -310 12 0
+234 294 234 310 0 16 -222 310 -234 310 -4 0 -59 -66 -121 -147z"/>
+</g>
+</svg></p>
                 </li>
                  <li>
                   <a

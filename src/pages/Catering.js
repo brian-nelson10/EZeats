@@ -1,11 +1,13 @@
 import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 import OrderButton from "../components/OrderButton";
 import Hamburger from "../components/Hamburger";
 import Section5 from "../components/Section5";
 import Footer from "../components/Footer";
 import ContactTitle from "../components/NavTitle/contactTitle";
+import img from "../assets/images/filtertruck.png"
+import CateringMenu from "../components/Section2/cateringMenu";
 
 const main = {
     initial: {
@@ -28,72 +30,124 @@ const header = {
     animate: {
         opacity: 1,
         transition: {
-                duration: 1.8,
-                delay: .5
+            duration: 1.8,
+            delay: .5
         }
     }
 }
-// const header1 = {
-//     initial: {
-//         opacity: 0
-//     },
-//     animate: {
-//         opacity: 1,
-//         transition: {
-//                 duration: 1.8,
-//                 delay: .75
-//         }
-//     }
-// }
+const header1 = {
+    initial: {
+        opacity: 0
+    },
+    animate: {
+        opacity: 1,
+        transition: {
+            duration: 1.8,
+            delay: .75
+        }
+    }
+}
+const divVariants = {
+    hidden: { opacity: 0, y: -500 },
+    visible: {
+        opacity: 1,
+
+
+    }
+}
+const containerVar = {
+    visible: { transition: { staggerChildren: .2 } }
+};
 
 const Catering = () => {
     React.useState(() => {
         typeof windows !== "undefined" && window.scrollTo(0, 0);
-      }, []);
+    }, []);
+    const { scrollYProgress } = useScroll();
+    const fallY = useTransform(scrollYProgress, [0, 1], [-500, -400]);
 
-      return (
+
+    return (
         <AnimatePresence mode="wait">
             <motion.section
-                className="square"
+                className="square gradient3"
                 variants={main}
                 initial="initial"
                 animate="animate"
-                exit="exit">
-                    <section className="grid grid-cols-3 w-screen z-50 h-[2rem] fixed">
+                exit="exit"
+            >
+                <section className="grid grid-cols-3 w-screen z-50 h-[2rem] fixed">
                     <div className="items-center justify-end mt-[3rem]">
-                        <Hamburger/>
+                        <Hamburger />
                     </div>
                     <div>
-                        <ContactTitle text="EZ EATZ"/>
+                        <ContactTitle text="EZ EATZ" />
                     </div>
                     <div className="grid items-center justify-end mr-4 mt-6">
                         <OrderButton />
                     </div>
                 </section>
-                <section className="h-[50rem] gradient3">
-                <div className="px-[9rem] py-[10rem]">
+                <section className="h-[50rem] gradient3" >
+                    <div className="px-[9rem] py-[10rem]">
                         <div
                             className="grid mt-[2rem]">
-                            <motion.h1 
+                            <motion.h1
                                 variants={header}
                                 className="tracking-wide text-[5rem] font-mari text-[#D8C29D]">Catering</motion.h1>
                         </div>
-                </div>
+                    </div>
                 </section>
-                <LazyLoadComponent>
-                <section>
-                    <Section5/>
-                </section>
-                </LazyLoadComponent>
-                <LazyLoadComponent>
-                <section>
-                    <Footer/>
-                </section>
-                </LazyLoadComponent>
+                <motion.section
+                    variants={containerVar}
+                    initial="hidden"
+                    animate="visible"
+                    className="bg-transparent overflow-hiden grid grid-cols-3 px-[5rem] gap-[2rem] pt-[5rem] z-20">
+                    <motion.div
+                        variants={divVariants}
+                        className="bottom-0"
+                        style={{ y: fallY }}>
+
+                        <img className="h-[35rem] w-[45rem] rounded-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,1)] z-10" src={img} alt="" />
+                    </motion.div>
+                    <motion.div variants={divVariants} className="" style={{ y: fallY }}>
+                        <img className="h-[35rem] w-[45rem] rounded-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,1)]" src={img} alt="" />
+                    </motion.div>
+                    <motion.div variants={divVariants} className="" style={{ y: fallY }}>
+                        <img className="h-[35rem] w-[45rem] rounded-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,1)]" src={img} alt="" />
+                    </motion.div>
                 </motion.section>
+                <motion.section
+                    variants={containerVar}
+                    initial="hidden"
+                    animate="visible"
+                    className="bg-transparent overflow-hiden px-[5rem] -mt-[18rem] z-20 h-[35rem]">
+                        <motion.div 
+                            className="px-10"
+                            initial="initial"
+                            whileInView="animate" 
+                            variants={header1}>
+                            <p className="tracking-wide text-[3.5rem] font-rah text-[#D8C29D] text-center">Let our catering team create an elegant and customized package for you, offering a range of traditional dishes and flavors to suit any event or occasion.</p>
+                        </motion.div>
+                </motion.section>
+                <LazyLoadComponent>
+                    <section style={{ y: fallY }}>
+                        <CateringMenu/>
+                    </section>
+                </LazyLoadComponent>
+                <LazyLoadComponent>
+                    <section>
+                        <Section5 />
+                    </section>
+                </LazyLoadComponent>
+                <LazyLoadComponent>
+                    <section>
+                        <Footer />
+                    </section>
+                </LazyLoadComponent>
+            </motion.section>
         </AnimatePresence>
 
-      )
+    )
 };
 
 export default Catering;

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
-import img from "../../assets/images/6.JPG";
+import img from "../../assets/images/filtertruck.png";
 import truck from "../../assets/images/truck.png";
 import plus from "../../assets/images/plus.png";
 import "../Section1/section.css";
@@ -18,12 +18,6 @@ const containerVar = {
 const Section3 = () => {
   const [scrollY, setScrollY] = useState(null);
   const myRef = useRef(null);
-// const y = useTransform(
-//     scrollY,
-//     [0, window.innerHeight],
-//     ["0%", "-100%"]
-// );
-
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY - 3000);
     window.addEventListener("scroll", handleScroll);
@@ -44,17 +38,17 @@ const Section3 = () => {
             className="bottom-0" 
             style={{y: -scrollY * scale2 }}>
               
-          <img className="h-auto w-[100%] rounded-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,1)] z-10" src={img} alt="" />
+          <img className="h-[47rem] w-[45rem] rounded-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,1)] z-10" src={img} alt="" />
           <img className="h-auto w-[75%] ml-[4.5rem] -mt-[35rem] rounded-lg z-20 truck" src={truck} alt=""/>
           <img className="h-auto w-[18%] ml-[14rem] -mt-[15rem] rounded-lg z-20" src={plus} alt=""/>
         </motion.div>
         <motion.div variants={divVariants} className="" style={{ y: -scrollY * scale }}>
-          <img className="h-auto w-[100%] rounded-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,1)]" src={img} alt="" />
+          <img className="h-[47rem] w-[45rem] rounded-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,1)]" src={img} alt="" />
           <img className="h-auto w-[75%] ml-[4.5rem] -mt-[35rem] rounded-lg z-20 truck" src={truck} alt=""/>
           <img className="h-auto w-[18%] ml-[14rem] -mt-[15rem] rounded-lg z-20" src={plus} alt=""/>
         </motion.div>
         <motion.div variants={divVariants} className="" style={{ y: -scrollY * scale2}}>
-          <img className="h-auto w-[100%] rounded-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,1)]" src={img} alt="" />
+          <img className="h-[47rem] w-[45rem] rounded-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,1)]" src={img} alt="" />
           <img className="h-auto w-[75%] ml-[4.5rem] -mt-[35rem] rounded-lg z-20 truck" src={truck} alt=""/>
           <img className="h-auto w-[18%] ml-[14rem] -mt-[15rem] rounded-lg z-20" src={plus} alt=""/>
         </motion.div>
