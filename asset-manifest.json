@@ -1,14 +1,20 @@
 {
   "files": {
-    "main.css": "/EZeats/static/css/main.8f9d64bf.css",
-    "main.js": "/EZeats/static/js/main.6ac35b3f.js",
+    "main.css": "/EZeats/static/css/main.d85e0eb9.css",
+    "main.js": "/EZeats/static/js/main.677cdc0e.js",
+    "static/media/5.JPG": "/EZeats/static/media/5.6840d01575753ab13c6b.JPG",
     "static/media/1.JPG": "/EZeats/static/media/1.ad5d8f44b22da0eb3e7d.JPG",
     "static/media/4.JPG": "/EZeats/static/media/4.083ba512d41bac22685f.JPG",
     "static/media/3.JPG": "/EZeats/static/media/3.b504317308d58980b258.JPG",
     "static/media/2.JPG": "/EZeats/static/media/2.adad866f3136a0ad7f21.JPG",
     "static/media/2.webp": "/EZeats/static/media/2.223d85fb2127b8834050.webp",
+    "static/media/filtertruck.png": "/EZeats/static/media/filtertruck.c8f70a9254f383f8cbf6.png",
+    "static/media/8.JPG": "/EZeats/static/media/8.8ef605030850ad1f3f09.JPG",
     "static/media/6.JPG": "/EZeats/static/media/6.2e0fa3793b3c217e5c8f.JPG",
+    "static/media/bgGreen.png": "/EZeats/static/media/bgGreen.2f2cd0702881051887ed.png",
+    "static/media/eztruck.png": "/EZeats/static/media/eztruck.fb3d6bbb18fb11a5966a.png",
     "static/media/bgBlue.png": "/EZeats/static/media/bgBlue.453866ee63112652955d.png",
+    "static/media/7.JPG": "/EZeats/static/media/7.3443d2d3aaf0745a1ddf.JPG",
     "static/media/arugula.png": "/EZeats/static/media/arugula.c7d308d2a3f39a46b954.png",
     "static/media/beans2.png": "/EZeats/static/media/beans2.dec1d07f0ef40cd2fe5b.png",
     "static/media/cardamom.png": "/EZeats/static/media/cardamom.b16be5cc46e6eea70e8e.png",
@@ -29,11 +35,11 @@
     "static/media/order.png": "/EZeats/static/media/order.a360396a49fddbf3c910.png",
     "static/media/order.webp": "/EZeats/static/media/order.c94ddce3d2372c51de07.webp",
     "index.html": "/EZeats/index.html",
-    "main.8f9d64bf.css.map": "/EZeats/static/css/main.8f9d64bf.css.map",
-    "main.6ac35b3f.js.map": "/EZeats/static/js/main.6ac35b3f.js.map"
+    "main.d85e0eb9.css.map": "/EZeats/static/css/main.d85e0eb9.css.map",
+    "main.677cdc0e.js.map": "/EZeats/static/js/main.677cdc0e.js.map"
   },
   "entrypoints": [
-    "static/css/main.8f9d64bf.css",
-    "static/js/main.6ac35b3f.js"
+    "static/css/main.d85e0eb9.css",
+    "static/js/main.677cdc0e.js"
   ]
 }
