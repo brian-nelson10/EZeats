@@ -8,6 +8,8 @@ import Footer from "../components/Footer";
 import ContactTitle from "../components/NavTitle/contactTitle";
 import img from "../assets/images/filtertruck.png"
 import CateringMenu from "../components/Section2/cateringMenu";
+import CarouselPage from "../components/Carousel";
+import { useNavigate } from "react-router";
 
 const main = {
     initial: {
@@ -64,8 +66,12 @@ const Catering = () => {
         typeof windows !== "undefined" && window.scrollTo(0, 0);
     }, []);
     const { scrollYProgress } = useScroll();
-    const fallY = useTransform(scrollYProgress, [0, 1], [-500, -400]);
+    const fallY = useTransform(scrollYProgress, [0, 1], [-500, -100]);
+    const navigate = useNavigate();
 
+    function handleContact() {
+        navigate("/contact")
+    };
 
     return (
         <AnimatePresence mode="wait">
@@ -101,6 +107,21 @@ const Catering = () => {
                     variants={containerVar}
                     initial="hidden"
                     animate="visible"
+                    className="bg-transparent overflow-hiden px-[5rem] mt-[8rem] z-20 h-auto">
+                        <motion.div 
+                            className="px-10"
+                            initial="initial"
+                            whileInView="animate" 
+                            variants={header1}>
+                            <p className="tracking-wide text-[3.5rem] font-rah text-[#D8C29D] text-center">Let our catering team create an elegant and customized package for you, offering a range of traditional dishes and flavors to suit any event or occasion.</p>
+                        </motion.div>
+                        
+                </motion.section>
+                <hr className="border-6 border-[#D8C29D]"/>
+                <motion.section
+                    variants={containerVar}
+                    initial="hidden"
+                    animate="visible"
                     className="bg-transparent overflow-hiden grid grid-cols-3 px-[5rem] gap-[2rem] pt-[5rem] z-20">
                     <motion.div
                         variants={divVariants}
@@ -116,22 +137,22 @@ const Catering = () => {
                         <img className="h-[35rem] w-[45rem] rounded-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,1)]" src={img} alt="" />
                     </motion.div>
                 </motion.section>
-                <motion.section
-                    variants={containerVar}
-                    initial="hidden"
-                    animate="visible"
-                    className="bg-transparent overflow-hiden px-[5rem] -mt-[18rem] z-20 h-[35rem]">
-                        <motion.div 
-                            className="px-10"
-                            initial="initial"
-                            whileInView="animate" 
-                            variants={header1}>
-                            <p className="tracking-wide text-[3.5rem] font-rah text-[#D8C29D] text-center">Let our catering team create an elegant and customized package for you, offering a range of traditional dishes and flavors to suit any event or occasion.</p>
-                        </motion.div>
-                </motion.section>
                 <LazyLoadComponent>
                     <section style={{ y: fallY }}>
                         <CateringMenu/>
+                    </section>
+                </LazyLoadComponent>
+                <section className="grid px-[10rem] py-[5rem] -mt-[10rem]  text-center justify-center items-center">
+                    <div className="text-center justify-center flex-row flex">
+                        <p className="font-rah text-[6rem] text-[#D8C29D]">Questions?</p>
+                        <p 
+                            className="font-mari text-[6rem] text-[#D8C29D] hover:cursor-pointer hover:opacity-[.5]"
+                            onClick={handleContact}>CONTACT US</p>
+                    </div>
+                </section>
+                <LazyLoadComponent>
+                    <section>
+                    <CarouselPage/>
                     </section>
                 </LazyLoadComponent>
                 <LazyLoadComponent>

@@ -47,7 +47,7 @@ export default function SuccessTxt({text}) {
      animate="visible"
    >
      {letters.map((letter, index) => (
-       <motion.span className="font-larissa text-black hover:text-[#d6d6d6]" variants={child} key={index} >
+       <motion.span className="" variants={child} key={index} >
          {letter === " " ? "\u00A0" : letter}
        </motion.span>
      ))}

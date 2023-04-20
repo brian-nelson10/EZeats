@@ -43,3 +43,8 @@
     content: attr(data-front);
     transform: translateY(0) rotateX(0);
 }
+.truckBg {
+    background: url("../assets/images/eztruck.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}

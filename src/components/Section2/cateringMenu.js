@@ -1,6 +1,7 @@
 import React from "react";
 import "../Section1/section.css";
 import { AnimatePresence, motion } from "framer-motion";
+import { useNavigate } from "react-router";
 
 const pack = {
     initial: {
@@ -49,7 +50,6 @@ const menuItem = {
         transition: { duration: 1, ease: "easeInOut" }
     }
 }
-
 const wordVariants = {
     hovered: {
       y: [0, -2, 0, 2, 0],
@@ -57,7 +57,10 @@ const wordVariants = {
     }
   }
 export default function CateringMenu() {
-
+    const navigate = useNavigate();
+    function handleCaterOrder() {
+        navigate("/caterorder")
+    };
     return (
         <AnimatePresence>
             <div className="gradient3 w-screen z-50 -mt-[17rem] pb-[16rem]" id="menuComponent" >
@@ -220,8 +223,11 @@ export default function CateringMenu() {
                             </motion.div>
                             <motion.div
                                 variants={wordVariants}
-                                whileHover="hovered">
+                                whileHover="hovered"
+                                >
                             <motion.div
+                                onClick={handleCaterOrder}
+                                viewport={{ once: true }}
                                 variants={pack2}
                                 initial="initial"
                                 whileInView="animate"

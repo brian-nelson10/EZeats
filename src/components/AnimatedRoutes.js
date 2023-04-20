@@ -4,6 +4,7 @@ import { AnimatePresence } from 'framer-motion';
 import Home from '../pages/Home';
 import Contact from '../pages/Contact';
 import Catering from "../pages/Catering";
+import FoodTruck from "../pages/FoodTruck";
 
 function AnimatedRoutes() {
     const location = useLocation();
@@ -27,10 +28,10 @@ function AnimatedRoutes() {
               path="/catering"
               exact element={<Catering/>}
               />
-              {/* <Route
+              <Route
               path="/foodtruck"
-              element={}
-              /> */}
+              element={<FoodTruck/>}
+              />
           </Routes>
           </AnimatePresence>
     );
