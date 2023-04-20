@@ -72,7 +72,6 @@ const Catering = () => {
     function handleContact() {
         navigate("/contact")
     };
-
     return (
         <AnimatePresence mode="wait">
             <motion.section
@@ -107,7 +106,7 @@ const Catering = () => {
                     variants={containerVar}
                     initial="hidden"
                     animate="visible"
-                    className="bg-transparent overflow-hiden px-[5rem] mt-[8rem] z-20 h-auto">
+                    className="bg-transparent overflow-hiden px-[5rem] -mt-[22rem] mb-[28rem] z-20 h-auto">
                         <motion.div 
                             className="px-10"
                             initial="initial"
@@ -115,14 +114,14 @@ const Catering = () => {
                             variants={header1}>
                             <p className="tracking-wide text-[3.5rem] font-rah text-[#D8C29D] text-center">Let our catering team create an elegant and customized package for you, offering a range of traditional dishes and flavors to suit any event or occasion.</p>
                         </motion.div>
-                        
                 </motion.section>
+
                 <hr className="border-6 border-[#D8C29D]"/>
                 <motion.section
                     variants={containerVar}
                     initial="hidden"
                     animate="visible"
-                    className="bg-transparent overflow-hiden grid grid-cols-3 px-[5rem] gap-[2rem] pt-[5rem] z-20">
+                    className="bg-transparent overflow-hiden grid grid-cols-3 mt-[8rem] px-[5rem] gap-[2rem] pt-[5rem] z-20">
                     <motion.div
                         variants={divVariants}
                         className="bottom-0"
@@ -138,7 +137,7 @@ const Catering = () => {
                     </motion.div>
                 </motion.section>
                 <LazyLoadComponent>
-                    <section style={{ y: fallY }}>
+                    <section className="-mt-[20rem]" style={{ y: fallY }}>
                         <CateringMenu/>
                     </section>
                 </LazyLoadComponent>
