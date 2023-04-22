@@ -172,7 +172,7 @@ export default function Hamburger() {
   
   return (
     <>
-      <nav className="fixed ml-[8rem] z-50">
+      <nav className="fixed lg:ml-[8rem] z-50">
         <motion.div
           layout
           className="xl:container-fluid xl:pr-6 hover:cursor-pointer"

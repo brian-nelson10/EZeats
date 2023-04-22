@@ -4,10 +4,10 @@ import Image from "../Image";
 import webImg from "../../assets/web/beans2.webp";
 import img from "../../assets/images/beans2.png";
 
-const Beans = () => {
+const BeansMobile = () => {
     // const x = useMotionValue(0);
     const { scrollYProgress } = useScroll();
-    const fallY = useTransform(scrollYProgress, [0, 1], [-10, 100]);
+    const fallY = useTransform(scrollYProgress, [0, 1], [50, 10]);
    
 
     const rotater = {
@@ -43,7 +43,7 @@ const Beans = () => {
             variants={rotater}
             initial="initial"
             animate="animate"
-            className="beanImg absolute w-[80%] h-[80%] -ml-[5rem] lg:ml-0 md:w-[40%] md:h-[40%] lg:w-[28%] lg:h-[28%] z-10 " 
+            className="beanImg absolute w-[80%] h-[80%] -ml-[6rem] lg:ml-0 md:w-[40%] md:h-[40%] z-10 " 
             style={{y: fallY}}>
             <Image
                 srcSet={webImg}
@@ -53,4 +53,4 @@ const Beans = () => {
         </motion.div>
     )
 }
-export default Beans;
+export default BeansMobile;

@@ -7,25 +7,27 @@ import Img3 from "../../assets/carousel/3.JPG";
 // import Img5 from "../../assets/carousel/5.JPG";
 
 const HeroCarousel = () => (
-    <div className="w-screen h-screen z-10">
+    <div className="h-[50rem] w-screen lg:w-screen lg:h-screen z-10">
     <Carousel 
+        
         interval="6000"
-        className="z-10">
+        className="z-10"
+        >
       <img
           draggable="false"
-          className="object-cover z-10"
+          className="object-cover h-[50rem] lg:h-auto z-10"
           src={Img}
           alt=""
         />
         <img
           draggable="false"
-          className="object-cover"
+          className="object-cover h-[50rem] lg:h-auto"
           src={Img2}
           alt=""
         />
         <img
           draggable="false"
-          className="object-cover"
+          className="object-cover h-[50rem] lg:h-auto"
           src={Img3}
           alt=""
         />

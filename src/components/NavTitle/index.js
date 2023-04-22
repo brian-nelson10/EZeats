@@ -71,7 +71,7 @@ const NavTitle = ({ text }) => {
                 animate={scroll ? "visible" : "exit"}
                 className="z-20 absolute inset-0 flex -mt-6 text-center items-center justify-center mx-[1rem]">
                 {letters.map((letter, index) => (
-                    <motion.span className="font-mari font-bold text-[4rem] tracking-wide text-[#D8C29D] hover:cursor-pointer " variants={child} key={index} >
+                    <motion.span className="font-mari font-bold text-[2rem] lg:text-[4rem] tracking-wide text-[#D8C29D] hover:cursor-pointer " variants={child} key={index} >
                         {letter === " " ? "\u00A0" : letter}
                     </motion.span>
                 ))}

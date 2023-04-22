@@ -53,17 +53,17 @@ export default function Section2() {
     
     return (
         <AnimatePresence>
-        <div className="gradient2 w-screen z-50 -mt-[13rem] pb-[16rem]" id="menuComponent" >
+        <div className="gradient2 w-screen z-50 -mt-[18rem] xl:-mt-[13rem] xl:pb-[16rem]" id="menuComponent" >
             <motion.div className="container flex-wrap">
                 <motion.div className="aboutHero grid w-screen items-center justify-center">
-                    <div className="mt-[5rem] -mb-[1.5rem] text-center font-mari tracking-widest text-[8rem] text-[#D8C29D]">
+                    <div className="mt-[5rem] mb-[2rem] xl:-mb-[1.5rem] text-center font-mari tracking-widest text-[4rem] md:text-[5rem] lg:text-[6rem] xl:text-[8rem] text-[#D8C29D]">
                         <motion.div
                             className="flex flex-row gap-6"
                             variants={pack}
                             initial="initial"
                             whileInView="animate">
-                                <svg className="mt-12" version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="64.000000pt" height="64.000000pt" viewBox="0 0 64.000000 64.000000"
+                                <svg className="mt-8 xl:mt-12 h-[34pt] w-[34pt] xl:h-[64pt] xl:w-[64pt]" version="1.0" xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 64.000000 64.000000"
  preserveAspectRatio="xMidYMid meet">
 
 <g transform="translate(0.000000,64.000000) scale(0.100000,-0.100000)"
@@ -71,8 +71,8 @@ fill="#D8C29D" stroke="none">
 <path d="M199 483 c-62 -82 -113 -155 -113 -163 0 -16 222 -310 234 -310 12 0
 234 294 234 310 0 16 -222 310 -234 310 -4 0 -59 -66 -121 -147z"/>
 </g>
-</svg> MENU <svg className="mt-12" version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="64.000000pt" height="64.000000pt" viewBox="0 0 64.000000 64.000000"
+</svg> MENU <svg className="mt-8 xl:mt-12 h-[34pt] w-[34pt] xl:h-[64pt] xl:w-[64pt]" version="1.0" xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 64.000000 64.000000"
  preserveAspectRatio="xMidYMid meet">
 
 <g transform="translate(0.000000,64.000000) scale(0.100000,-0.100000)"
@@ -83,33 +83,25 @@ fill="#D8C29D" stroke="none">
 </svg></motion.div>
                     </div>
                 </motion.div>
-                <section className="container py-[1rem] w-5/6 bg-[#D8C29D] shadow-[1px_35px_35px_2px_rgba(0,0,0,0.5)] -mt-[2rem] md:mt-[3rem] md:mx-auto items-center justify-center text-center h-[220rem] md:h-[100rem] md:ml-[15rem] rounded-xl z-50 bg-fixed bg-deco">
-                    {/* <motion.div
-                        variants={pack}
-                        initial="initial"
-                        whileInView="animate"
-                        className="p-2 md:p-5 font-rah text-[3rem] md:text-[5rem] text-[#D8C29D] tracking-wide">
-                        Lunch ♦️ Dinner
-                    </motion.div> */}
-
+                <section className="container py-[1rem] xl:w-5/6 bg-[#D8C29D] shadow-[1px_35px_35px_2px_rgba(0,0,0,0.5)] -mt-[2rem] md:mt-[3rem] md:mx-auto items-center justify-center text-center h-auto xl:h-[220rem] md:h-[100rem] md:ml-[15rem] rounded-xl z-50 bg-fixed bg-deco">
                     <div className="container my-20 px-6 mx-auto text-xl">
                         <motion.div
                             variants={pack2}
                             initial="initial"
                             whileInView="animate" 
-                            className="block mx-[18rem] bg-[#D8C29D] py-[2rem] mb-[2rem] border-seperate border-2 border-[#023047] rounded-lg shadow-lg">
+                            className="block xl:mx-[18rem] bg-[#D8C29D] py-[2rem] mb-[2rem] border-seperate border-2 border-[#023047] rounded-lg shadow-lg">
                             <h1 className="font-mari text-[2rem] mt-[.5rem] text-center text-[#023047]">Moroccan Whole Chicken</h1>
                             <p className="font-rah text-[1rem] tracking-widest font-bold text-center text-[#023047] mt-8">Marinated moroccan style whole rotisserie chicken</p> 
                             <p className="font-rah text-[1rem] tracking-widest font-bold text-center text-[#023047] mt-4">with sauce, rolls, and two family style sides.</p> 
                             <p className="font-mari text-[2rem] tracking-wide font-bold text-center text-[#023047] mt-4 mb-1">$ 30</p> 
                         </motion.div>
                         <div className="grid gap-6 lg:gap-x-12">
-                            <div className="grid gap-4 grid-cols-3 mb-6 lg:mb-0">
+                            <div className="grid gap-4 xl:grid-cols-3 mb-6 lg:mb-0 ">
                                 <motion.div 
                                     variants={pack2}
                                     initial="initial"
                                     whileInView="animate" 
-                                    className="block border-solid border-[#023047] border-seperate border-2 rounded-lg shadow-lg py-[1rem] my-[3rem] h-[30rem] bg-[#D8C29D]">
+                                    className="block w-[160%] xl:w-[100%] ml-1 border-solid border-[#023047] border-seperate border-2 rounded-lg shadow-lg py-[1rem] xl:my-[3rem] xl:h-[30rem] bg-[#D8C29D]">
                                         <motion.div
                                             variants={pack}
                                             className="font-mari tracking-wide text-[2rem] mt-[.5rem] text-center text-[#023047]">
@@ -163,7 +155,7 @@ fill="#D8C29D" stroke="none">
                                     variants={pack2}
                                     initial="initial"
                                     whileInView="animate" 
-                                    className="block col-span-2 border-spacing-[3rem] bg-[#D8C29D] border-seperate border-2 border-solid border-[#023047] rounded-lg shadow-lg py-[2rem] h-[50rem]">
+                                    className="block col-span-2 border-spacing-[3rem] bg-[#D8C29D] border-seperate border-2 border-solid border-[#023047] rounded-lg shadow-lg py-[2rem] sl:h-[50rem]">
                                     {/* <div className="p-6 border-black border-gray-300 bordertext-center">
 
                                     </div> */}
@@ -264,7 +256,7 @@ fill="#D8C29D" stroke="none">
                             variants={pack2}
                             initial="initial"
                             whileInView="animate" 
-                            className="block mx-[15rem] bg-[#D8C29D] mt-[3rem] py-[2rem] mb-[2rem] border-seperate border-2 border-[#023047] rounded-lg shadow-lg">
+                            className="block xl:mx-[15rem] bg-[#D8C29D] mt-[3rem] py-[2rem] mb-[2rem] border-seperate border-2 border-[#023047] rounded-lg shadow-lg">
                             <h1 className="font-mari text-[2rem] mt-[.5rem] text-center text-[#023047]">Moroccan Bread Pudding</h1>
                             <p className="font-rah text-[1rem] tracking-widest font-bold text-center text-[#023047] mt-8">Moroccan Bread, Raisins, Streussel Topping</p> 
                             <p className="font-rah text-[1rem] tracking-widest font-bold text-center text-[#023047] mt-4">with Saffron Ice Cream</p> 

@@ -27,6 +27,13 @@
     background-position: 50%;
     background-repeat: no-repeat;
 }
+.bg-contactMobile {
+  background: url("../../assets/carousel/2.JPG");
+  background-position: fixed;
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
 
 .contactImg2 {
     z-index: 1 !important;

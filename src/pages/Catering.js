@@ -6,7 +6,9 @@ import Hamburger from "../components/Hamburger";
 import Section5 from "../components/Section5";
 import Footer from "../components/Footer";
 import ContactTitle from "../components/NavTitle/contactTitle";
-import img from "../assets/images/filtertruck.png"
+import img from "../assets/carousel/3.JPG";
+import img2 from "../assets/carousel/1.JPG";
+import img3 from "../assets/carousel/2.JPG";
 import CateringMenu from "../components/Section2/cateringMenu";
 import CarouselPage from "../components/Carousel";
 import { useNavigate } from "react-router";
@@ -66,7 +68,7 @@ const Catering = () => {
         typeof windows !== "undefined" && window.scrollTo(0, 0);
     }, []);
     const { scrollYProgress } = useScroll();
-    const fallY = useTransform(scrollYProgress, [0, 1], [-500, -100]);
+    const fallY = useTransform(scrollYProgress, [0, 1], [-100, 300]);
     const navigate = useNavigate();
 
     function handleContact() {
@@ -75,7 +77,7 @@ const Catering = () => {
     return (
         <AnimatePresence mode="wait">
             <motion.section
-                className="square gradient3"
+                className="square gradient3 overflow-hidden"
                 variants={main}
                 initial="initial"
                 animate="animate"
@@ -92,7 +94,7 @@ const Catering = () => {
                         <OrderButton />
                     </div>
                 </section>
-                <section className="h-[50rem] gradient3" >
+                <section className="h-[50rem] gradient3  overflow-hidden" >
                     <div className="px-[9rem] py-[10rem]">
                         <div
                             className="grid mt-[2rem]">
@@ -106,7 +108,7 @@ const Catering = () => {
                     variants={containerVar}
                     initial="hidden"
                     animate="visible"
-                    className="bg-transparent overflow-hiden px-[5rem] -mt-[22rem] mb-[28rem] z-20 h-auto">
+                    className="bg-transparent overflow-hiden px-[5rem] -mt-[22rem] mb-[28rem] z-20 h-auto overflow-hidden">
                         <motion.div 
                             className="px-10"
                             initial="initial"
@@ -117,27 +119,28 @@ const Catering = () => {
                 </motion.section>
 
                 <hr className="border-6 border-[#D8C29D]"/>
+                <LazyLoadComponent>
                 <motion.section
                     variants={containerVar}
                     initial="hidden"
                     animate="visible"
-                    className="bg-transparent overflow-hiden grid grid-cols-3 mt-[8rem] px-[5rem] gap-[2rem] pt-[5rem] z-20">
+                    className="bg-transparent grid grid-cols-3 mt-[8rem] px-[5rem] gap-[2rem] pt-[5rem] z-20" style={{ y: fallY }}>
                     <motion.div
                         variants={divVariants}
                         className="bottom-0"
-                        style={{ y: fallY }}>
-
+                        >
                         <img className="h-[35rem] w-[45rem] rounded-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,1)] z-10" src={img} alt="" />
                     </motion.div>
-                    <motion.div variants={divVariants} className="" style={{ y: fallY }}>
-                        <img className="h-[35rem] w-[45rem] rounded-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,1)]" src={img} alt="" />
+                    <motion.div variants={divVariants} className="">
+                        <img className="h-[35rem] w-[45rem] rounded-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,1)]" src={img2} alt="" />
                     </motion.div>
-                    <motion.div variants={divVariants} className="" style={{ y: fallY }}>
-                        <img className="h-[35rem] w-[45rem] rounded-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,1)]" src={img} alt="" />
+                    <motion.div variants={divVariants} className="">
+                        <img className="h-[35rem] w-[45rem] rounded-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,1)]" src={img3} alt="" />
                     </motion.div>
                 </motion.section>
+                </LazyLoadComponent>
                 <LazyLoadComponent>
-                    <section className="-mt-[20rem]" style={{ y: fallY }}>
+                    <section className="-mt-[20rem]">
                         <CateringMenu/>
                     </section>
                 </LazyLoadComponent>

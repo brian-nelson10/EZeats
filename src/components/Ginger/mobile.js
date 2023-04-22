@@ -4,10 +4,10 @@ import Image from "../Image";
 import webImg from "../../assets/web/ginger.webp";
 import img from "../../assets/images/ginger.png";
 
-export default function Ginger() {
+export default function GingerMobile() {
     const { scrollYProgress } = useScroll();
   
-    const fallY = useTransform(scrollYProgress, [0, 1], [-50, 500]);
+    const fallY = useTransform(scrollYProgress, [0, 1], [-50, -150]);
     const rotater = {
         initial: {
             x: -1000,
@@ -32,13 +32,12 @@ export default function Ginger() {
             variants={rotater}
             initial="initial"
             whileInView="animate"
-            className="z-30 absolute w-[50%] h-[50%] -left-[5rem] -top-[10rem] xl:w-[20%] xl:h-[20%] xl:-left-[7rem] xl:-top-[28rem]" >
+            className="z-30 absolute w-[50%] h-[50%] -left-[6rem] -top-[10.5rem] " >
             <Image
                 srcSet={webImg}
                 fallback={img}
                 className=""
-                
             />
         </motion.div>
     )
-}
+};

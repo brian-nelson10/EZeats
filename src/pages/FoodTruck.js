@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 import OrderButton from "../components/OrderButton";
@@ -37,18 +38,18 @@ const header = {
         }
     }
 }
-// const header1 = {
-//     initial: {
-//         opacity: 0
-//     },
-//     animate: {
-//         opacity: 1,
-//         transition: {
-//             duration: 1.8,
-//             delay: .75
-//         }
-//     }
-// }
+const header1 = {
+    initial: {
+        opacity: 0
+    },
+    animate: {
+        opacity: 1,
+        transition: {
+            duration: 1.8,
+            delay: .75
+        }
+    }
+}
 const divVariants = {
     hidden: { opacity: 0 },
     visible: {opacity: 1},
@@ -58,15 +59,36 @@ const containerVar1 = {
     hidden: { opacity: 0, x: -100 },
     visible: { transition: { delay: 1, staggerChildren: .2, type: "spring", bounce: .002, restDelta: .01 }, opacity: 1, x: 0 }
 };
-
+const wordVariants = {
+    hovered: {
+      y: [0, -2, 0, 2, 0],
+      transition: { duration: .5, ease: 'easeInOut' }
+    }
+  }
 const FoodTruck = () => {
     React.useState(() => {
         typeof windows !== "undefined" && window.scrollTo(0, 0);
     }, []);
     const { scrollYProgress } = useScroll();
     const fallY = useTransform(scrollYProgress, [0, 1], [20, -160]);
-
-
+    const [isHover, setIsHover] = useState(false);
+    const [isHoverReq, setIsHoverReq] = useState(false);
+    const navigate = useNavigate();
+    const handleHover = () => {
+        setIsHover(true);
+    };
+    const handleHoverLeave = () => {
+        setIsHover(false);
+    };
+    const handleHoverReq = () => {
+        setIsHoverReq(true);
+    };
+    const handleHoverLeaveReq = () => {
+        setIsHoverReq(false);
+    };
+    function handleContact() {
+        navigate("/contact")
+    };
     return (
         <AnimatePresence mode="wait">
             <motion.section
@@ -101,9 +123,8 @@ const FoodTruck = () => {
                     variants={containerVar1}
                     initial="hidden"
                     whileInView="visible"
-                    className="bg-transparent overflow-hiden px-[5rem] gap-[2rem] z-20"
+                    className="bg-transparent overflow-hidden px-[5rem] gap-[2rem] z-20"
                     style={{y: fallY}}>
-                    
             <div className="container mx-[8rem]">
                 <div className="flex flex-col lg:flex-row justify-center items-strech mx-4">
                     <div className="lg:w-4/12 flex justify-center items-center">
@@ -113,7 +134,6 @@ const FoodTruck = () => {
                             <motion.p 
                                 initial={{opacity: 0}}
                                 animate={{opacity: 1, transition: {delay: 2, duration: 1.4}}}
-                                
                                 className="lg:w-7/12 lg:w-11/12 xl:w-10/12 mt-4 lg:mt-5 font-mari text-[2rem] font-bold tracking-wide text-[#D8C29D]">- YaYa</motion.p>
                         </div>
                     </div>
@@ -122,27 +142,50 @@ const FoodTruck = () => {
                             <Image
                                 srcset={imgWeb}
                                 fallback={img}
-                                alt="champagne img"/>
+                                alt="food truck"
+                                className={isHover ? "z-10 opacity-25" : "z-10"}/>
+                                <motion.button
+                                    className="absolute z-20 top-1/2 right-1/2 font-mari text-[3rem] font-bold tracking-wide text-[#D8C29D] border-2 border-[#D8C29D] px-6 py-2 rounded-lg bg-[#07252d]"
+                                    variants={header1}
+                                    initial="initial"
+                                    animate="animate"
+                                    onMouseEnter={handleHover}
+                                    onMouseLeave={handleHoverLeave}>
+                                        <motion.p
+                                            variants={wordVariants}
+                                            whileHover="hovered">Find Us.</motion.p>
+                                </motion.button>
                         </div>
                     </div>
                 </div>
             </div>
                 </motion.section>
-
                 <motion.section
                     variants={containerVar1}
                     initial="hidden"
                     whileInView="visible"
                     className="bg-transparent overflow-hiden px-[5rem] gap-[2rem] z-20"
                     style={{y: fallY}}>
-                    
             <div className="container mx-[8rem]">
                 <div className="flex flex-col lg:flex-row justify-center items-strech mx-4">
                     <div className="lg:w-8/12 mt-6 lg:mt-8 lg:mt-0">
                     <Image
                                 srcset={imgWeb}
                                 fallback={img}
-                                alt="champagne img"/>
+                                alt="food truck alternate"
+                                className={isHoverReq ? "z-10 opacity-25" : "z-10"}/>
+                                 <motion.button
+                                    className="absolute z-20 top-[50%] right-[56%] font-mari text-[3rem] font-bold tracking-wide text-[#D8C29D] border-2 border-[#D8C29D] px-6 py-2 rounded-lg bg-[#07252d]"
+                                    variants={header1}
+                                    initial="initial"
+                                    animate="animate"
+                                    onMouseEnter={handleHoverReq}
+                                    onMouseLeave={handleHoverLeaveReq}
+                                    onClick={handleContact}>
+                                        <motion.p
+                                            variants={wordVariants}
+                                            whileHover="hovered">Request Us.</motion.p>
+                                </motion.button>
                     </div>
                     <div className=" lg:w-4/12 flex justify-center items-center mt-[10rem]">
                         <div className="relative w-full h-full">
@@ -153,28 +196,13 @@ const FoodTruck = () => {
                             <motion.p 
                                 initial={{opacity: 0}}
                                 animate={{opacity: 1, transition: {delay: 2, duration: 1.4}}}
-                                
                                 className="lg:w-7/12 lg:w-11/12 xl:w-10/12 mt-4 lg:mt-5 font-mari text-[2rem] font-bold tracking-wide text-[#D8C29D]">- YaYa</motion.p>
                         </motion.div>
-                           
                         </div>
                     </div>
                 </div>
             </div>
                 </motion.section>
-                {/* <motion.section
-                    variants={containerVar}
-                    initial="hidden"
-                    animate="visible"
-                    className="bg-transparent overflow-hiden px-[5rem] mt-[18rem] z-20 h-[35rem]">
-                        <motion.div 
-                            className="px-10"
-                            initial="initial"
-                            whileInView="animate" 
-                            variants={header1}>
-                            <p className="tracking-wide text-[3.5rem] font-rah text-[#D8C29D] text-center">Find Our Food Truck.</p>
-                        </motion.div>
-                </motion.section> */}
                 <LazyLoadComponent>
                     <section className="mt-[2rem]">
                         <Section5 />

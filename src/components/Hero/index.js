@@ -72,7 +72,7 @@ const Hero = ({ text }) => {
                         animate={scroll ? "exit" : "visible"}
                         className="z-20 absolute inset-0 flex my-2 text-center items-center justify-center mx-[3rem]">
                         {letters.map((letter, index) => (
-                            <motion.span className="font-mari text-[14rem] tracking-wide text-[#D8C29D] hover:cursor-pointer " variants={child} key={index} >
+                            <motion.span className="font-mari text-[5.5rem] lg:text-[14rem] tracking-wide text-[#D8C29D] hover:cursor-pointer " variants={child} key={index} >
                                 {letter === " " ? "\u00A0" : letter}
                             </motion.span>
                         ))}
