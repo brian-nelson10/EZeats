@@ -53,7 +53,7 @@ export default function Section2() {
     
     return (
         <AnimatePresence>
-        <div className="gradient2 w-screen z-50 -mt-[18rem] xl:-mt-[13rem] xl:pb-[16rem]" id="menuComponent" >
+        <div className="gradient2 w-screen h-auto z-50 -mt-[18rem] xl:-mt-[13rem] xl:pb-[16rem]" id="menuComponent" >
             <motion.div className="container flex-wrap">
                 <motion.div className="aboutHero grid w-screen items-center justify-center">
                     <div className="mt-[5rem] mb-[2rem] xl:-mb-[1.5rem] text-center font-mari tracking-widest text-[4rem] md:text-[5rem] lg:text-[6rem] xl:text-[8rem] text-[#D8C29D]">
@@ -83,7 +83,7 @@ fill="#D8C29D" stroke="none">
 </svg></motion.div>
                     </div>
                 </motion.div>
-                <section className="container py-[1rem] xl:w-5/6 bg-[#D8C29D] shadow-[1px_35px_35px_2px_rgba(0,0,0,0.5)] -mt-[2rem] md:mt-[3rem] md:mx-auto items-center justify-center text-center h-auto xl:h-[220rem] md:h-[100rem] md:ml-[15rem] rounded-xl z-50 bg-fixed bg-deco">
+                <section className="container py-[1rem] xl:w-5/6 bg-[#D8C29D] shadow-[1px_35px_35px_2px_rgba(0,0,0,0.5)] -mt-[2rem] md:mt-[3rem] md:mx-auto items-center justify-center text-center h-auto xl:h-[117rem] md:h-[100rem] md:ml-[15rem] rounded-xl z-50 bg-fixed bg-deco">
                     <div className="container my-20 px-6 mx-auto text-xl">
                         <motion.div
                             variants={pack2}
@@ -211,7 +211,7 @@ fill="#D8C29D" stroke="none">
                                                 </motion.li>
                                                 <motion.li variants={menuItem} initial={{opacity: 0}} className="grid grid-cols-2 mb-[2rem]">
                                                 <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
-                                                    <div>Grilled Tempeh</div><div> <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill="#023047" fill-rule="evenodd" clip-rule="evenodd" width="20px" height="20px" viewBox="0 0 512 512"><g fill-rule="nonzero"><path d="M255.998 0c70.69 0 134.694 28.658 181.017 74.982C483.342 121.308 512 185.312 512 256.002c0 70.689-28.658 134.69-74.985 181.016C390.692 483.342 326.688 512 255.998 512c-70.689 0-134.687-28.658-181.017-74.982C28.657 390.689 0 326.691 0 256.002c0-70.69 28.657-134.694 74.981-181.017C121.308 28.658 185.309 0 255.998 0z"/><path fill="#fff" d="M283.004 162.24h63.307l-46.503 187.523h-87.61L165.691 162.24h63.307l25.505 119.116h2.7z"/></g></svg>
+                                                    <div>Grilled Tempeh</div><div> <svg xmlns="http://www.w3.org/2000/svg" shapeRendering="geometricPrecision" textRendering="geometricPrecision" imageRendering="optimizeQuality" fill="#023047" fillRule="evenodd" clipRule="evenodd" width="20px" height="20px" viewBox="0 0 512 512"><g fillRule="nonzero"><path d="M255.998 0c70.69 0 134.694 28.658 181.017 74.982C483.342 121.308 512 185.312 512 256.002c0 70.689-28.658 134.69-74.985 181.016C390.692 483.342 326.688 512 255.998 512c-70.689 0-134.687-28.658-181.017-74.982C28.657 390.689 0 326.691 0 256.002c0-70.69 28.657-134.694 74.981-181.017C121.308 28.658 185.309 0 255.998 0z"/><path fill="#fff" d="M283.004 162.24h63.307l-46.503 187.523h-87.61L165.691 162.24h63.307l25.505 119.116h2.7z"/></g></svg>
                                                     </div>
                                                     </div>
                                                     
@@ -235,7 +235,7 @@ fill="#D8C29D" stroke="none">
                                                 </motion.li>
                                                 <motion.li variants={menuItem} initial={{opacity: 0}} className="grid grid-cols-2 mb-[2rem]">
                                                 <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
-                                                    <div>Plant Based Protein Balls</div><div> <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill="#023047" fill-rule="evenodd" clip-rule="evenodd" width="20px" height="20px" viewBox="0 0 512 512"><g fill-rule="nonzero"><path d="M255.998 0c70.69 0 134.694 28.658 181.017 74.982C483.342 121.308 512 185.312 512 256.002c0 70.689-28.658 134.69-74.985 181.016C390.692 483.342 326.688 512 255.998 512c-70.689 0-134.687-28.658-181.017-74.982C28.657 390.689 0 326.691 0 256.002c0-70.69 28.657-134.694 74.981-181.017C121.308 28.658 185.309 0 255.998 0z"/><path fill="#fff" d="M283.004 162.24h63.307l-46.503 187.523h-87.61L165.691 162.24h63.307l25.505 119.116h2.7z"/></g></svg>
+                                                    <div>Plant Based Protein Balls</div><div> <svg xmlns="http://www.w3.org/2000/svg" shapeRendering="geometricPrecision" textRendering="geometricPrecision" imageRendering="optimizeQuality" fill="#023047" fillRule="evenodd" clipRule="evenodd" width="20px" height="20px" viewBox="0 0 512 512"><g fillRule="nonzero"><path d="M255.998 0c70.69 0 134.694 28.658 181.017 74.982C483.342 121.308 512 185.312 512 256.002c0 70.689-28.658 134.69-74.985 181.016C390.692 483.342 326.688 512 255.998 512c-70.689 0-134.687-28.658-181.017-74.982C28.657 390.689 0 326.691 0 256.002c0-70.69 28.657-134.694 74.981-181.017C121.308 28.658 185.309 0 255.998 0z"/><path fill="#fff" d="M283.004 162.24h63.307l-46.503 187.523h-87.61L165.691 162.24h63.307l25.505 119.116h2.7z"/></g></svg>
                                                     </div>
                                                     </div>
                                                     

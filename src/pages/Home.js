@@ -23,6 +23,7 @@ import PepperMobile from "../components/Pepper/mobile";
 import OnionMobile from "../components/Onion/mobile";
 import Section1Mobile from "../components/Section1/mobile";
 import Section4Mobile from "../components/Section4/mobile";
+import Section5Mobile from "../components/Section5/mobile";
 
 const main = {
     initial: {
@@ -132,7 +133,7 @@ const Home = () => {
                     </section>
                     <section className="z-10 relative">
                         <LazyLoadComponent>
-                            <Section5 />
+                        {width < breakpoint ? <Section5Mobile/> : <Section5 />}
                         </LazyLoadComponent>
                     </section>
                     <section className="">

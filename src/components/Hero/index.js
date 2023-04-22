@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import HeroCarousel from "../HeroCarousel";
 import "./hero.css";
@@ -51,17 +51,18 @@ const Hero = ({ text }) => {
             },
         },
     };
-    const isScroll = () => {
-        if (window.scrollY >= 100) {
-            setScroll(true)
-            console.log(setScroll);
-        } 
-        if (window.scrollY <= 90) {
-            setScroll(false)
+    useEffect(() => {
+        const isScroll = () => {
+            if (window.scrollY >= 100) {
+                setScroll(true)
+            } 
+            if (window.scrollY <= 90) {
+                setScroll(false)
+            }
         }
-    }
-    window.addEventListener('scroll', isScroll)
-   
+        window.addEventListener('scroll', isScroll);
+        return () => window.removeEventListener("scroll", isScroll);
+    }, []);
     return (
         <>
             <AnimatePresence mode="wait">

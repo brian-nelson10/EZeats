@@ -5,7 +5,7 @@ import ScrollTop from './components/ScrollTop';
 
 function App() {
   return (
-      <Router basename="/EZeats">
+      <Router basename={process.env.PUBLIC_URL}>
         <ScrollTop />
         <AnimatedRoutes className="overflow-hidden"/>
       </Router>
