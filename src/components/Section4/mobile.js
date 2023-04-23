@@ -54,11 +54,11 @@ const Section4Mobile = () => {
                 />
                 </motion.div>
                 <motion.div className="-mt-[15rem]" style={{y: fallY}}> 
-               <motion.img style={{rotate: rotateY}} src={pcorn} className="w-[50%] h-[50%] items-center jusitfy-center -ml-[4.5rem] -mt-[45rem]"
+               <motion.img src={pcorn} className="w-[50%] h-[50%] items-center jusitfy-center -ml-[4.5rem] -mt-[45rem]"
                 />
                 </motion.div>
                 <motion.div className="mt-[15rem] " style={{y: fallY}}> 
-               <motion.img style={{rotate: rotateY}} src={seeds} className="w-[50%] h-[50%] items-center jusitfy-center ml-[13rem] -mt-[20rem]"
+               <motion.img src={seeds} className="w-[50%] h-[50%] items-center jusitfy-center ml-[13rem] -mt-[20rem]"
                 />
                 </motion.div>
       <motion.div className="-mt-[5rem] " style={{y: fallY}}> 

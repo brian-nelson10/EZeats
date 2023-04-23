@@ -54,7 +54,6 @@ const NavTitle = ({ text }) => {
     const isScroll = () => {
         if (window.scrollY >= 100) {
             setScroll(true)
-            console.log(setScroll);
         }
         if (window.scrollY <= 90) {
             setScroll(false)

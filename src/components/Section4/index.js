@@ -9,13 +9,10 @@ import pcorn from "../../assets/images/peppercorn.png";
 import "../Section1/section.css";
 const Section4 = () => {
   const { scrollYProgress } = useScroll();
-  const rotateY = useTransform(scrollYProgress, [0.75, 1],  [-200, -140]);
-  const rotateYcard = useTransform(scrollYProgress, [0.75, 1], [-200, -150]);
-  const rotateYarug = useTransform(scrollYProgress, [0.5, 1], [-100, -180]);
-  const rotateYgar = useTransform(scrollYProgress, [0.5, 1], [100, 150]);
-  const leftX = useTransform(scrollYProgress, [0, 1], [-1400, 0]);
+  const rotateY = useTransform(scrollYProgress, [0.75, 1],  [-200, -150]);
+  const leftX = useTransform(scrollYProgress, [0, 1], [-500, 0]);
   const rightX = useTransform(scrollYProgress, [0.5, 1], [200, -300]);
-  const fallY = useTransform(scrollYProgress, [0, 1], [-2500, 100]);
+  const fallY = useTransform(scrollYProgress, [0, 1], [-4000, -100]);
   const navigate = useNavigate();
   function handleContact() {
       navigate("/contact");
@@ -26,7 +23,7 @@ const Section4 = () => {
   return (
     
     <>
-    <section className="-mt-[25rem] h-[80rem] px-[2rem] gradient3 pt-[6rem] -mb-[7rem] overflow-hidden">
+    <section className="-mt-[25rem] h-[80rem] px-[2rem] gradient3 pt-[6rem] -mb-[2rem] overflow-hidden">
         <div className="container mt-[25rem] mx-[2rem] ml-[4rem] items-center justify-center text-center bg-contact bg-fixed z-20 relative">
       <motion.div
         style={{ x: leftX }}
@@ -48,25 +45,25 @@ const Section4 = () => {
       </div>
    
       </section>
-      <div className="gradient3 -mt-[45rem] z-10"> 
+      <div className="gradient3 mt-[45rem] z-10"> 
       <motion.div className="-mt-[15rem]"  style={{y: fallY}}> 
-               <motion.img style={{rotate: rotateYcard}} src={cardamom}  className="w-[15%] h-[15%] items-center jusitfy-center ml-[75rem] -mt-[10rem]"
+               <motion.img style={{rotate: rotateY}} src={cardamom}  className="w-[15%] h-[15%] items-center jusitfy-center ml-[75rem] -mt-[10rem]"
                 />
                 </motion.div>
                 <motion.div className="-mt-[10rem]" style={{y: fallY}}> 
-               <motion.img style={{rotate: rotateY}} src={pcorn} className="w-[15%] h-[15%] items-center jusitfy-center ml-[21.5rem] -mt-[10rem]"
+               <motion.img src={pcorn} className="w-[15%] h-[15%] items-center jusitfy-center ml-[21.5rem] -mt-[10rem]"
                 />
                 </motion.div>
                 <motion.div className="mt-[15rem] " style={{y: fallY}}> 
-               <motion.img style={{rotate: rotateY}} src={seeds} className="w-[20%] h-[20%] items-center jusitfy-center ml-[70rem] -mt-[10rem]"
+               <motion.img src={seeds} className="w-[20%] h-[20%] items-center jusitfy-center ml-[70rem] -mt-[10rem]"
                 />
                 </motion.div>
       <motion.div className="-mt-[5rem] " style={{y: fallY}}> 
-               <motion.img style={{rotate: rotateYgar}} src={garlic} className="w-[20%] h-[20%] items-center jusitfy-center ml-[8rem] -mt-[9rem]"
+               <motion.img style={{rotate: rotateY}} src={garlic} className="w-[20%] h-[20%] items-center jusitfy-center ml-[8rem] -mt-[9rem]"
                 />
                 </motion.div>
                 <motion.div className="mt-[35rem] top-0 right-0" style={{y: fallY}}> 
-               <motion.img style={{rotate: rotateYarug}} src={arugula} className=" w-[20%] h-[20%] items-center jusitfy-center ml-[85rem] -mt-[40rem]"
+               <motion.img style={{rotate: rotateY}} src={arugula} className=" w-[20%] h-[20%] items-center jusitfy-center ml-[85rem] -mt-[40rem]"
                 />
                 </motion.div>
                 </div> 

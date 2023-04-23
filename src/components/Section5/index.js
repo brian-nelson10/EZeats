@@ -37,7 +37,7 @@ export default function Section5() {
   
     return (
         
-        <section className="-mb-[4rem] py-[10rem] xl:-mt-[20rem] bg-transparent">
+        <section className="-mb-[4rem] py-[10rem] xl:-mt-[30rem] bg-transparent">
             <div className="">
         <div className="grid grid-cols-3 ">
             <div className="">
@@ -53,9 +53,6 @@ export default function Section5() {
                   animate={x}
                   drag="x"
                   dragConstraints={{ left: -50, right: 40 }}
-                  whileTap={{ cursor: "grabbing" }}
-                  whileHover={{ cursor: "grab" }}
-                  
                 className="text-end -ml-[7rem] w-[90%]">
         <motion.svg xmlns="http://www.w3.org/2000/svg" width="30%" viewBox="0 0 70.744 90.043" className="rotate-[270deg] ">
   <g transform="translate(-5919.641 -1363.532)">

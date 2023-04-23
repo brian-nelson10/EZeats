@@ -24,7 +24,7 @@ import OnionMobile from "../components/Onion/mobile";
 import Section1Mobile from "../components/Section1/mobile";
 import Section4Mobile from "../components/Section4/mobile";
 import Section5Mobile from "../components/Section5/mobile";
-
+import useWindowSize from '../hooks/useWindowSize';
 const main = {
     initial: {
         clipPath: 'polygon(0 0, 0 0, 0 100%, 0% 100%)',
@@ -64,8 +64,62 @@ const Home = () => {
         React.useState(() => {
             typeof windows !== "undefined" && window.scrollTo(0, 0);
         }, []);
+  //Hook to grab window size
+  const size = useWindowSize();
+
+  // Ref for parent div and scrolling div
+  const app = useRef();
+  const scrollContainer = useRef();
+
+  // Configs
+  const data = {
+    ease: 0.1,
+    current: 0,
+    previous: 0,
+    rounded: 0
+  };
+
+  // Run scrollrender once page is loaded.
+  useEffect(() => {
+    requestAnimationFrame(() => skewScrolling());
+  }, []);
+
+  //set the height of the body.
+  useEffect(() => {
+    setBodyHeight();
+  }, [size.height]);
+
+  //Set the height of the body to the height of the scrolling div
+  const setBodyHeight = () => {
+    document.body.style.height = `${
+      scrollContainer.current.getBoundingClientRect().height
+    }px`;
+  };
+
+  // Scrolling
+  const skewScrolling = () => {
+    //Set Current to the scroll position amount
+    data.current = window.scrollY;
+    // Set Previous to the scroll previous position
+    data.previous += (data.current - data.previous) * data.ease;
+    // Set rounded to
+    data.rounded = Math.round(data.previous * 100) / 100;
+
+    // Difference between
+    const difference = data.current - data.rounded;
+    const acceleration = difference / size.width;
+    const velocity = +acceleration;
+    const skew = velocity * .5;
+
+    //Assign skew and smooth scrolling to the scroll container
+    scrollContainer.current.style.transform = `translate3d(0, -${data.rounded}px, 0) skewY(${skew}deg)`;
+
+    //loop vai raf
+    requestAnimationFrame(() => skewScrolling());
+  };
 
         return (
+            
             <AnimatePresence mode="wait" >
                 <motion.section
                     layout
@@ -75,6 +129,7 @@ const Home = () => {
                     animate="animate"
                     exit="exit"
                 >
+                    
                     <section className="grid grid-cols-3 w-screen z-50 fixed overflow-hidden">
                         <div className="grid items-center justify-end z-40">
                             <Hamburger />
@@ -83,9 +138,12 @@ const Home = () => {
                             <NavTitle text="EZ EATZ" />
                         </div>
                         <div className="grid items-center justify-end lg:mr-4 mt-6 z-50">
+                            
                             <OrderButton />
                         </div>
                     </section>
+                    <div ref={app} className="h-[100%] w-[100%] overflow-hidden gradient3">
+      <div ref={scrollContainer} className="scroll h-[100%] w-[100%] overflow-hidden"> 
                     <section className="z-10 relative">
                         <Hero text="EZ EATZ" />
                     </section>
@@ -99,50 +157,47 @@ const Home = () => {
                     </section>
                     <section
                         className="ingredients z-40 relative">
-                        <LazyLoadComponent>
                         {width < breakpoint ? <GingerMobile/> : <Ginger/>}
                         {width < breakpoint ? <BeansMobile/> : <Beans/>}
-                        </LazyLoadComponent>
-                        <LazyLoadComponent>
                         {width < breakpoint ? <OnionMobile/> : <Onion />}
-                        </LazyLoadComponent>
                     </section>
                     <section className="section-about pt-[200px] pb-[200px] z-30 relative">
-                        <LazyLoadComponent>
                         {width < breakpoint ? <PepperMobile/> : <Pepper/>}
-                        </LazyLoadComponent>
-                        <LazyLoadComponent>
                         {width < breakpoint ? <Section1Mobile/> : <Section1/>}
-                        </LazyLoadComponent>
                     </section>
+                    
                     <section className="z-20 relative" ref={myRef}>
-                        <LazyLoadComponent>
+                        
                             <Section2 />
-                        </LazyLoadComponent>
+                        
                     </section>
                     <section className="z-30 relative">
-                        <LazyLoadComponent>
+                        
                         {width < breakpoint ? "" : <Section3 />}
                             
-                        </LazyLoadComponent>
+                        
                     </section>
                     <section className="z-10 relative">
-                        <LazyLoadComponent>
+                        
                         {width < breakpoint ? <Section4Mobile/> : <Section4 />}
-                        </LazyLoadComponent>
+                       
                     </section>
+                    
                     <section className="z-10 relative">
-                        <LazyLoadComponent>
+                        
                         {width < breakpoint ? <Section5Mobile/> : <Section5 />}
-                        </LazyLoadComponent>
+                        
                     </section>
-                    <section className="">
-                        <LazyLoadComponent>
+                    <section className="z-50">
+                        
                             <Footer />
-                        </LazyLoadComponent>
+                       
                     </section>
+                    </div></div>
+                    
                 </motion.section>
             </AnimatePresence>
+           
         );
     };
     export default Home;

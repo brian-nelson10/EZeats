@@ -30,7 +30,7 @@ const Section3 = () => {
         variants={containerVar}
         initial="hidden"
         whileInView="visible"
-        className="bg-transparent overflow-hiden grid grid-cols-3 px-[5rem] gap-[2rem] h-[25rem] pt-[5rem] z-20"
+        className="bg-transparent grid grid-cols-3 px-[5rem] gap-[2rem] h-[25rem] pt-[5rem] z-20"
         ref={myRef} id="myId" >
       
         <motion.div 

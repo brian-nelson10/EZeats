@@ -4,11 +4,14 @@ import AnimatedRoutes from './components/AnimatedRoutes';
 import ScrollTop from './components/ScrollTop';
 
 function App() {
+  
   return (
+    <>   
       <Router basename={process.env.PUBLIC_URL}>
-        <ScrollTop />
-        <AnimatedRoutes className="overflow-hidden"/>
-      </Router>
+      <ScrollTop />
+      <AnimatedRoutes className="overflow-hidden" />
+    </Router>
+    </>
   );
 }
 

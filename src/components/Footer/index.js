@@ -22,7 +22,7 @@ export default function Footer() {
     navigate('/foodtruck')
   };
   return (
-    <section className="">
+    <section className="bottom-0">
       <div className="z-10 bg-[#07252d] h-[20rem] -mt-[25rem]" />
       <footer aria-label="Site Footer" className="bg-[#05323a] z-20 bottom-0 lg:grid lg:grid-cols-5">
         <div className="relative block h-32 lg:col-span-2 lg:h-full">
