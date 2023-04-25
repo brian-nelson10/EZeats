@@ -45,9 +45,7 @@ const Home = () => {
     const [menuState, setMenuState] = useState(false);
     const handleStateChange = () => {
         setMenuState((prevState) => !prevState);
-        console.log(menuState);
     }
-    
     const [width, setWidth] = React.useState(window.innerWidth);
     const breakpoint = 1250;
     React.useEffect(() => {
@@ -66,7 +64,6 @@ const Home = () => {
         }, []);
   //Hook to grab window size
   const size = useWindowSize();
-
   // Ref for parent div and scrolling div
   const app = useRef();
   const scrollContainer = useRef();
@@ -104,22 +101,17 @@ const Home = () => {
     data.previous += (data.current - data.previous) * data.ease;
     // Set rounded to
     data.rounded = Math.round(data.previous * 100) / 100;
-
     // Difference between
     const difference = data.current - data.rounded;
     const acceleration = difference / size.width;
     const velocity = +acceleration;
     const skew = velocity * .5;
-
     //Assign skew and smooth scrolling to the scroll container
     scrollContainer.current.style.transform = `translate3d(0, -${data.rounded}px, 0) skewY(${skew}deg)`;
-
     //loop vai raf
     requestAnimationFrame(() => skewScrolling());
   };
-
         return (
-            
             <AnimatePresence mode="wait" >
                 <motion.section
                     layout
@@ -129,7 +121,6 @@ const Home = () => {
                     animate="animate"
                     exit="exit"
                 >
-                    
                     <section className="grid grid-cols-3 w-screen z-50 fixed overflow-hidden">
                         <div className="grid items-center justify-end z-40">
                             <Hamburger />
@@ -138,7 +129,6 @@ const Home = () => {
                             <NavTitle text="EZ EATZ" />
                         </div>
                         <div className="grid items-center justify-end lg:mr-4 mt-6 z-50">
-                            
                             <OrderButton />
                         </div>
                     </section>

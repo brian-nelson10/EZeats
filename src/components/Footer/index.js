@@ -23,7 +23,7 @@ export default function Footer() {
   };
   return (
     <section className="bottom-0">
-      <div className="z-10 bg-[#07252d] h-[20rem] -mt-[25rem]" />
+      <div className="z-10 bg-[#07252d] xl:h-[20rem] xl:-mt-[25rem]" />
       <footer aria-label="Site Footer" className="bg-[#05323a] z-20 bottom-0 lg:grid lg:grid-cols-5">
         <div className="relative block h-32 lg:col-span-2 lg:h-full">
           <Image
@@ -126,7 +126,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div className="grid grid-cols-1 items-end justify-end text-end gap-4 sm:grid-cols-2">
+            <div className="grid grid-cols-2 xl:grid-cols-1 items-end justify-end text-end gap-4 sm:grid-cols-2">
               <div>
                 {/* <p className="font-medium text-[#D8C29D]"></p> */}
 
@@ -171,7 +171,7 @@ export default function Footer() {
                 className="grid grid-rows-2 hover:cursor-pointer">
                 <div onClick={() => {
                     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-                  }}className="text-center justify-center items-center grid mb-[1rem] ml-[4rem]">
+                  }} className="xl:text-center xl:justify-center xl:items-center mb-[1rem] ml-[4rem] xl:ml-[4rem]">
                   <motion.svg xmlns="http://www.w3.org/2000/svg" width="30%" viewBox="0 0 70.744 90.043" className="rotate-[180deg]">
                     <g transform="translate(-5919.641 -1363.532)">
                       <path id="Path_87" data-name="Path 87" d="M5869.476,1080.805s1.941-16.7,11.31-26.108,25.953-11.233,25.953-11.233" transform="translate(87.537 372.654)" fill="none" stroke="#e3dac6" strokeWidth="2"></path>
@@ -184,7 +184,7 @@ export default function Footer() {
                   onClick={() => {
                     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
                   }}
-                  className="items-center text-center grid mr-[3rem] font-rah text-[#D8C29D] text-[1rem] md:text-[1.1rem] -mt-[3rem] hover:cursor-pointer">Back Up</div>
+                  className="items-center text-start xl:text-center grid ml-[3rem] xl:mr-[3rem] font-rah text-[#D8C29D] text-[1rem] md:text-[1.1rem] -mt-[3rem] hover:cursor-pointer">Back Up</div>
               </div>
             </div>
           </div>

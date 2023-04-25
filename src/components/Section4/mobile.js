@@ -10,12 +10,10 @@ import "../Section1/section.css";
 const Section4Mobile = () => {
   const { scrollYProgress } = useScroll();
   const rotateY = useTransform(scrollYProgress, [0.75, 1],  [-200, -140]);
-  const rotateYcard = useTransform(scrollYProgress, [0.75, 1], [-200, -150]);
-  const rotateYarug = useTransform(scrollYProgress, [0.5, 1], [-100, -180]);
   const rotateYgar = useTransform(scrollYProgress, [0.5, 1], [10, 50]);
-  const leftX = useTransform(scrollYProgress, [0, 1], [-150, 100]);
-  const rightX = useTransform(scrollYProgress, [0, 1], [300, -300]);
-  const fallY = useTransform(scrollYProgress, [0, 1], [-100, 100]);
+  const leftX = useTransform(scrollYProgress, [0, 1], [-350, 100]);
+  const rightX = useTransform(scrollYProgress, [0, 1], [1000, -300]);
+  const fallY = useTransform(scrollYProgress, [0, 1], [-500, 200]);
   const navigate = useNavigate();
   function handleContact() {
       navigate("/contact");
@@ -27,14 +25,14 @@ const Section4Mobile = () => {
     
     <>
     <section className="-mt-[8rem] h-[80rem] px-[2rem] gradient3 pt-[6rem] -mb-[7rem] overflow-hidden">
-        <div className="container mt-[15rem] mx-[2rem] ml-[1rem] items-center justify-center text-center bg-contactMobile bg-fixed z-20 relative">
+        <div className="container mt-[15rem] items-center justify-center text-center bg-contactMobile bg-fixed z-20 relative">
       <motion.div
         style={{ x: leftX }}
         initial={{opacity: 0}}
         whileInView={{opacity: [.1,.3,.5,.7,.9,1] , transition: {duration: .9, delay: .6}}}
-        className="contactText"
+        className="contactText mb-10"
       >
-        <div onClick={handleContact} className="font-mari text-[3rem] tracking-wide text-[#D8C29D] hover:cursor-pointer contactText">Contact Us</div>
+        <div onClick={handleContact} className="font-mari text-[3.2rem] tracking-wide text-[#D8C29D] hover:cursor-pointer contactText">Contact Us</div>
       </motion.div>
       <motion.div
         style={{ x: rightX }}
@@ -50,7 +48,7 @@ const Section4Mobile = () => {
       </section>
       <div className="gradient3 -mt-[35rem] z-10"> 
       <motion.div className="-mt-[35rem]"  style={{y: fallY}}> 
-               <motion.img style={{rotate: rotateYcard}} src={cardamom}  className="w-[50%] h-[50%] items-center jusitfy-center ml-[15rem] -mt-[20rem]"
+               <motion.img style={{rotate: rotateY}} src={cardamom}  className="w-[50%] h-[50%] items-center jusitfy-center ml-[15rem] -mt-[20rem]"
                 />
                 </motion.div>
                 <motion.div className="-mt-[15rem]" style={{y: fallY}}> 
@@ -66,7 +64,7 @@ const Section4Mobile = () => {
                 />
                 </motion.div>
                 <motion.div className="mt-[35rem] top-0 right-0" style={{y: fallY}}> 
-               <motion.img style={{rotate: rotateYarug}} src={arugula} className=" w-[40%] h-[40%] items-center jusitfy-center ml-[85rem] -mt-[40rem]"
+               <motion.img style={{rotate: rotateY}} src={arugula} className=" w-[40%] h-[40%] items-center jusitfy-center ml-[85rem] -mt-[40rem]"
                 />
                 </motion.div>
                 </div> 

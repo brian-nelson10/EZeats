@@ -1,38 +1,38 @@
-import React, { useEffect } from "react";
-import { motion,  useAnimation } from "framer-motion";
+import React from "react";
+// import { motion,  useAnimation } from "framer-motion";
   
 export default function Section5Mobile() {
-    const x = useAnimation();
+//     const x = useAnimation();
 
-  useEffect(() => {
-    const animation = async () => {
-      while (true) {
-        await x.start({
-          x: 40,
-          transition: {
-            type: "spring",
-            stiffness: 600,
-            damping: 70,
-            restDelta: 0.01,
-            duration: 1,
+//   useEffect(() => {
+//     const animation = async () => {
+//       while (true) {
+//         await x.start({
+//           x: 40,
+//           transition: {
+//             type: "spring",
+//             stiffness: 600,
+//             damping: 70,
+//             restDelta: 0.01,
+//             duration: 1,
             
-          },
-        });
-        await x.start({
-          x: -40,
-          transition: {
-            type: "spring",
-            stiffness: 500,
-            damping: 80,
-            restDelta: 0.01,
-            duration: 1.5,
+//           },
+//         });
+//         await x.start({
+//           x: -40,
+//           transition: {
+//             type: "spring",
+//             stiffness: 500,
+//             damping: 80,
+//             restDelta: 0.01,
+//             duration: 1.5,
             
-          },
-        });
-      }
-    };
-    animation();
-  }, [x]);
+//           },
+//         });
+//       }
+//     };
+//     animation();
+//   }, [x]);
   
   
     return (

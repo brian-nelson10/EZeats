@@ -222,10 +222,10 @@ export default function Hamburger() {
         variants={menuVariants}
         animate={isOpen ? "opened" : "closed"}
       >
-        <div className="grid grid-cols-2 gap-20 z-50">
+        <div className="grid xl:grid-cols-2 xl:gap-20 z-50">
           {/* Left section */}
           <motion.div
-            className="w-[20rem] h-[20rem] mt-[5rem]"
+            className="w-[20rem] h-[20rem] mt-[15rem] xl:mt-[5rem]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -238,7 +238,7 @@ export default function Hamburger() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
                 src={img}
-                className="" />
+                className="xl:mt-0 mt-[12rem]" />
             )}
             {hoveredDiv === 0 && (
               <motion.img
@@ -287,7 +287,7 @@ export default function Hamburger() {
             )}
           </motion.div>
           {/* Right section */}
-          <div className="flex-shrink-0 w-full p-4">
+          <div className="flex-shrink-0 w-full p-4 -mt-[34rem] xl:mt-0">
             <div className="text-center">
               <ul className="div-list">
                 <motion.li
@@ -295,11 +295,11 @@ export default function Hamburger() {
                   onMouseEnter={() => handleDivHover(0)}
                   onMouseLeave={handleDivLeave}
                   onClick={handleHome}
-                  className="text-[#D8C29D] font-mari mb-2 text-[3rem] list-none tracking-wide hover:cursor-pointer" variants={linkVariants}
+                  className="text-[#D8C29D] font-mari sl:mb-2 text-[3.5rem] xl:text-[3rem] list-none tracking-wide hover:cursor-pointer" variants={linkVariants}
                 >Home
                 </motion.li>
                 <motion.li
-                  className="text-[#D8C29D] font-mari mb-2 text-[3rem] list-none tracking-wide hover:cursor-pointer" variants={linkVariants}
+                  className="text-[#D8C29D] font-mari xl:mb-2 text-[3.4rem] xl:text-[3rem] list-none tracking-wide hover:cursor-pointer" variants={linkVariants}
                   whileHover={{ scale: 1.1 }}
                   onMouseEnter={() => handleDivHover(1)}
                   onMouseLeave={handleDivLeave}
@@ -307,7 +307,7 @@ export default function Hamburger() {
                 >Order Online
                 </motion.li>
                 <motion.li
-                  className="text-[#D8C29D] font-mari mb-2 text-[3rem] list-none tracking-wide hover:cursor-pointer" variants={linkVariants}
+                  className="text-[#D8C29D] font-mari xl:mb-2 text-[3.5rem] xl:text-[3rem] list-none tracking-wide hover:cursor-pointer" variants={linkVariants}
                   whileHover={{ scale: 1.1 }}
                   onMouseEnter={() => handleDivHover(2)}
                   onMouseLeave={handleDivLeave}
@@ -315,7 +315,7 @@ export default function Hamburger() {
                 >Catering
                 </motion.li>
                 <motion.li
-                  className="text-[#D8C29D] font-mari mb-2 text-[3rem] list-none tracking-wide hover:cursor-pointer" variants={linkVariants}
+                  className="text-[#D8C29D] font-mari xl:mb-2 text-[3.4rem] xl:text-[3rem] list-none tracking-wide hover:cursor-pointer" variants={linkVariants}
                   whileHover={{ scale: 1.1 }}
                   onMouseEnter={() => handleDivHover(3)}
                   onMouseLeave={handleDivLeave}
@@ -323,7 +323,7 @@ export default function Hamburger() {
                 >Food Truck
                 </motion.li>
                 <motion.li
-                  className="text-[#D8C29D] font-mari mb-2 text-[3rem] list-none tracking-wide hover:cursor-pointer" variants={linkVariants}
+                  className="text-[#D8C29D] font-mari mb-2 text-[3.5rem] xl:text-[3rem] list-none tracking-wide hover:cursor-pointer" variants={linkVariants}
                   whileHover={{ scale: 1.1 }}
                   onMouseEnter={() => handleDivHover(4)}
                   onMouseLeave={handleDivLeave}
@@ -334,14 +334,6 @@ export default function Hamburger() {
             </div>
           </div>
         </div>
-
-
-        {/* <motion.li onClick={handleNavigate} className="text-white font-larissa mb-2 text-[2.8rem] list-none" variants={linkVariants}>Book Online</motion.li>
-                <motion.li onClick={handlePackage} className="text-white font-larissa mb-2 text-[2.8rem] list-none" variants={linkVariants}>date</motion.li>
-                <motion.li onClick={handlePackageTwo} className="text-white font-larissa mb-2 text-[2.8rem] list-none" variants={linkVariants}>event</motion.li>
-                <motion.li onClick={handlePackageThree} className="text-white font-larissa mb-2 text-[2.8rem] list-none" variants={linkVariants}>i do</motion.li>
-                <motion.li onClick={handlePackageFour} className="text-white font-larissa mb-2 text-[2.8rem] list-none" variants={linkVariants}>celebrate</motion.li>
-                <motion.li onClick={handleAddOns} className="text-white font-larissa mb-2 text-[2.8rem] list-none" variants={linkVariants}>Add On's</motion.li> */}
       </motion.nav>
 
     </>

@@ -80,7 +80,7 @@ const ContactTitle = ({ text }) => {
                 {letters.map((letter, index) => (
                     <motion.span 
                         onClick={handleHome}
-                        className="font-mari font-bold text-[4rem] tracking-wide text-[#D8C29D] hover:cursor-pointer " variants={child} key={index} >
+                        className="font-mari font-bold text-[2rem] lg:text-[4rem] tracking-wide text-[#D8C29D] hover:cursor-pointer " variants={child} key={index} >
                         {letter === " " ? "\u00A0" : letter}
                     </motion.span>
                 ))}
