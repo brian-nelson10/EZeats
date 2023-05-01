@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import { motion,  useAnimation } from "framer-motion";
-  
 export default function Section5() {
     const x = useAnimation();
-
   useEffect(() => {
     const animation = async () => {
       while (true) {
@@ -33,10 +31,7 @@ export default function Section5() {
     };
     animation();
   }, [x]);
-  
-  
     return (
-        
         <section className="-mb-[4rem] py-[10rem] xl:-mt-[30rem] bg-transparent">
             <div className="">
         <div className="grid grid-cols-3 ">

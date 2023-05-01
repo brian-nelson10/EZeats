@@ -8,8 +8,6 @@ const Beans = () => {
     // const x = useMotionValue(0);
     const { scrollYProgress } = useScroll();
     const fallY = useTransform(scrollYProgress, [0, 1], [-10, 100]);
-   
-
     const rotater = {
         initial: {
             x: -1000,
@@ -37,7 +35,6 @@ const Beans = () => {
             }
         },
     }
-    
     return (
         <motion.div
             variants={rotater}

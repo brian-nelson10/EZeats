@@ -128,7 +128,7 @@ const Home = () => {
                         <div>
                             <NavTitle text="EZ EATZ" />
                         </div>
-                        <div className="grid items-center justify-end lg:mr-4 mt-6 z-50">
+                        <div className="grid items-center justify-end lg:mr-4 z-50">
                             <OrderButton />
                         </div>
                     </section>

@@ -21,7 +21,6 @@ const Section4 = () => {
     navigate("/order");
   }
   return (
-    
     <>
     <section className="-mt-[25rem] h-[80rem] px-[2rem] gradient3 pt-[6rem] -mb-[2rem] overflow-hidden">
         <div className="container mt-[25rem] mx-[2rem] ml-[4rem] items-center justify-center text-center bg-contact bg-fixed z-20 relative">

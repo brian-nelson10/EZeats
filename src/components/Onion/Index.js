@@ -5,14 +5,6 @@ import webImg from "../../assets/web/onion.webp";
 import img from "../../assets/images/onion.png";
 
 export default function Onion() {
-    // const [rotate, setRotate] = useState(false);
-    // const startRotate = () => {
-    //     if (window.scrollY >= 950) {
-    //         setRotate(true)
-    //     } else {
-    //         setRotate(false)
-    //     }
-    // };
     const {scrollYProgress} = useScroll();
     const fallY = useTransform(scrollYProgress, [0, .75], [-100, 200]);
     const rotater = {
@@ -30,19 +22,7 @@ export default function Onion() {
                 restDelta: 0.001,
             }
         },
-        // reanimate: {
-        //     rotate: -180,
-        //     x: -1090,
-        //     transition: {
-        //         type: "spring",
-        //         stiffness: 100,
-        //         damping: 40,
-        //         restDelta: 0.001,
-        //         duration: 1
-        //     }
-        // },
     }
-    // window.addEventListener('scroll', startRotate)
     return (
         <motion.div
             variants={rotater}

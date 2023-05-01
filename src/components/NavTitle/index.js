@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const NavTitle = ({ text }) => {
     const letters = Array.from(text);
     const [scroll, setScroll] = useState(false);
+    const [changeColor, setChangeColor] = useState(false);
     const container = {
         hidden: { opacity: 0 },
         visible: (i = 1) => ({
@@ -50,25 +51,37 @@ const NavTitle = ({ text }) => {
             },
         },
     };
-
-    const isScroll = () => {
-        if (window.scrollY >= 100) {
-            setScroll(true)
+    useEffect(() => {
+        const isScroll = () => {
+            if (window.scrollY >= 100) {
+                setScroll(true)
+            }
+            if (window.scrollY <= 90) {
+                setScroll(false)
+            }
         }
-        if (window.scrollY <= 90) {
-            setScroll(false)
+        window.addEventListener('scroll', isScroll);
+        return () => window.removeEventListener("scroll", isScroll);
+    }, []);
+    useEffect(() => {
+        const changeColor = () => {
+            if (window.scrollY >= 1900) {
+                setChangeColor(true)
+            }
+            if (window.scrollY <= 1900) {
+                setChangeColor(false)
+            }
         }
-    }
-
-    window.addEventListener('scroll', isScroll)
-
+        window.addEventListener('scroll', changeColor);
+        return () => window.removeEventListener("scroll", changeColor);
+    }, []);
     return (
         <section>
             <motion.div
                 variants={container}
                 initial="hidden"
                 animate={scroll ? "visible" : "exit"}
-                className="z-20 absolute inset-0 flex -mt-6 text-center items-center justify-center mx-[1rem]">
+                className={changeColor ? "invisible" : "z-20 absolute inset-0 flex -mt-6 text-center items-center justify-center mx-[1rem]"}>
                 {letters.map((letter, index) => (
                     <motion.span className="font-mari font-bold text-[2rem] lg:text-[4rem] tracking-wide text-[#D8C29D] hover:cursor-pointer " variants={child} key={index} >
                         {letter === " " ? "\u00A0" : letter}

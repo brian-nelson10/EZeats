@@ -4,7 +4,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "../Image";
 import webImg from "../../assets/web/cilantro.webp";
 import img from "../../assets/images/cilantro.png";
-
 export default function Pepper() {
     const { scrollYProgress } = useScroll();
     const rotateY = useTransform(scrollYProgress, [0.5, 1],  [-200, 200]);
