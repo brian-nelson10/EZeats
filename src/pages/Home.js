@@ -121,7 +121,7 @@ const Home = () => {
                     animate="animate"
                     exit="exit"
                 >
-                    <section className="grid grid-cols-3 w-screen z-50 fixed overflow-hidden">
+                    <section className="grid grid-cols-3 w-screen z-50 fixed">
                         <div className="grid items-center justify-end z-40">
                             <Hamburger />
                         </div>
@@ -132,8 +132,7 @@ const Home = () => {
                             <OrderButton />
                         </div>
                     </section>
-                    <div ref={app} className="h-[100%] w-[100%] overflow-hidden gradient3">
-      <div ref={scrollContainer} className="scroll h-[100%] w-[100%] overflow-hidden"> 
+                    
                     <section className="z-10 relative">
                         <Hero text="EZ EATZ" />
                     </section>
@@ -155,7 +154,8 @@ const Home = () => {
                         {width < breakpoint ? <PepperMobile/> : <Pepper/>}
                         {width < breakpoint ? <Section1Mobile/> : <Section1/>}
                     </section>
-                    
+                    <div ref={app} className="h-[100%] w-[100%] overflow-hidden gradient3">
+      <div ref={scrollContainer} className="scroll h-[100%] w-[100%] overflow-hidden gradient3"> 
                     <section className="z-20 relative" ref={myRef}>
                         
                             <Section2 />

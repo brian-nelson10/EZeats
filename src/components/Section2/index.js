@@ -53,7 +53,7 @@ export default function Section2() {
     
     return (
         <AnimatePresence>
-        <div className="gradient2 w-screen h-auto z-50 -mt-[13rem] xl:pb-[16rem]" id="menuComponent" >
+        <div className="gradient2 w-screen h-auto z-50 xl:-mt-[13rem] xl:pb-[16rem]" id="menuComponent" >
             <motion.div className="container flex-wrap">
                 <motion.div className="aboutHero grid w-screen items-center justify-center">
                     <div className="mt-[5rem] mb-[2rem] xl:-mb-[1.5rem] text-center font-mari tracking-widest text-[4rem] md:text-[5rem] lg:text-[6rem] xl:text-[8rem] text-[#D8C29D]">

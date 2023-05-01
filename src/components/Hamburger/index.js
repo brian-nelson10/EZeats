@@ -172,7 +172,7 @@ export default function Hamburger() {
   
   return (
     <>
-      <nav className="fixed lg:ml-[8rem] z-50">
+      <nav className="fixed ml-4 mt-2 lg:ml-[8rem] z-50">
         <motion.div
           layout
           className="xl:container-fluid xl:pr-6 hover:cursor-pointer"
@@ -217,7 +217,7 @@ export default function Hamburger() {
         </motion.div>
       </nav>
       <motion.nav
-        className="h-screen w-screen fixed flex flex-col items-center justify-center align-center bg-[#07252d] z-40"
+        className="h-full w-screen fixed flex flex-col items-center justify-center align-center bg-[#07252d] z-40 inset-0"
         initial={false}
         variants={menuVariants}
         animate={isOpen ? "opened" : "closed"}
