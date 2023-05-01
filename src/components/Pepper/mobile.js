@@ -33,7 +33,7 @@ export default function PepperMobile() {
         variants={rotater}
         initial="initial"
         animate="animate"
-            className="cilImg z-30 absolute w-[50%] h-[45%] mt-[15rem] -left-9">
+            className="cilImg z-30 absolute w-[50%] h-[45%] mt-[35rem] -left-14">
         <Image
             srcSet={webImg}
             fallback={img}

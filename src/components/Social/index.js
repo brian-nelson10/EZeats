@@ -41,7 +41,7 @@ const Social = () => {
               <ul>
               <li>
                   <a
-                    href="http://instagram.com/"
+                    href="https://www.instagram.com/ezeatzbyyaya/"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -63,7 +63,7 @@ fill="#D8C29D" stroke="none">
                 </li>
                  <li>
                   <a
-                    href="http://facebook.com"
+                    href="https://www.facebook.com/ezeatzbyyaya"
                     target="_blank"
                     rel="noreferrer"
                   >

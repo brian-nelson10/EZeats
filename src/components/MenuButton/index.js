@@ -39,7 +39,7 @@ export default function MenuButton(props) {
             initial="initial"
             animate="animate"
             whileHover="hovered"
-            className="absolute top-[65%] z-40 hover:cursor-pointer justify-center items-center left-[5%] lg:left-[42%] text-center ">
+            className="absolute top-[65%] -mt-[2rem] xl:mt-0 z-40 hover:cursor-pointer justify-center items-center left-[5%] lg:left-[42%] text-center ">
                 <motion.button
             variants={wordVariants}
             className="text-[4.2rem] font-rah font-bold tracking-widest text-[#D8C29D] flex flex-row gap-6 hover:cursor-pointer"

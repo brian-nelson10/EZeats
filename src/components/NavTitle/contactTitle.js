@@ -65,7 +65,6 @@ const ContactTitle = ({ text }) => {
                 setScroll(false)
             }
         }
-    
         window.addEventListener('scroll', isScroll);
         return () => window.removeEventListener("scroll", isScroll);
     }, []);

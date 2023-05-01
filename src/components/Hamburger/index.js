@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // import "./hamburger.css";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import img from "../../assets/images/herbs.png";
+import img from "../../assets/images/ezlogogreen.png";
 import img1 from "../../assets/images/arugula.png";
 import img2 from "../../assets/images/seed.png";
 import img3 from "../../assets/images/onion.png";
@@ -169,7 +169,7 @@ export default function Hamburger() {
       translateY: 0
     },
   }
-  
+  let url = "https://foodtruck.pub/order/menu.aspx?busid=5143"
   return (
     <>
       <nav className="fixed ml-6 mt-8 lg:mt-2 lg:ml-[8rem] z-50">
@@ -238,7 +238,7 @@ export default function Hamburger() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
                 src={img}
-                className="xl:mt-0 mt-[12rem]" />
+                className="xl:mt-0 -mt-[23rem] ml-10 xl:ml-0" />
             )}
             {hoveredDiv === 0 && (
               <motion.img
@@ -303,7 +303,7 @@ export default function Hamburger() {
                   whileHover={{ scale: 1.1 }}
                   onMouseEnter={() => handleDivHover(1)}
                   onMouseLeave={handleDivLeave}
-                  onClick={handleOrder}
+                  onClick={() => {window.location.href = url;}}
                 >Order Online
                 </motion.li>
                 <motion.li

@@ -28,7 +28,7 @@ export default function OnionMobile() {
             variants={rotater}
             initial="initial"
             animate="animate"
-            className="z-30 absolute w-[53%] h-[53%] ml-[12rem] -bottom-[42rem]"
+            className="z-30 absolute w-[53%] h-[53%] ml-[12rem] -bottom-[53rem]"
             style={{y: fallY}} >
             <Image
                 srcSet={webImg}

@@ -99,7 +99,7 @@ const Catering = () => {
                     <div>
                         <ContactTitle text="EZ EATZ" />
                     </div>
-                    <div className="grid items-center justify-end mr-4 mt-6">
+                    <div className="grid items-center justify-end mr-4 mt-6 z-50">
                         <OrderButton />
                     </div>
                 </section>

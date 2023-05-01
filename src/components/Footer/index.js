@@ -44,22 +44,22 @@ export default function Footer() {
                 <div
                   className="block text-2xl font-medium font-mari tracking-widest text-[#D8C29D] hover:opacity-75 sm:text-3xl"
                 >
-                  904-888-8888
+                  904-994-6508
                 </div>
               </div>
 
               <ul className="mt-8 space-y-1 text-[1.1rem] tracking-widest font-rah text-[#D8C29D]">
-                <li>Monday thru Friday: 11am - 9pm</li>
-                <li>Weekends: 10am - 10pm</li>
+                <li>Monday - Sunday: 11am - 9pm</li>
+                {/* <li>Weekends: 11am - 9pm</li> */}
               </ul>
 
               <ul className="flex gap-6 mt-8">
                 <li>
-                  <div
-                    href="www.facebook.com"
+                  <a
+                    href="https://www.facebook.com/ezeatzbyyaya"
                     rel="noreferrer"
                     target="_blank"
-                    className="text-[#D8C29D] transition hover:opacity-75"
+                    className="text-[#D8C29D] transition hover:opacity-75 hover:cursor-pointer"
                   >
                     <span className="sr-only">Facebook</span>
 
@@ -75,15 +75,15 @@ export default function Footer() {
                         clipRule="evenodd"
                       />
                     </svg>
-                  </div>
+                  </a>
                 </li>
 
                 <li>
-                  <div
-                    href="www.instagram.com"
+                  <a
+                    href="https://www.instagram.com/ezeatzbyyaya/"
                     rel="noreferrer"
                     target="_blank"
-                    className="text-[#D8C29D] transition hover:opacity-75"
+                    className="text-[#D8C29D] transition hover:opacity-75 hover:cursor-pointer"
                   >
                     <span className="sr-only">Instagram</span>
 
@@ -99,7 +99,7 @@ export default function Footer() {
                         clipRule="evenodd"
                       />
                     </svg>
-                  </div>
+                  </a>
                 </li>
 
                 <li>
@@ -126,7 +126,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div className="grid grid-cols-2 xl:grid-cols-1 items-end justify-end text-end gap-4 sm:grid-cols-2">
+            <div className="grid grid-cols-2 items-end justify-end text-end gap-4 sm:grid-cols-2">
               <div>
                 {/* <p className="font-medium text-[#D8C29D]"></p> */}
 
@@ -184,7 +184,7 @@ export default function Footer() {
                   onClick={() => {
                     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
                   }}
-                  className="items-center text-start xl:text-center grid ml-[3rem] xl:mr-[3rem] font-rah text-[#D8C29D] text-[1rem] md:text-[1.1rem] -mt-[3rem] hover:cursor-pointer">Back Up</div>
+                  className="items-center text-start xl:text-center grid ml-[3rem] xl:ml-0 xl:mr-[3rem] font-rah text-[#D8C29D] text-[1rem] lg:text-[1.1rem] -mt-[3rem] hover:cursor-pointer">Back Up</div>
               </div>
             </div>
           </div>

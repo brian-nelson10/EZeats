@@ -32,7 +32,7 @@ export default function GingerMobile() {
             variants={rotater}
             initial="initial"
             whileInView="animate"
-            className="z-30 absolute w-[50%] h-[50%] -left-[6rem] -top-[10.5rem] " >
+            className="z-30 absolute w-[50%] h-[50%] -left-[6rem] -top-[12rem] " >
             <Image
                 srcSet={webImg}
                 fallback={img}

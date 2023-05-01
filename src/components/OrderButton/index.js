@@ -10,12 +10,14 @@ const wordVariants = {
       transition: { duration: .5, ease: 'easeInOut' }
     }
   }
+  let url = "https://foodtruck.pub/order/menu.aspx?busid=5143"
 export default function OrderButton() {
     return (
         <motion.div
         variants={wordVariants}
         whileHover="hovered"
-        className="">
+        className=""
+        onClick={() => {window.location.href = url;}}>
         <Image
             srcSet={orderWeb}
             fallback={order}

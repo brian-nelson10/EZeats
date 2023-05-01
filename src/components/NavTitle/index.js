@@ -81,7 +81,7 @@ const NavTitle = ({ text }) => {
                 variants={container}
                 initial="hidden"
                 animate={scroll ? "visible" : "exit"}
-                className={changeColor ? "invisible" : "z-20 absolute inset-0 flex -mt-6 text-center items-center justify-center mx-[1rem]"}>
+                className={changeColor ? "invisible" : "z-20 absolute inset-0 flex xl:-mt-6 text-center items-center justify-center mx-[1rem]"}>
                 {letters.map((letter, index) => (
                     <motion.span className="font-mari font-bold text-[2rem] lg:text-[4rem] tracking-wide text-[#D8C29D] hover:cursor-pointer " variants={child} key={index} >
                         {letter === " " ? "\u00A0" : letter}
