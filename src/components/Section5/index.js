@@ -46,8 +46,8 @@ export default function Section5() {
                 </div>
             </div>
             <div className="grid grid-rows-2">
-                <div className="text-[#D8C29D] font-rah text-[5rem] -mb-[2rem] hover:text-[#e3dac6] hover:cursor-pointer">800 Address</div>
-                <div className="text-[#D8C29D] font-rah text-[5rem] hover:text-[#e3dac6] hover:cursor-pointer">Jacksonville, Fl</div>
+                <div className="text-[#D8C29D] font-rah text-[5rem] -mb-[2rem] hover:text-[#e3dac6] hover:cursor-pointer">3520 St. John's Bluff Road South</div>
+                <div className="text-[#D8C29D] font-rah text-[5rem] hover:text-[#e3dac6] hover:cursor-pointer">Jacksonville, Fl 32224</div>
             </div>
             <motion.div 
                   animate={x}

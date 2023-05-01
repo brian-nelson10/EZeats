@@ -217,7 +217,7 @@ export default function Hamburger() {
         </motion.div>
       </nav>
       <motion.nav
-        className="h-screen w-screen fixed flex flex-col items-center justify-center align-center bg-[#07252d] z-10"
+        className="h-screen w-screen fixed flex flex-col items-center justify-center align-center bg-[#07252d] z-40"
         initial={false}
         variants={menuVariants}
         animate={isOpen ? "opened" : "closed"}
