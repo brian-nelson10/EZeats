@@ -7,7 +7,7 @@ import img from "../../assets/images/beans2.png";
 const Beans = () => {
     // const x = useMotionValue(0);
     const { scrollYProgress } = useScroll();
-    const fallY = useTransform(scrollYProgress, [0, 1], [-10, 100]);
+    const fallY = useTransform(scrollYProgress, [0, 1], [-120, 100]);
     const rotater = {
         initial: {
             x: -1000,

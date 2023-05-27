@@ -6,7 +6,7 @@ import img from "../../assets/images/onion.png";
 
 export default function OnionMobile() {
     const {scrollYProgress} = useScroll();
-    const fallY = useTransform(scrollYProgress, [0, 1], [-50, 200]);
+    const fallY = useTransform(scrollYProgress, [0, 1], [10, 210]);
     const rotater = {
         initial: {
             x: -1050,

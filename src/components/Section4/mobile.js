@@ -12,7 +12,7 @@ const Section4Mobile = () => {
   const rotateY = useTransform(scrollYProgress, [0.75, 1],  [-200, -140]);
   const rotateYgar = useTransform(scrollYProgress, [0.5, 1], [10, 50]);
   const leftX = useTransform(scrollYProgress, [0, 1], [-350, 100]);
-  const rightX = useTransform(scrollYProgress, [0, 1], [1000, -300]);
+  const rightX = useTransform(scrollYProgress, [0, 1], [2000, -200]);
   const fallY = useTransform(scrollYProgress, [0, 1], [-500, 200]);
   const navigate = useNavigate();
   function handleContact() {

@@ -50,12 +50,12 @@ const menuItem = {
 export default function Section2() {
     return (
         <AnimatePresence>
-        <div className="gradient2 w-screen h-auto z-50 xl:pb-[16rem]" id="menuComponent" >
-            <motion.div className="container flex-wrap">
+        <div className="gradient2 justify-center w-screen px-10 h-auto z-50 xl:pb-[16rem]" id="menuComponent" >
+            <motion.div className="justify-center flex-wrap ">
                 <motion.div className="aboutHero grid w-screen items-center justify-center">
                     <div className="mt-[5rem] mb-[2rem] xl:-mb-[1.5rem] text-center font-mari tracking-widest text-[4rem] md:text-[5rem] lg:text-[6rem] xl:text-[8rem] text-[#D8C29D]">
                         <motion.div
-                            className="flex flex-row gap-6"
+                            className="flex flex-row gap-6 justify-center text-center -ml-16 xl:ml-0"
                             variants={pack}
                             initial="initial"
                             whileInView="animate">
@@ -80,69 +80,463 @@ fill="#D8C29D" stroke="none">
 </svg></motion.div>
                     </div>
                 </motion.div>
-                <section className="container py-[1rem] xl:w-5/6 bg-[#D8C29D] shadow-[1px_35px_35px_2px_rgba(0,0,0,0.5)] -mt-[2rem] md:mt-[3rem] md:mx-auto items-center justify-center text-center h-auto xl:h-[117rem] md:h-[100rem] md:ml-[15rem] rounded-xl z-50 bg-fixed bg-deco">
-                    <div className="container my-20 px-6 mx-auto text-xl">
+                <section className="py-[1rem] xl:w-[100%] bg-[#D8C29D] shadow-[1px_35px_35px_2px_rgba(0,0,0,0.5)] -mt-[2rem] md:mt-[3rem] md:mx-auto items-center justify-center text-center h-auto w-screen -ml-10 rounded-xl z-50 bg-fixed bg-deco">
+                    <div className=" my-20 xl:-px-3 xl:mx-auto text-xl">
                         <motion.div
                             variants={pack2}
                             initial="initial"
                             whileInView="animate" 
                             className="block xl:mx-[18rem] bg-[#D8C29D] py-[2rem] mb-[2rem] border-seperate border-2 border-[#023047] rounded-lg shadow-lg">
-                            <h1 className="font-mari text-[2rem] mt-[.5rem] text-center text-[#023047]">Moroccan Whole Chicken</h1>
-                            <p className="font-rah text-[1rem] tracking-widest font-bold text-center text-[#023047] mt-8">Marinated moroccan style whole rotisserie chicken</p> 
-                            <p className="font-rah text-[1rem] tracking-widest font-bold text-center text-[#023047] mt-4">with sauce, rolls, and two family style sides.</p> 
-                            <p className="font-mari text-[2rem] tracking-wide font-bold text-center text-[#023047] mt-4 mb-1">$ 30</p> 
+                        <motion.div
+                                            variants={pack}
+                                            initial="initial"
+                                            animate="animate"
+                                            className="font-mari tracking-wide text-[2.5rem] mt-[.5rem] text-center text-[#023047]">
+                                                EZ BITEZ
+                                            </motion.div>
+                                            <motion.ul variants={menuVariant} initial="initial" whileInView="animate" className="">
+                                            <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    Hummus<div> <svg xmlns="http://www.w3.org/2000/svg" shapeRendering="geometricPrecision" textRendering="geometricPrecision" imageRendering="optimizeQuality" fill="#023047" fillRule="evenodd" clipRule="evenodd" width="20px" height="20px" viewBox="0 0 512 512"><g fillRule="nonzero"><path d="M255.998 0c70.69 0 134.694 28.658 181.017 74.982C483.342 121.308 512 185.312 512 256.002c0 70.689-28.658 134.69-74.985 181.016C390.692 483.342 326.688 512 255.998 512c-70.689 0-134.687-28.658-181.017-74.982C28.657 390.689 0 326.691 0 256.002c0-70.69 28.657-134.694 74.981-181.017C121.308 28.658 185.309 0 255.998 0z"/><path fill="#fff" d="M283.004 162.24h63.307l-46.503 187.523h-87.61L165.691 162.24h63.307l25.505 119.116h2.7z"/></g></svg>
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-start font-rah text-[.9rem] tracking-widest font-bold text-[#023047]">
+                                                        Choice of Classic, Spicy, or Sun-Dried Tomato. Served with Pita.
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                    7$
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    Zaalouk<div> <svg xmlns="http://www.w3.org/2000/svg" shapeRendering="geometricPrecision" textRendering="geometricPrecision" imageRendering="optimizeQuality" fill="#023047" fillRule="evenodd" clipRule="evenodd" width="20px" height="20px" viewBox="0 0 512 512"><g fillRule="nonzero"><path d="M255.998 0c70.69 0 134.694 28.658 181.017 74.982C483.342 121.308 512 185.312 512 256.002c0 70.689-28.658 134.69-74.985 181.016C390.692 483.342 326.688 512 255.998 512c-70.689 0-134.687-28.658-181.017-74.982C28.657 390.689 0 326.691 0 256.002c0-70.69 28.657-134.694 74.981-181.017C121.308 28.658 185.309 0 255.998 0z"/><path fill="#fff" d="M283.004 162.24h63.307l-46.503 187.523h-87.61L165.691 162.24h63.307l25.505 119.116h2.7z"/></g></svg>
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-start font-rah text-[.9rem] tracking-widest font-bold text-[#023047]">
+                                                    Eggplant dip infused with garlic tomato sauce. Served with pita.
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                    7$
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    Shakshuka<div> <svg xmlns="http://www.w3.org/2000/svg" shapeRendering="geometricPrecision" textRendering="geometricPrecision" imageRendering="optimizeQuality" fill="#023047" fillRule="evenodd" clipRule="evenodd" width="20px" height="20px" viewBox="0 0 512 512"><g fillRule="nonzero"><path d="M255.998 0c70.69 0 134.694 28.658 181.017 74.982C483.342 121.308 512 185.312 512 256.002c0 70.689-28.658 134.69-74.985 181.016C390.692 483.342 326.688 512 255.998 512c-70.689 0-134.687-28.658-181.017-74.982C28.657 390.689 0 326.691 0 256.002c0-70.69 28.657-134.694 74.981-181.017C121.308 28.658 185.309 0 255.998 0z"/><path fill="#fff" d="M283.004 162.24h63.307l-46.503 187.523h-87.61L165.691 162.24h63.307l25.505 119.116h2.7z"/></g></svg>
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-start font-rah text-[.9rem] tracking-widest font-bold text-[#023047]">
+                                                    Sautéed bell pepper mix, seasoned with garlic tomato sauce and other Moroccan flavors. Served with pita.
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                    7$
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    Olive Msharmal<div> <svg xmlns="http://www.w3.org/2000/svg" shapeRendering="geometricPrecision" textRendering="geometricPrecision" imageRendering="optimizeQuality" fill="#023047" fillRule="evenodd" clipRule="evenodd" width="20px" height="20px" viewBox="0 0 512 512"><g fillRule="nonzero"><path d="M255.998 0c70.69 0 134.694 28.658 181.017 74.982C483.342 121.308 512 185.312 512 256.002c0 70.689-28.658 134.69-74.985 181.016C390.692 483.342 326.688 512 255.998 512c-70.689 0-134.687-28.658-181.017-74.982C28.657 390.689 0 326.691 0 256.002c0-70.69 28.657-134.694 74.981-181.017C121.308 28.658 185.309 0 255.998 0z"/><path fill="#fff" d="M283.004 162.24h63.307l-46.503 187.523h-87.61L165.691 162.24h63.307l25.505 119.116h2.7z"/></g></svg>
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-start font-rah text-[.9rem] tracking-widest font-bold text-[#023047]">
+                                                    Olives infused with garlic and cilantro and served with pita. Choice of Mild or Spicy.
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                    6$
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    Lentil Soup<div> <svg xmlns="http://www.w3.org/2000/svg" shapeRendering="geometricPrecision" textRendering="geometricPrecision" imageRendering="optimizeQuality" fill="#023047" fillRule="evenodd" clipRule="evenodd" width="20px" height="20px" viewBox="0 0 512 512"><g fillRule="nonzero"><path d="M255.998 0c70.69 0 134.694 28.658 181.017 74.982C483.342 121.308 512 185.312 512 256.002c0 70.689-28.658 134.69-74.985 181.016C390.692 483.342 326.688 512 255.998 512c-70.689 0-134.687-28.658-181.017-74.982C28.657 390.689 0 326.691 0 256.002c0-70.69 28.657-134.694 74.981-181.017C121.308 28.658 185.309 0 255.998 0z"/><path fill="#fff" d="M283.004 162.24h63.307l-46.503 187.523h-87.61L165.691 162.24h63.307l25.505 119.116h2.7z"/></g></svg>
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-start font-rah text-[.9rem] tracking-widest font-bold text-[#023047]">
+                                                    Lentils slow cooked with garlic, tomatoes, and carrots. Served with pita.
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                    6$
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    Briwat
+                                                    </div>
+                                                    <div className="text-start font-rah text-[.9rem] tracking-widest font-bold text-[#023047]">
+                                                    Crispy Moroccan dough filled with your choice of protein and served with Honey Harissa sauce. Choice of Kefta or Seafood.
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                    9$
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    Loubia Soup<div> <svg xmlns="http://www.w3.org/2000/svg" shapeRendering="geometricPrecision" textRendering="geometricPrecision" imageRendering="optimizeQuality" fill="#023047" fillRule="evenodd" clipRule="evenodd" width="20px" height="20px" viewBox="0 0 512 512"><g fillRule="nonzero"><path d="M255.998 0c70.69 0 134.694 28.658 181.017 74.982C483.342 121.308 512 185.312 512 256.002c0 70.689-28.658 134.69-74.985 181.016C390.692 483.342 326.688 512 255.998 512c-70.689 0-134.687-28.658-181.017-74.982C28.657 390.689 0 326.691 0 256.002c0-70.69 28.657-134.694 74.981-181.017C121.308 28.658 185.309 0 255.998 0z"/><path fill="#fff" d="M283.004 162.24h63.307l-46.503 187.523h-87.61L165.691 162.24h63.307l25.505 119.116h2.7z"/></g></svg>
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-start font-rah text-[.9rem] tracking-widest font-bold text-[#023047]">
+                                                   Traditional Moroccan stew slow cooked with white beans and infused with garlic tomato sauce. Served with pita.
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                    7$
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    The EZ Salad<div> <svg xmlns="http://www.w3.org/2000/svg" shapeRendering="geometricPrecision" textRendering="geometricPrecision" imageRendering="optimizeQuality" fill="#023047" fillRule="evenodd" clipRule="evenodd" width="20px" height="20px" viewBox="0 0 512 512"><g fillRule="nonzero"><path d="M255.998 0c70.69 0 134.694 28.658 181.017 74.982C483.342 121.308 512 185.312 512 256.002c0 70.689-28.658 134.69-74.985 181.016C390.692 483.342 326.688 512 255.998 512c-70.689 0-134.687-28.658-181.017-74.982C28.657 390.689 0 326.691 0 256.002c0-70.69 28.657-134.694 74.981-181.017C121.308 28.658 185.309 0 255.998 0z"/><path fill="#fff" d="M283.004 162.24h63.307l-46.503 187.523h-87.61L165.691 162.24h63.307l25.505 119.116h2.7z"/></g></svg>
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-start font-rah text-[.9rem] tracking-widest font-bold text-[#023047]">
+                                                    Lettuce, Tomatoes, Cucumbers, and Red Onions served with a Moroccan Vinaigrette.
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                    7$
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    Carrot Msharmal<div> <svg xmlns="http://www.w3.org/2000/svg" shapeRendering="geometricPrecision" textRendering="geometricPrecision" imageRendering="optimizeQuality" fill="#023047" fillRule="evenodd" clipRule="evenodd" width="20px" height="20px" viewBox="0 0 512 512"><g fillRule="nonzero"><path d="M255.998 0c70.69 0 134.694 28.658 181.017 74.982C483.342 121.308 512 185.312 512 256.002c0 70.689-28.658 134.69-74.985 181.016C390.692 483.342 326.688 512 255.998 512c-70.689 0-134.687-28.658-181.017-74.982C28.657 390.689 0 326.691 0 256.002c0-70.69 28.657-134.694 74.981-181.017C121.308 28.658 185.309 0 255.998 0z"/><path fill="#fff" d="M283.004 162.24h63.307l-46.503 187.523h-87.61L165.691 162.24h63.307l25.505 119.116h2.7z"/></g></svg>
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-start font-rah text-[.9rem] tracking-widest font-bold text-[#023047]">
+                                                    Carrots cooked in a flavor packed garlic cilantr sauce. Served with pita.
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                    7$
+                                                    </div>
+                                                </motion.li>
+                                                </motion.ul>
                         </motion.div>
                         <div className="grid gap-6 lg:gap-x-12">
-                            <div className="grid gap-4 xl:grid-cols-3 mb-6 lg:mb-0 ">
+                            <div className="grid gap-4 xl:grid-cols-5 mb-6 lg:mb-0 ">
                                 <motion.div 
                                     variants={pack2}
                                     initial="initial"
                                     whileInView="animate" 
-                                    className="block w-[160%] xl:w-[100%] ml-1 border-solid border-[#023047] border-seperate border-2 rounded-lg shadow-lg py-[1rem] xl:my-[3rem] xl:h-[30rem] bg-[#D8C29D]">
+                                    className="block col-span-2 w-[160%] xl:w-[100%] w-screen ml-1 border-solid border-[#023047] border-seperate border-2 rounded-lg shadow-lg py-[2rem] xl:my-[3rem]  xl:h-auto bg-[#D8C29D]">
                                         <motion.div
                                             variants={pack}
-                                            className="font-mari tracking-wide text-[2rem] mt-[.5rem] text-center text-[#023047]">
-                                                Small Plates
+                                            className="font-mari tracking-wide text-[2.5rem] mt-[.5rem] text-center text-[#023047]">
+                                                HAND HELDZ
                                             </motion.div>
                                             <motion.ul variants={menuVariant} initial="initial" whileInView="animate" className="">
                                             <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
-                                                    <div className="text-start font-rah text-[1.1rem] tracking-widest font-bold text-[#023047]">
-                                                    Signature Hummus
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    EZ Burger
+                                                    </div>
+                                                    <div className="text-start font-rah text-[.9rem] tracking-widest font-bold text-[#023047]">
+                                                    Kefta burger served with cheese, lettuce, tomatoes, sautéed onions, and garlic aioli. 
+                                                    </div>
                                                     </div>
                                                     <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
-                                                    8$
+                                                    10$
                                                     </div>
                                                 </motion.li>
-                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8">
-                                                    <div className="text-start font-rah text-[1.1rem] tracking-widest font-bold text-[#023047]">
-                                                    Roasted Red Pepper Hummus
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    Falafel Wrap<div> <svg xmlns="http://www.w3.org/2000/svg" shapeRendering="geometricPrecision" textRendering="geometricPrecision" imageRendering="optimizeQuality" fill="#023047" fillRule="evenodd" clipRule="evenodd" width="20px" height="20px" viewBox="0 0 512 512"><g fillRule="nonzero"><path d="M255.998 0c70.69 0 134.694 28.658 181.017 74.982C483.342 121.308 512 185.312 512 256.002c0 70.689-28.658 134.69-74.985 181.016C390.692 483.342 326.688 512 255.998 512c-70.689 0-134.687-28.658-181.017-74.982C28.657 390.689 0 326.691 0 256.002c0-70.69 28.657-134.694 74.981-181.017C121.308 28.658 185.309 0 255.998 0z"/><path fill="#fff" d="M283.004 162.24h63.307l-46.503 187.523h-87.61L165.691 162.24h63.307l25.505 119.116h2.7z"/></g></svg>
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-start font-rah text-[.9rem] tracking-widest font-bold text-[#023047]">
+                                                    Falafel, hummus, lettuce, tomato, cucumber, onions, and tahini sauce.
+                                                    </div>
                                                     </div>
                                                     <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
-                                                    8$
+                                                    10$
                                                     </div>
                                                 </motion.li>
-                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8">
-                                                    <div className="text-start font-rah text-[1.1rem] tracking-widest font-bold text-[#023047]">
-                                                    Tabouleh
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    Beef and Lamb Shawarma Wrap
+                                                    </div>
+                                                    <div className="text-start font-rah text-[.9rem] tracking-widest font-bold text-[#023047]">
+                                                    Pita wrap filled with marinated beef and lamb, pickles, tomatoes, onions, parsley, garlic sauce, and tahini sauce.
+                                                    </div>
                                                     </div>
                                                     <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
-                                                    8$
+                                                    10$
                                                     </div>
                                                 </motion.li>
-                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8">
-                                                    <div className="text-start font-rah text-[1.1rem] tracking-widest font-bold text-[#023047]">
-                                                    Grilled Haloumi
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    Chicken Shawarma Wrap
+                                                    </div>
+                                                    <div className="text-start font-rah text-[.9rem] tracking-widest font-bold text-[#023047]">
+                                                    Pita wrap filled with marinated chicken, pickles, tomatoes, onions, parsley, fries (the fries come inside the wrap), garlic sauce and yogurt sauce. 
+                                                    </div>
                                                     </div>
                                                     <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
-                                                    8$
+                                                    10$
                                                     </div>
                                                 </motion.li>
-                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8">
-                                                    <div className="text-start font-rah text-[1.1rem] tracking-widest font-bold text-[#023047]">
-                                                    Babaganoush
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    Kefta Wrap
+                                                    </div>
+                                                    <div className="text-start font-rah text-[.9rem] tracking-widest font-bold text-[#023047]">
+                                                    Seasoned ground beef served with sautéed tomatoes and onions, lettuce pickles, parsley, fries (the fries come inside the sandwich) and harissa aioli. 
+                                                    </div>
                                                     </div>
                                                     <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
-                                                    8$
+                                                    10$
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    Margaz Sandwich
+                                                    </div>
+                                                    <div className="text-start font-rah text-[.9rem] tracking-widest font-bold text-[#023047]">
+                                                    Moroccan beef sausage served with onions, tomatoes, olives, parsley garlic tomato sauce and harissa. 
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                    11$
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                   Kefta Sandwich
+                                                    </div>
+                                                    <div className="text-start font-rah text-[.9rem] tracking-widest font-bold text-[#023047]">
+                                                    Seasoned ground beef topped with olives, parsley, tomatoes, onions, fries (the fries come inside the sandwich) harissa aioli and garlic tomato sauce. 
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                    10$
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    Bocadillos Tuna Sandwich
+                                                    </div>
+                                                    <div className="text-start font-rah text-[.9rem] tracking-widest font-bold text-[#023047]">
+                                                    Tuna with shaved carrots, tomatoes, lettuce, onions, cucumbers, boiled eggs, olives, mayo and fries (the fries are inside the sandwich).    
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                    10$
+                                                    </div>
+                                                </motion.li>
+                                               
+                                                </motion.ul>
+
+                                </motion.div>
+                                <motion.div 
+                                    variants={pack2}
+                                    initial="initial"
+                                    whileInView="animate" 
+                                    className="block col-span-3 border-spacing-[3rem] bg-[#D8C29D] border-seperate border-2 border-solid border-[#023047] rounded-lg shadow-lg py-[2rem] sl:h-[50rem]">
+                                    {/* <div className="p-6 border-black border-gray-300 bordertext-center">
+
+                                    </div> */}
+                                     <motion.div
+                                            variants={pack}
+                                            className="font-mari tracking-wide text-[2rem] xl:text-[3rem] mt-[.5rem] text-center text-[#023047]">
+                                                PLATEZ AND TAJINEZ
+                                            </motion.div>
+                                            <motion.ul variants={menuVariant} initial="initial" whileInView="animate" className="mx-[2rem] my-[2rem]">
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem]">
+                                                    <div className="grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    Grilled Kabob Plate (Choice of Beef Kefta or Marinated Chicken) 
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                        17$
+                                                    </div>
+                                                    <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-[#023047]">
+                                                    Comes with your choice of white rice, saffron rice or fries. Served with grilled tomato and onion and comes with your choice of sauce.    
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem]">
+                                                <div className="grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                Grilled Marinated Chicken Wings
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                        15$
+                                                    </div>
+                                                    <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-[#023047]">
+                                                    Seven marinated Moroccan flavored wings served with your choice of white rice, saffron rice or fries. Comes with grilled tomato and onion and served with a dipping sauce of your choice. 
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{ opacity: 0 }} className="grid grid-cols-2 mb-[2rem]">
+                                                <div className="grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                Shawarma Rice Bowl (Choice of Beef and Lamb, or Chicken)
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                    17$
+                                                    </div>
+                                                    <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-[#023047]">
+                                                    Marinated meat served with your choice of white rice or saffron rice. Comes with tomato cucumber salad and your choice of sauce.  
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}} className="grid grid-cols-2 mb-[2rem]">
+                                                <div className="grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                Shawarma Fries 
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                        15$
+                                                    </div>
+                                                    <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-[#023047]">
+                                                    Loaded fries served with your choice of chicken shawarma or beef and lamb shawarma. Toppings include cheese, garlic sauce and yogurt sauce.
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}} className="grid grid-cols-2 mb-[2rem]">
+                                                <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    <div>Falafel Plate </div><div> <svg xmlns="http://www.w3.org/2000/svg" shapeRendering="geometricPrecision" textRendering="geometricPrecision" imageRendering="optimizeQuality" fill="#023047" fillRule="evenodd" clipRule="evenodd" width="20px" height="20px" viewBox="0 0 512 512"><g fillRule="nonzero"><path d="M255.998 0c70.69 0 134.694 28.658 181.017 74.982C483.342 121.308 512 185.312 512 256.002c0 70.689-28.658 134.69-74.985 181.016C390.692 483.342 326.688 512 255.998 512c-70.689 0-134.687-28.658-181.017-74.982C28.657 390.689 0 326.691 0 256.002c0-70.69 28.657-134.694 74.981-181.017C121.308 28.658 185.309 0 255.998 0z"/><path fill="#fff" d="M283.004 162.24h63.307l-46.503 187.523h-87.61L165.691 162.24h63.307l25.505 119.116h2.7z"/></g></svg>
+                                                    </div>
+                                                    </div>
+                                                    
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                        16$
+                                                    </div>
+                                                    <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-[#023047]">
+                                                    Falafel, Hummus (your choice of flavor), EZ Salad, pita, and tahini sauce.
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}} className="grid grid-cols-2 mb-[2rem]">
+                                                <div className="grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                Beef Tajine
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                        22$
+                                                    </div>
+                                                    <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-[#023047]">
+                                                    Slow cooked beef chunks simmered in a delicious sauce and served with carrots, peas, and olives. Comes with your choice of pita or rice.
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}} className="grid grid-cols-2 mb-[2rem]">
+                                                <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    <div>Couscous with Tfaya</div>
+                                                    </div>
+                                                    
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                        19$
+                                                    </div>
+                                                    <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-[#023047]">
+                                                    Sweet chicken topped with glazed onions, raisins, and chickpeas. Served over couscous. 
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}} className="grid grid-cols-2 mb-[2rem]">
+                                                <div className="grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                Shwa
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                        22$
+                                                    </div>
+                                                    <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-[#023047]">
+                                                    1/2 pound rotisserie cooked lamb shoulder served with a cumin rub. Comes with pita and your choice of one EZ Bite sample.
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}} className="grid grid-cols-2 mb-[2rem]">
+                                                <div className="grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                Shwa
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                        38$
+                                                    </div>
+                                                    <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-[#023047]">
+                                                    One pound rotisserie cooked lamb shoulder served with a cumin rub. Comes with pita and your choice of two EZ Bitez samples. 
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}} className="grid grid-cols-2 mb-[2rem]">
+                                                <div className="grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                Mixed Grill Family Style
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                        65$
+                                                    </div>
+                                                    <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-[#023047]">
+                                                    Comes with two chicken kabobs, two kefta kabobs, four wings, six margaz beef sausages, three ounces of chicken shawarma, three ounces of beef and lamb shawarma, rice, hummus, EZ Salad, grilled tomatoes and onions, and pita.     
+                                                    </div>
+                                                </motion.li>
+                                                
+                                            </motion.ul>
+
+                                </motion.div>
+                            </div>
+
+                            <div className="grid gap-4 xl:grid-cols-2 mb-6 lg:mb-0 ">
+                                <motion.div 
+                                    variants={pack2}
+                                    initial="initial"
+                                    whileInView="animate" 
+                                    className="block w-[160%] xl:w-[100%] w-screen ml-1 border-solid border-[#023047] border-seperate border-2 rounded-lg shadow-lg py-[2rem] xl:my-[3rem] xl:h-auto bg-[#D8C29D]">
+                                        <motion.div
+                                            variants={pack}
+                                            className="font-mari tracking-wide text-[2.5rem] mt-[.5rem] text-center text-[#023047]">
+                                                SIDEZ
+                                            </motion.div>
+                                            <motion.ul variants={menuVariant} initial="initial" whileInView="animate" className="">
+                                            <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    Pita
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                    2$
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    White Rice
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                    3$
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    Saffron Rice
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                    3.5$
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    Fries
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                    3.5$
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    Couscous
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                    3$
                                                     </div>
                                                 </motion.li>
                                                 </motion.ul>
@@ -152,97 +546,39 @@ fill="#D8C29D" stroke="none">
                                     variants={pack2}
                                     initial="initial"
                                     whileInView="animate" 
-                                    className="block col-span-2 border-spacing-[3rem] bg-[#D8C29D] border-seperate border-2 border-solid border-[#023047] rounded-lg shadow-lg py-[2rem] sl:h-[50rem]">
+                                    className="block border-spacing-[3rem] bg-[#D8C29D] border-seperate border-2 border-solid border-[#023047] rounded-lg shadow-lg py-[2rem] sl:h-[50rem]">
                                     {/* <div className="p-6 border-black border-gray-300 bordertext-center">
 
                                     </div> */}
                                      <motion.div
                                             variants={pack}
-                                            className="font-mari tracking-wide text-[3rem] mt-[.5rem] text-center text-[#023047]">
-                                                Mains
+                                            className="font-mari tracking-wide text-[2.5rem] xl:text-[3rem] mt-[.5rem] text-center text-[#023047]">
+                                                Kidz (Ages 10 and Under Only!)
                                             </motion.div>
                                             <motion.ul variants={menuVariant} initial="initial" whileInView="animate" className="mx-[2rem] my-[2rem]">
                                                 <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem]">
                                                     <div className="grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
-                                                    Steak Kabobs 
+                                                    Mini Rice Bowl
                                                     </div>
                                                     <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
-                                                        20$
+                                                        7.50$
                                                     </div>
                                                     <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-[#023047]">
-                                                        Saffron rice, Hummus, Pickled Cucumbers
+                                                    Comes with white rice, choice of chicken or beef
                                                     </div>
                                                 </motion.li>
                                                 <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem]">
                                                 <div className="grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
-                                                    Chicken Kabobs 
+                                                Mini Burger with Fries
                                                     </div>
                                                     <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
-                                                        20$
+                                                        7.50$
                                                     </div>
                                                     <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-[#023047]">
-                                                        Saffron rice, Hummus, Pickled Cucumbers
+                                                   Choice of fries or rice.
                                                     </div>
                                                 </motion.li>
-                                                <motion.li variants={menuItem} initial={{ opacity: 0 }} className="grid grid-cols-2 mb-[2rem]">
-                                                <div className="grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
-                                                    Grilled Salmon
-                                                    </div>
-                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
-                                                        20$
-                                                    </div>
-                                                    <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-[#023047]">
-                                                        Saffron rice, Hummus, Pickled Cucumbers
-                                                    </div>
-                                                </motion.li>
-                                                <motion.li variants={menuItem} initial={{opacity: 0}} className="grid grid-cols-2 mb-[2rem]">
-                                                <div className="grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
-                                                    Broiled Seabass
-                                                    </div>
-                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
-                                                        20$
-                                                    </div>
-                                                    <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-[#023047]">
-                                                        Saffron rice, Hummus, Pickled Cucumbers
-                                                    </div>
-                                                </motion.li>
-                                                <motion.li variants={menuItem} initial={{opacity: 0}} className="grid grid-cols-2 mb-[2rem]">
-                                                <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
-                                                    <div>Grilled Tempeh</div><div> <svg xmlns="http://www.w3.org/2000/svg" shapeRendering="geometricPrecision" textRendering="geometricPrecision" imageRendering="optimizeQuality" fill="#023047" fillRule="evenodd" clipRule="evenodd" width="20px" height="20px" viewBox="0 0 512 512"><g fillRule="nonzero"><path d="M255.998 0c70.69 0 134.694 28.658 181.017 74.982C483.342 121.308 512 185.312 512 256.002c0 70.689-28.658 134.69-74.985 181.016C390.692 483.342 326.688 512 255.998 512c-70.689 0-134.687-28.658-181.017-74.982C28.657 390.689 0 326.691 0 256.002c0-70.69 28.657-134.694 74.981-181.017C121.308 28.658 185.309 0 255.998 0z"/><path fill="#fff" d="M283.004 162.24h63.307l-46.503 187.523h-87.61L165.691 162.24h63.307l25.505 119.116h2.7z"/></g></svg>
-                                                    </div>
-                                                    </div>
-                                                    
-                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
-                                                        20$
-                                                    </div>
-                                                    <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-[#023047]">
-                                                        Saffron rice, Hummus, Pickled Cucumbers
-                                                    </div>
-                                                </motion.li>
-                                                <motion.li variants={menuItem} initial={{opacity: 0}} className="grid grid-cols-2 mb-[2rem]">
-                                                <div className="grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
-                                                    Steak Kabobs 
-                                                    </div>
-                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
-                                                        20$
-                                                    </div>
-                                                    <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-[#023047]">
-                                                        Saffron rice, Hummus, Pickled Cucumbers
-                                                    </div>
-                                                </motion.li>
-                                                <motion.li variants={menuItem} initial={{opacity: 0}} className="grid grid-cols-2 mb-[2rem]">
-                                                <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
-                                                    <div>Plant Based Protein Balls</div><div> <svg xmlns="http://www.w3.org/2000/svg" shapeRendering="geometricPrecision" textRendering="geometricPrecision" imageRendering="optimizeQuality" fill="#023047" fillRule="evenodd" clipRule="evenodd" width="20px" height="20px" viewBox="0 0 512 512"><g fillRule="nonzero"><path d="M255.998 0c70.69 0 134.694 28.658 181.017 74.982C483.342 121.308 512 185.312 512 256.002c0 70.689-28.658 134.69-74.985 181.016C390.692 483.342 326.688 512 255.998 512c-70.689 0-134.687-28.658-181.017-74.982C28.657 390.689 0 326.691 0 256.002c0-70.69 28.657-134.694 74.981-181.017C121.308 28.658 185.309 0 255.998 0z"/><path fill="#fff" d="M283.004 162.24h63.307l-46.503 187.523h-87.61L165.691 162.24h63.307l25.505 119.116h2.7z"/></g></svg>
-                                                    </div>
-                                                    </div>
-                                                    
-                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
-                                                        20$
-                                                    </div>
-                                                    <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-[#023047]">
-                                                        Saffron rice, Hummus, Pickled Cucumbers
-                                                    </div>
-                                                </motion.li>
+                                    
                                             </motion.ul>
 
                                 </motion.div>
@@ -254,10 +590,96 @@ fill="#D8C29D" stroke="none">
                             initial="initial"
                             whileInView="animate" 
                             className="block xl:mx-[15rem] bg-[#D8C29D] mt-[3rem] py-[2rem] mb-[2rem] border-seperate border-2 border-[#023047] rounded-lg shadow-lg">
-                            <h1 className="font-mari text-[2rem] mt-[.5rem] text-center text-[#023047]">Moroccan Bread Pudding</h1>
-                            <p className="font-rah text-[1rem] tracking-widest font-bold text-center text-[#023047] mt-8">Moroccan Bread, Raisins, Streussel Topping</p> 
-                            <p className="font-rah text-[1rem] tracking-widest font-bold text-center text-[#023047] mt-4">with Saffron Ice Cream</p> 
-                            <p className="font-mari text-[2rem] tracking-wide font-bold text-center text-[#023047] mt-4 mb-1">$ 10</p> 
+                            <motion.div
+                                            variants={pack}
+                                            initial="initial"
+                                            animate="animate"
+                                            className="font-mari tracking-wide text-[2.5rem] mt-[.5rem] text-center text-[#023047]">
+                                                DESSERTZ
+                                            </motion.div>
+                                            <motion.ul variants={menuVariant} initial="initial" whileInView="animate" className="">
+                                            <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    Sweet Briwat
+                                                    </div>
+                                                    <div className="text-start font-rah text-[.9rem] tracking-widest font-bold text-[#023047]">
+                                                    Crispy thin Moroccan dough filled with almonds and dipped in honey orange blossom.
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                    9$
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    Baklava
+                                                    </div>
+                                                    <div className="text-start font-rah text-[.9rem] tracking-widest font-bold text-[#023047]">
+                                                    Phyllo dough stuffed with honey and nuts.
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                    9$
+                                                    </div>
+                                                </motion.li>
+                                                </motion.ul>
+                        </motion.div>
+                        <motion.div
+                            variants={pack2}
+                            initial="initial"
+                            whileInView="animate" 
+                            className="block xl:mx-[15rem] bg-[#D8C29D] mt-[3rem] py-[2rem] mb-[2rem] border-seperate border-2 border-[#023047] rounded-lg shadow-lg">
+                            <motion.div
+                                            variants={pack}
+                                            initial="initial"
+                                            animate="animate"
+                                            className="font-mari tracking-wide text-[2.5rem] mt-[.5rem] text-center text-[#023047]">
+                                                DRINKZ
+                                            </motion.div>
+                                            <motion.ul variants={menuVariant} initial="initial" whileInView="animate" className="">
+                                            <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    Soda
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                    2.95$
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    Moroccan Coffee (Nas Nas)
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                    6.5$
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    Mini Hot Tea Pot
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                    8$
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#023047]">
+                                                    Bottled Water
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#023047]">
+                                                    2.50$
+                                                    </div>
+                                                </motion.li>
+                                                </motion.ul>
                         </motion.div>
                     </div>
                 </section>
