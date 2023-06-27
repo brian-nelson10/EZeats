@@ -37,12 +37,12 @@ export default function Section5() {
         <div className="grid grid-cols-3 ">
             <div className="">
                 <div className="-rotate-90 absolute items-center ml-[31rem] mt-20 tracking-widest">
-                <span className="text-[#D8C29D] font-rah text-[2rem]">Find Us</span>
+                <span className="text-[#000000] font-rah text-[2rem]">Find Us</span>
                 </div>
             </div>
             <div className="grid grid-rows-2">
-                <div className="text-[#D8C29D] font-rah text-[5rem] -mb-[2rem] hover:text-[#e3dac6] hover:cursor-pointer">3520 St. John's Bluff Road South</div>
-                <div className="text-[#D8C29D] font-rah text-[5rem] hover:text-[#e3dac6] hover:cursor-pointer">Jacksonville, Fl 32224</div>
+                <div className="text-[#000000] font-rah text-[5rem] -mb-[2rem] hover:text-[#e3dac6] hover:cursor-pointer">3520 St. John's Bluff Road South</div>
+                <div className="text-[#000000] font-rah text-[5rem] hover:text-[#e3dac6] hover:cursor-pointer">Jacksonville, Fl 32224</div>
             </div>
             <motion.div 
                   animate={x}

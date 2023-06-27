@@ -19,7 +19,7 @@ const Section3 = () => {
   const [scrollY, setScrollY] = useState(null);
   const myRef = useRef(null);
   useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY - 3000);
+    const handleScroll = () => setScrollY(window.scrollY - 5000);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -30,7 +30,7 @@ const Section3 = () => {
         variants={containerVar}
         initial="hidden"
         whileInView="visible"
-        className="bg-transparent grid grid-cols-3 px-[5rem] gap-[2rem] h-[25rem] pt-[5rem] z-20"
+        className="bg-transparent grid grid-cols-3 px-[5rem] gap-[2rem] h-[25rem] pt-[15rem] xl:mt-[30rem] z-20"
         ref={myRef} id="myId" >
       
         <motion.div 

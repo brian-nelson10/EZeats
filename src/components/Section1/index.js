@@ -26,7 +26,7 @@ export default function Section1() {
         <div className="gradient h-[55rem] w-screen z-50 xl:-mb-[13rem] -mt-[16rem] lg:-mt-[15rem]">
             <motion.div className="container flex-row lg:flex-wrap">
                 <motion.div className="aboutHero grid grid-rows-2 lg:grid-cols-2 gap-8 w-screen items-center justify-center">
-                    <div className="-mt-[1rem] mx-[2rem] lg:mt-[9rem] lg:ml-[17rem] text-center font-rah text-[1.4rem] tracking-wide text-[#D8C29D]">
+                    <div className="-mt-[1rem] mx-[2rem] lg:mt-[9rem] lg:ml-[17rem] text-center font-bold font-rah text-[1.4rem] tracking-wide text-[#000000]">
                     <p>"EZ Eatz is a locally owned restaurant that specializes in Moroccan cuisine.</p>
                     <p> Located on St. John’s Bluff in Jacksonville, FL, our restaurant offers a quick and convenient dining experience without compromising on quality or flavor.</p><br/>
                     <p>Our menu features a range of traditional Moroccan dishes, such as couscous, tagine, tangia, and loubia soup, as well as a variety of wraps, salads, and more that are perfect for a satisfying meal that you can dine in and enjoy, or take on the go.</p><br/>

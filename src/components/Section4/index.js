@@ -22,7 +22,7 @@ const Section4 = () => {
   }
   return (
     <>
-    <section className="-mt-[25rem] h-[80rem] px-[2rem] gradient3 pt-[6rem] -mb-[2rem] overflow-hidden">
+    <section className="-mt-[5rem] h-[78rem] px-[2rem] gradient3 pt-[6rem] -mb-[40rem] overflow-hidden">
         <div className="container mt-[25rem] mx-[2rem] ml-[4rem] items-center justify-center text-center bg-contact bg-fixed z-20 relative">
       <motion.div
         style={{ x: leftX }}
@@ -30,7 +30,7 @@ const Section4 = () => {
         whileInView={{opacity: [.1,.3,.5,.7,.9,1] , transition: {duration: .9, delay: .6}}}
         className="contactText"
       >
-        <div onClick={handleContact} className="font-mari text-[10rem] tracking-wide text-[#D8C29D] hover:cursor-pointer contactText">Contact Us</div>
+        <div onClick={handleContact} className="font-mari text-[10rem] tracking-wide text-[#000000] hover:cursor-pointer contactText">Contact Us</div>
       </motion.div>
       <motion.div
         style={{ x: rightX }}
@@ -38,13 +38,13 @@ const Section4 = () => {
         whileInView={{opacity: [.1,.3,.5,.7,.9,1] , transition: {duration: .9, delay: .6}}}
         className="z-50 contactText text-end overflow-hidden"
       >
-        <h1 onClick={handleOrder} className="font-mari text-[10rem] tracking-wide text-[#D8C29D] overflow-hidden contactText hover:cursor-pointer">Order Online</h1>
+        <h1 onClick={handleOrder} className="font-mari text-[10rem] tracking-wide text-[#000000] overflow-hidden contactText hover:cursor-pointer">Order Online</h1>
       </motion.div>
       
       </div>
    
       </section>
-      <div className="gradient3 mt-[45rem] z-10"> 
+      <div className="bg-[#32cd32] mt-[15rem] -mb-[30rem] z-10"> 
       <motion.div className="-mt-[15rem]"  style={{y: fallY}}> 
                <motion.img style={{rotate: rotateY}} src={cardamom}  className="w-[15%] h-[15%] items-center jusitfy-center ml-[75rem] -mt-[10rem]"
                 />

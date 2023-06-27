@@ -23,8 +23,8 @@ export default function Footer() {
   };
   return (
     <section className="bottom-0">
-      <div className="z-10 bg-[#07252d] xl:h-[20rem] xl:-mt-[25rem]" />
-      <footer aria-label="Site Footer" className="bg-[#05323a] z-20 bottom-0 lg:grid lg:grid-cols-5">
+      <div className="z-10 bg-[#32cd32] xl:h-[20rem] xl:-mt-[25rem]" />
+      <footer aria-label="Site Footer" className="bg-black z-20 bottom-0 lg:grid lg:grid-cols-5">
         <div className="relative block h-32 lg:col-span-2 lg:h-full">
           <Image
             srcSet={imgWeb}
@@ -37,18 +37,18 @@ export default function Footer() {
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
             <div>
               <div>
-                <span className="text-xs tracking-wide text-[#D8C29D] uppercase">
+                <span className="text-xs tracking-wide text-[#32cd32] uppercase">
                   Give us a call
                 </span>
 
                 <div
-                  className="block text-2xl font-medium font-mari tracking-widest text-[#D8C29D] hover:opacity-75 sm:text-3xl"
+                  className="block text-2xl font-medium font-mari tracking-widest text-[#32cd32] hover:opacity-75 sm:text-3xl"
                 >
                   904-994-6508
                 </div>
               </div>
 
-              <ul className="mt-8 space-y-1 text-[1.1rem] tracking-widest font-rah text-[#D8C29D]">
+              <ul className="mt-8 space-y-1 text-[1.1rem] tracking-widest font-rah text-[#32cd32]">
                 <li>Monday - Sunday: 11am - 9pm</li>
                 {/* <li>Weekends: 11am - 9pm</li> */}
               </ul>
@@ -59,7 +59,7 @@ export default function Footer() {
                     href="https://www.facebook.com/ezeatzbyyaya"
                     rel="noreferrer"
                     target="_blank"
-                    className="text-[#D8C29D] transition hover:opacity-75 hover:cursor-pointer"
+                    className="text-[#32cd32] transition hover:opacity-75 hover:cursor-pointer"
                   >
                     <span className="sr-only">Facebook</span>
 
@@ -83,7 +83,7 @@ export default function Footer() {
                     href="https://www.instagram.com/ezeatzbyyaya/"
                     rel="noreferrer"
                     target="_blank"
-                    className="text-[#D8C29D] transition hover:opacity-75 hover:cursor-pointer"
+                    className="text-[#32cd32] transition hover:opacity-75 hover:cursor-pointer"
                   >
                     <span className="sr-only">Instagram</span>
 
@@ -107,7 +107,7 @@ export default function Footer() {
                     href="www.twitter.com"
                     rel="noreferrer"
                     target="_blank"
-                    className="text-[#D8C29D] transition hover:opacity-75"
+                    className="text-[#32cd32] transition hover:opacity-75"
                   >
                     <span className="sr-only">Twitter</span>
 
@@ -128,36 +128,36 @@ export default function Footer() {
 
             <div className="grid grid-cols-2 items-end justify-end text-end gap-4 sm:grid-cols-2">
               <div>
-                {/* <p className="font-medium text-[#D8C29D]"></p> */}
+                {/* <p className="font-medium text-[#32cd32]"></p> */}
 
                 <nav aria-label="Footer" className="mt-6">
                   <ul className="space-y-4 text-sm">
                     <li>
-                      <div onClick={handleOrder} className="text-[#D8C29D] text-[1.4rem] tracking-widest font-rah transition hover:opacity-75 hover:cursor-pointer">
+                      <div onClick={handleOrder} className="text-[#32cd32] text-[1.4rem] tracking-widest font-rah transition hover:opacity-75 hover:cursor-pointer">
                         Order Online
                       </div>
                     </li>
 
                     <li>
-                      <div onClick={handleMenu} className="text-[#D8C29D] text-[1.4rem] tracking-widest font-rah transition hover:opacity-75 hover:cursor-pointer">
+                      <div onClick={handleMenu} className="text-[#32cd32] text-[1.4rem] tracking-widest font-rah transition hover:opacity-75 hover:cursor-pointer">
                         Download Menu
                       </div>
                     </li>
 
                     <li>
-                      <div onClick={handleCatering} className="text-[#D8C29D] text-[1.4rem] tracking-widest font-rah transition hover:opacity-75 hover:cursor-pointer">
+                      <div onClick={handleCatering} className="text-[#32cd32] text-[1.4rem] tracking-widest font-rah transition hover:opacity-75 hover:cursor-pointer">
                         Private Events
                       </div>
                     </li>
 
                     <li>
-                      <div onClick={handleFoodTruck} className="text-[#D8C29D] text-[1.4rem] tracking-widest font-rah transition hover:opacity-75 hover:cursor-pointer">
+                      <div onClick={handleFoodTruck} className="text-[#32cd32] text-[1.4rem] tracking-widest font-rah transition hover:opacity-75 hover:cursor-pointer">
                         Food Truck
                       </div>
                     </li>
 
                     <li>
-                      <div onClick={handleJobs} className="text-[#D8C29D] text-[1.4rem] tracking-widest font-rah transition hover:opacity-75 hover:cursor-pointer">
+                      <div onClick={handleJobs} className="text-[#32cd32] text-[1.4rem] tracking-widest font-rah transition hover:opacity-75 hover:cursor-pointer">
                         Work With Us
                       </div>
                     </li>
@@ -184,7 +184,7 @@ export default function Footer() {
                   onClick={() => {
                     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
                   }}
-                  className="items-center text-start xl:text-center grid ml-[3rem] xl:ml-0 xl:mr-[3rem] font-rah text-[#D8C29D] text-[1rem] lg:text-[1.1rem] -mt-[3rem] hover:cursor-pointer">Back Up</div>
+                  className="items-center text-start xl:text-center grid ml-[3rem] xl:ml-0 xl:mr-[3rem] font-rah text-[#32cd32] text-[1rem] lg:text-[1.1rem] -mt-[3rem] hover:cursor-pointer">Back Up</div>
               </div>
             </div>
           </div>
@@ -194,26 +194,26 @@ export default function Footer() {
               <nav aria-label="Footer Navigation - Support">
                 <ul className="flex flex-wrap gap-4 text-xs">
                   <li>
-                    <div className="text-[#D8C29D] transition hover:opacity-75">
+                    <div className="text-[#32cd32] transition hover:opacity-75">
                       Terms & Conditions
                     </div>
                   </li>
 
                   <li>
-                    <div className="text-[#D8C29D] transition hover:opacity-75">
+                    <div className="text-[#32cd32] transition hover:opacity-75">
                       Privacy Policy
                     </div>
                   </li>
 
                   <li>
-                    <div className="text-[#D8C29D] transition hover:opacity-75">
+                    <div className="text-[#32cd32] transition hover:opacity-75">
                       Cookies
                     </div>
                   </li>
                 </ul>
               </nav>
 
-              <p className="font-rah mt-8 text-xs text-[#D8C29D] sm:mt-0">
+              <p className="font-rah mt-8 text-xs text-[#32cd32] sm:mt-0">
                 &copy; 2023. EZ EATZ. All rights reserved.
               </p>
             </div>

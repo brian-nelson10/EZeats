@@ -13,7 +13,7 @@ import Section2 from "../components/Section2";
 import Onion from "../components/Onion/Index";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 import Ginger from "../components/Ginger";
-import Section3 from "../components/Section3";
+// import Section3 from "../components/Section3";
 import Section4 from "../components/Section4";
 import Footer from "../components/Footer";
 import Section5 from "../components/Section5";
@@ -154,19 +154,19 @@ const Home = () => {
                         {width < breakpoint ? <PepperMobile/> : <Pepper/>}
                         {width < breakpoint ? <Section1Mobile/> : <Section1/>}
                     </section>
-                    <div ref={app} className="h-[100%] w-[100%] overflow-hidden gradient3">
-      <div ref={scrollContainer} className="scroll h-[100%] w-[100%] overflow-hidden gradient3"> 
+                    <div ref={app} className="h-[100%] w-[100%] overflow-hidden bg-[#32cd32]">
+      <div ref={scrollContainer} className="scroll h-[100%] w-[100%] overflow-hidden bg-[#32cd32]"> 
                     <section className="z-20 relative" ref={myRef}>
                         
                             <Section2 />
                         
                     </section>
-                    <section className="z-30 relative">
+                    {/* <section className="z-30 relative">
                         
                         {width < breakpoint ? "" : <Section3 />}
                             
                         
-                    </section>
+                    </section> */}
                     <section className="z-10 relative">
                         
                         {width < breakpoint ? <Section4Mobile/> : <Section4 />}

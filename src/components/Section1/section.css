@@ -1,11 +1,11 @@
 .gradient {
-    background: linear-gradient(#D8C29D, .1%, #023047); 
+    background: linear-gradient(#07252d, 8%, #32cd32); 
 }
 .gradient2 {
-    background: linear-gradient( #023047, 35%, #07252d );
+    background: linear-gradient( #32cd32, 85%, #07252d );
 }
 .gradient3 {
-    background: #07252d;
+  background: linear-gradient(#07252d, 8%, #32cd32); 
 }
 .bg-deco {
     background-image: url("../../assets/images/bgBlue.png");
