@@ -104,13 +104,13 @@ const Catering = () => {
                     </div>
                 </section>
                 <LazyLoadComponent>
-                <section className="h-[50rem] gradient3  overflow-hidden" >
+                <section className="h-[50rem] overflow-hidden" >
                     <div className="px-[4rem] xl:px-[9rem] py-[10rem]">
                         <div
                             className="grid mt-[2rem]">
                             <motion.h1
                                 variants={header}
-                                className="tracking-wide text-[4rem] xl:text-[5rem] font-mari text-[#D8C29D]">Catering</motion.h1>
+                                className="tracking-wide text-[4rem] xl:text-[5rem] font-mari text-black">Catering</motion.h1>
                         </div>
                     </div>
                 </section>
@@ -124,7 +124,7 @@ const Catering = () => {
                             initial="initial"
                             whileInView="animate" 
                             variants={header1}>
-                            <p className="tracking-wide text-[1.8rem] xl:text-[3.5rem] font-rah text-[#D8C29D] text-center">Let our catering team create an elegant and customized package for you, offering a range of traditional dishes and flavors to suit any event or occasion.</p>
+                            <p className="tracking-wide text-[1.8rem] xl:text-[3.5rem] font-rah text-black text-center">Let our catering team create an elegant and customized package for you, offering a range of traditional dishes and flavors to suit any event or occasion.</p>
                         </motion.div>
                 </motion.section>
                 <hr className="border-6 border-[#D8C29D]"/>
@@ -151,9 +151,9 @@ const Catering = () => {
                     </section>
                 <section className="grid px-[10rem] py-[5rem] xl:-mt-[10rem] text-center justify-center items-center">
                     <div className="text-center justify-center flex-row flex">
-                        <p className="font-rah text-[2rem] xl:text-[6rem] text-[#D8C29D]">Questions?</p>
+                        <p className="font-rah text-[2rem] xl:text-[6rem] text-black">Questions?</p>
                         <p 
-                            className="font-mari text-[2rem] xl:text-[6rem] text-[#D8C29D] hover:cursor-pointer hover:opacity-[.5]"
+                            className="font-mari text-[2rem] xl:text-[6rem] text-black hover:cursor-pointer hover:opacity-[.5]"
                             onClick={handleContact}>CONTACT US</p>
                     </div>
                 </section>

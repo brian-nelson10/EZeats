@@ -23,9 +23,11 @@
 .bg-contact {
     background: url("../../assets/carousel/2.JPG");
     background-position: fixed;
-    background-size: 60% ;
+    background-size: 70% ;
     background-position: 50%;
     background-repeat: no-repeat;
+    border-radius: 50%;
+    
 }
 .bg-contactMobile {
   background: url("../../assets/carousel/2.JPG");

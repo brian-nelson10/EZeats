@@ -94,8 +94,8 @@ fill="#000000" stroke="none">
                                             className="font-mari tracking-wide text-[2.5rem] mt-[.5rem] text-center text-[#000000]">
                                                 EZ BITEZ
                                             </motion.div>
-                                            <motion.ul variants={menuVariant} initial="initial" whileInView="animate" className="">
-                                            <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                            <motion.ul variants={menuVariant} initial="initial" whileInView="animate" viewport={{ once: true }} className="">
+                                            <motion.li variants={menuItem} initial={{opacity: 0}}  viewport={{ once: true }} className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
                                                 <div className="grid-rows-2">
                                                     <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
                                                     Hummus<div> <svg xmlns="http://www.w3.org/2000/svg" shapeRendering="geometricPrecision" textRendering="geometricPrecision" imageRendering="optimizeQuality" fill="#000000" fillRule="evenodd" clipRule="evenodd" width="20px" height="20px" viewBox="0 0 512 512"><g fillRule="nonzero"><path d="M255.998 0c70.69 0 134.694 28.658 181.017 74.982C483.342 121.308 512 185.312 512 256.002c0 70.689-28.658 134.69-74.985 181.016C390.692 483.342 326.688 512 255.998 512c-70.689 0-134.687-28.658-181.017-74.982C28.657 390.689 0 326.691 0 256.002c0-70.69 28.657-134.694 74.981-181.017C121.308 28.658 185.309 0 255.998 0z"/><path fill="#fff" d="M283.004 162.24h63.307l-46.503 187.523h-87.61L165.691 162.24h63.307l25.505 119.116h2.7z"/></g></svg>
@@ -228,13 +228,14 @@ fill="#000000" stroke="none">
                                     variants={pack2}
                                     initial="initial"
                                     whileInView="animate" 
+                                    viewport={{ once: true }}
                                     className="block col-span-2 w-[160%] xl:w-[100%] w-screen ml-1 border-solid border-[#000000] border-seperate border-2 rounded-lg shadow-lg py-[2rem] xl:my-[3rem]  xl:h-auto bg-[#adb5bd]">
                                         <motion.div
                                             variants={pack}
                                             className="font-mari tracking-wide text-[2.5rem] mt-[.5rem] text-center text-[#000000]">
                                                 HAND HELDZ
                                             </motion.div>
-                                            <motion.ul variants={menuVariant} initial="initial" whileInView="animate" className="">
+                                            <motion.ul variants={menuVariant} initial="initial" whileInView="animate" viewport={{ once: true }} className="">
                                             <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
                                                 <div className="grid-rows-2">
                                                     <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
@@ -357,7 +358,7 @@ fill="#000000" stroke="none">
                                             className="font-mari tracking-wide text-[2rem] xl:text-[3rem] mt-[.5rem] text-center text-[#000000]">
                                                 PLATEZ AND TAJINEZ
                                             </motion.div>
-                                            <motion.ul variants={menuVariant} initial="initial" whileInView="animate" className="mx-[2rem] my-[2rem]">
+                                            <motion.ul variants={menuVariant} initial="initial" whileInView="animate" viewport={{ once: true }} className="mx-[2rem] my-[2rem]">
                                                 <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem]">
                                                     <div className="grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
                                                     Grilled Kabob Plate (Choice of Beef Kefta or Marinated Chicken) 
@@ -488,7 +489,7 @@ fill="#000000" stroke="none">
                                             className="font-mari tracking-wide text-[2.5rem] mt-[.5rem] text-center text-[#000000]">
                                                 SIDEZ
                                             </motion.div>
-                                            <motion.ul variants={menuVariant} initial="initial" whileInView="animate" className="">
+                                            <motion.ul variants={menuVariant} initial="initial" whileInView="animate" viewport={{ once: true }} className="">
                                             <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
                                                 <div className="grid-rows-2">
                                                     <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
@@ -555,7 +556,7 @@ fill="#000000" stroke="none">
                                             className="font-mari tracking-wide text-[2.5rem] xl:text-[3rem] mt-[.5rem] text-center text-[#000000]">
                                                 Kidz (Ages 10 and Under Only!)
                                             </motion.div>
-                                            <motion.ul variants={menuVariant} initial="initial" whileInView="animate" className="mx-[2rem] my-[2rem]">
+                                            <motion.ul variants={menuVariant} initial="initial" whileInView="animate" viewport={{ once: true }} className="mx-[2rem] my-[2rem]">
                                                 <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem]">
                                                     <div className="grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
                                                     Mini Rice Bowl
@@ -597,7 +598,7 @@ fill="#000000" stroke="none">
                                             className="font-mari tracking-wide text-[2.5rem] mt-[.5rem] text-center text-[#000000]">
                                                 DESSERTZ
                                             </motion.div>
-                                            <motion.ul variants={menuVariant} initial="initial" whileInView="animate" className="">
+                                            <motion.ul variants={menuVariant} initial="initial" whileInView="animate" viewport={{ once: true }} className="">
                                             <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
                                                 <div className="grid-rows-2">
                                                     <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
@@ -638,7 +639,7 @@ fill="#000000" stroke="none">
                                             className="font-mari tracking-wide text-[2.5rem] mt-[.5rem] text-center text-[#000000]">
                                                 DRINKZ
                                             </motion.div>
-                                            <motion.ul variants={menuVariant} initial="initial" whileInView="animate" className="">
+                                            <motion.ul variants={menuVariant} initial="initial" whileInView="animate" viewport={{ once: true }} className="">
                                             <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
                                                 <div className="grid-rows-2">
                                                     <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">

@@ -3,11 +3,11 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import img from "../../assets/images/ezlogogreen.png";
-import img1 from "../../assets/images/arugula.png";
-import img2 from "../../assets/images/seed.png";
-import img3 from "../../assets/images/onion.png";
-import img4 from "../../assets/images/garlic.png";
-import img5 from "../../assets/images/cardamom.png";
+import img1 from "../../assets/images/arugulaG.png";
+import img2 from "../../assets/images/seedG.png";
+import img3 from "../../assets/images/onionG.png";
+import img4 from "../../assets/images/garlicG.png";
+import img5 from "../../assets/images/cardamomG.png";
 
 export default function Hamburger() {
   const [isOpen, setIsOpen] = useState(false);
@@ -217,7 +217,7 @@ export default function Hamburger() {
         </motion.div>
       </nav>
       <motion.nav
-        className="h-full w-screen fixed flex flex-col items-center justify-center align-center bg-[#07252d] z-40 inset-0"
+        className="h-full w-screen fixed flex flex-col items-center justify-center align-center bg-black z-40 inset-0"
         initial={false}
         variants={menuVariants}
         animate={isOpen ? "opened" : "closed"}

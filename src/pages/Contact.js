@@ -73,7 +73,7 @@ const Contact = () => {
     return (
         <AnimatePresence mode="wait">
             <motion.section
-                className="square gradient3"
+                className="square gradient"
                 variants={main}
                 initial="initial"
                 animate="animate"
@@ -91,7 +91,7 @@ const Contact = () => {
                     </div>
                 </section>
                 <LazyLoadComponent>
-                <section className="xl:h-[110rem] h-[107rem] gradient3 overflow-hidden -mb-[12rem]">
+                <section className="h-auto overflow-hidden -mb-[12rem]">
                     <div className="px-[4rem] xl:px-[9rem] py-[10rem]">
                         <div
                             className="grid mt-[2rem]">
@@ -150,7 +150,7 @@ const Contact = () => {
                             </svg>
                         </div>
                     </div>
-                    <div className="gradient3 xl:-mt-[45rem] z-10">
+                    <div className="xl:-mt-[45rem] z-10">
                             <motion.div className="xl:-mt-[20rem] ml-2" style={{ y: fallY }}>
                                 <motion.img style={{ rotate: rotateYcard }} src={cardamom} className="xl:w-[15%] xl:h-[15%] w-[50%] h-[50%] items-center jusitfy-center xl:ml-[75rem] -ml-[3rem] -mt-[10rem]"
                                 />

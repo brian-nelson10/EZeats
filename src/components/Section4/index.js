@@ -22,8 +22,8 @@ const Section4 = () => {
   }
   return (
     <>
-    <section className="-mt-[5rem] h-[78rem] px-[2rem] gradient3 pt-[6rem] -mb-[40rem] overflow-hidden">
-        <div className="container mt-[25rem] mx-[2rem] ml-[4rem] items-center justify-center text-center bg-contact bg-fixed z-20 relative">
+    <section className="-mt-[5rem] h-auto px-[2rem] gradient3 pt-[6rem] overflow-hidden">
+        <div className="container mt-[20rem] mx-[2rem] ml-[4rem] items-center justify-center text-center bg-contact bg-fixed z-20 relative">
       <motion.div
         style={{ x: leftX }}
         initial={{opacity: 0}}

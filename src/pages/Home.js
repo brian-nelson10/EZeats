@@ -77,9 +77,9 @@ const Home = () => {
   };
 
   // Run scrollrender once page is loaded.
-  useEffect(() => {
-    requestAnimationFrame(() => skewScrolling());
-  }, []);
+//   useEffect(() => {
+//     requestAnimationFrame(() => skewScrolling());
+//   }, []);
 
   //set the height of the body.
   useEffect(() => {
