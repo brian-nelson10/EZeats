@@ -5,6 +5,7 @@ import Home from '../pages/Home';
 import Contact from '../pages/Contact';
 import Catering from "../pages/Catering";
 import FoodTruck from "../pages/FoodTruck";
+import NotFound from "../pages/NotFound";
 
 function AnimatedRoutes() {
     const location = useLocation();
