@@ -1,4 +1,10 @@
 [[redirects]]
-from = "/*"
+from = "/home"
 to = "/"
 status = 200
+force = true
+
+from = "/catering"
+to = "/catering"
+status = 200
+force = true
