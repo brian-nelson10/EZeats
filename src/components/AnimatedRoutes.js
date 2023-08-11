@@ -15,19 +15,19 @@ function AnimatedRoutes() {
 <Routes location={location} key={location.pathname}>
             <Route
                path="/"
-              exact element={<Home/>}
+              element={<Home/>}
               />
               <Route
               path="/home"
-              exact element={<Home/>}
+              element={<Home/>}
               />
               <Route
               path="/contact"
-              exact element={<Contact />}
+              element={<Contact />}
               />
               <Route
               path="/catering"
-              exact element={<Catering/>}
+              element={<Catering/>}
               />
               <Route
               path="/foodtruck"
