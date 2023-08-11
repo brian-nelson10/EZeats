@@ -4,6 +4,7 @@ import Image from "../Image";
 import img from "../../assets/carousel/2.JPG"
 import imgWeb from "../../assets/web/2.webp"
 import { useNavigate } from "react-router-dom";
+let url = "https://www.clover.com/online-ordering/ez-eatz-by-yaya-llc-jacksonville"
 export default function Footer() {
   const navigate = useNavigate();
   function handleMenu() {
@@ -14,9 +15,6 @@ export default function Footer() {
   };
   function handleCatering() {
     navigate('/catering')
-  };
-  function handleOrder() {
-    navigate('/order')
   };
   function handleFoodTruck() {
     navigate('/foodtruck')
@@ -139,7 +137,7 @@ export default function Footer() {
                     </li>
 
                     <li>
-                      <div onClick={handleMenu} className="text-[#32cd32] text-[1.4rem] tracking-widest font-rah transition hover:opacity-75 hover:cursor-pointer">
+                      <div onClick={() => {window.location.href = url;}} className="text-[#32cd32] text-[1.4rem] tracking-widest font-rah transition hover:opacity-75 hover:cursor-pointer">
                         Download Menu
                       </div>
                     </li>

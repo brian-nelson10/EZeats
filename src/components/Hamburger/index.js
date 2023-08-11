@@ -169,7 +169,7 @@ export default function Hamburger() {
       translateY: 0
     },
   }
-  let url = "https://foodtruck.pub/order/menu.aspx?busid=5143"
+  let url = "https://www.clover.com/online-ordering/ez-eatz-by-yaya-llc-jacksonville"
   return (
     <>
       <nav className="fixed ml-6 mt-8 lg:mt-2 lg:ml-[8rem] z-50">
