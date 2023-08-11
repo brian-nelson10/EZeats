@@ -131,7 +131,7 @@ export default function Footer() {
                 <nav aria-label="Footer" className="mt-6">
                   <ul className="space-y-4 text-sm">
                     <li>
-                      <div onClick={handleOrder} className="text-[#32cd32] text-[1.4rem] tracking-widest font-rah transition hover:opacity-75 hover:cursor-pointer">
+                      <div onClick={() => {window.location.href = url;}} className="text-[#32cd32] text-[1.4rem] tracking-widest font-rah transition hover:opacity-75 hover:cursor-pointer">
                         Order Online
                       </div>
                     </li>
