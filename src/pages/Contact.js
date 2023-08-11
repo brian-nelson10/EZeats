@@ -81,7 +81,7 @@ const Contact = () => {
             >
                 <section className="grid grid-cols-3 w-screen z-50 fixed">
                     <div className="grid items-center justify-end">
-                        {/* <Hamburger /> */}
+                        <Hamburger />
                     </div>
                     <div>
                         <ContactTitle text="EZ EATZ" />

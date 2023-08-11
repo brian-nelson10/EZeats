@@ -30,9 +30,9 @@ export default function Hamburger() {
   function handleCatering() {
     navigate('/catering')
   };
-  function handleOrder() {
-    navigate('/order')
-  };
+  // function handleOrder() {
+  //   navigate('/order')
+  // };
   function handleFoodTruck() {
     navigate('/foodtruck')
   };

@@ -7,9 +7,9 @@ import { useNavigate } from "react-router-dom";
 let url = "https://www.clover.com/online-ordering/ez-eatz-by-yaya-llc-jacksonville"
 export default function Footer() {
   const navigate = useNavigate();
-  function handleMenu() {
-    navigate('/menu')
-  };
+  // function handleMenu() {
+  //   navigate('/menu')
+  // };
   function handleJobs() {
     navigate('/careers')
   };
