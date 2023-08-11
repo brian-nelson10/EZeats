@@ -10,7 +10,7 @@ const wordVariants = {
       transition: { duration: .5, ease: 'easeInOut' }
     }
   }
-  let url = "https://foodtruck.pub/order/menu.aspx?busid=5143"
+  let url = "https://www.clover.com/online-ordering/ez-eatz-by-yaya-llc-jacksonville"
 export default function OrderButton() {
     return (
         <motion.div
