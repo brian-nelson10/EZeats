@@ -22,7 +22,7 @@ export default function Hamburger() {
   };
   const navigate = useNavigate();
   function handleHome() {
-    navigate('/');
+    navigate('/')
   };
   function handleContact() {
     navigate('/contact')
