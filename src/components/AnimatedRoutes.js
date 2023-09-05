@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, useLocation} from 'react-router-dom';
+import { Switch, Route,} from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Home from '../pages/Home';
 import Contact from '../pages/Contact';
@@ -8,23 +8,24 @@ import FoodTruck from "../pages/FoodTruck";
 import NotFound from "../pages/NotFound";
 
 function AnimatedRoutes() {
-    const location = useLocation();
+    
     return (
         <AnimatePresence mode="wait">
            
-<Routes location={location} key={location.pathname}>
+<Switch>
             <Route
-               path="/"
-              exact element={<Home/>}
-              />
+              exact path="/">
+              <Home />
+              </Route>
               <Route
-              path="/home"
-              element={<Home/>}
-              />
+              path="/home">
+               <Home /> 
+               </Route>
               <Route
-              path="/contact"
-              element={<Contact />}
-              />
+              path="/contact">
+                <Contact />
+              </Route>
+            
               <Route
               path="/catering"
               element={<Catering/>}
@@ -37,7 +38,7 @@ function AnimatedRoutes() {
               path="*"
               element={<NotFound/>}
               />
-          </Routes>
+          </Switch>
           </AnimatePresence>
     );
 };
