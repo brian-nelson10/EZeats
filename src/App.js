@@ -7,7 +7,7 @@ function App() {
   
   return (
     <>   
-      <Router basename="https://www.ezeatzjax.com/">
+      <Router basename={process.env.PUBLIC_URL} forceRefresh={true}>
       <ScrollTop />
       <AnimatedRoutes />
     </Router>
