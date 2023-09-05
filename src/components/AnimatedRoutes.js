@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route,} from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Home from '../pages/Home';
 import Contact from '../pages/Contact';
@@ -12,20 +12,19 @@ function AnimatedRoutes() {
     return (
         <AnimatePresence mode="wait">
            
-<Switch>
+<Routes >
             <Route
-              exact path="/">
-              <Home />
-              </Route>
+               path="/"
+              element={<Home/>}
+              />
               <Route
-              path="/home">
-               <Home /> 
-               </Route>
+              path="/home"
+              element={<Home/>}
+              />
               <Route
-              path="/contact">
-                <Contact />
-              </Route>
-            
+              path="/contact"
+              element={<Contact />}
+              />
               <Route
               path="/catering"
               element={<Catering/>}
@@ -38,7 +37,7 @@ function AnimatedRoutes() {
               path="*"
               element={<NotFound/>}
               />
-          </Switch>
+          </Routes>
           </AnimatePresence>
     );
 };
