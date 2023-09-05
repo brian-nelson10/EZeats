@@ -9,7 +9,7 @@ function App() {
     <>   
       <Router basename={process.env.PUBLIC_URL}>
       <ScrollTop />
-      <AnimatedRoutes className="overflow-hidden" />
+      <AnimatedRoutes />
     </Router>
     </>
   );
