@@ -7,7 +7,7 @@ function App() {
   
   return (
     <>   
-      <Router basename={process.env.PUBLIC_URL} forceRefresh={true}>
+      <Router basename={process.env.PUBLIC_URL} forceRefresh={true} keyLength={12} >
       <ScrollTop />
       <AnimatedRoutes />
     </Router>
