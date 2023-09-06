@@ -8,6 +8,7 @@ import img2 from "../../assets/images/seedG.png";
 import img3 from "../../assets/images/onionG.png";
 import img4 from "../../assets/images/garlicG.png";
 import img5 from "../../assets/images/cardamomG.png";
+import Catering from "../../pages/Catering";
 
 export default function Hamburger() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,9 +28,9 @@ export default function Hamburger() {
   function handleContact() {
     navigate('/contact')
   };
-  function handleCatering() {
-    navigate('/catering')
-  };
+  // function handleCatering() {
+  //   navigate('/catering')
+  // };
   // function handleOrder() {
   //   navigate('/order')
   // };
@@ -311,8 +312,9 @@ export default function Hamburger() {
                   whileHover={{ scale: 1.1 }}
                   onMouseEnter={() => handleDivHover(2)}
                   onMouseLeave={handleDivLeave}
-                  onClick={handleCatering}
-                >Catering
+                  // onClick={handleCatering}
+                  key={<Catering/>}
+                ><Link to={<Catering/>}>Catering</Link>
                 </motion.li>
                 <motion.li
                   className="text-[#D8C29D] font-mari xl:mb-2 text-[3.4rem] xl:text-[3rem] list-none tracking-wide hover:cursor-pointer" variants={linkVariants}
