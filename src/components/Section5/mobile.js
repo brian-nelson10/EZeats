@@ -59,9 +59,9 @@ export default function Section5Mobile() {
                 className="text-end -ml-[7rem] w-[90%]">
         <motion.svg xmlns="http://www.w3.org/2000/svg" width="30%" viewBox="0 0 70.744 90.043" className="rotate-[270deg] ">
   <g transform="translate(-5919.641 -1363.532)">
-    <path id="Path_87" data-name="Path 87" d="M5869.476,1080.805s1.941-16.7,11.31-26.108,25.953-11.233,25.953-11.233" transform="translate(87.537 372.654)" fill="none" stroke="#e3dac6" stroke-width="2"></path>
-    <path id="Path_88" data-name="Path 88" d="M5906.738,1080.805s-1.941-16.7-11.31-26.108-25.953-11.233-25.953-11.233" transform="translate(50.275 372.654)" fill="none" stroke="#e3dac6" stroke-width="2"></path>
-    <line id="Line_10" data-name="Line 10" y2="89.928" transform="translate(5957.013 1363.532)" fill="none" stroke="#e3dac6" stroke-width="2"></line>
+    <path id="Path_87" data-name="Path 87" d="M5869.476,1080.805s1.941-16.7,11.31-26.108,25.953-11.233,25.953-11.233" transform="translate(87.537 372.654)" fill="none" stroke="#e3dac6" strokeWidth="2"></path>
+    <path id="Path_88" data-name="Path 88" d="M5906.738,1080.805s-1.941-16.7-11.31-26.108-25.953-11.233-25.953-11.233" transform="translate(50.275 372.654)" fill="none" stroke="#e3dac6" strokeWidth="2"></path>
+    <line id="Line_10" data-name="Line 10" y2="89.928" transform="translate(5957.013 1363.532)" fill="none" stroke="#e3dac6" strokeWidth="2"></line>
   </g>
 </motion.svg>
 </motion.div> */}

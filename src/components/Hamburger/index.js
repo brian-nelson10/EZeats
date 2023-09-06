@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 // import "./hamburger.css";
 import { motion } from "framer-motion";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import img from "../../assets/images/ezlogogreen.png";
 import img1 from "../../assets/images/arugulaG.png";
 import img2 from "../../assets/images/seedG.png";
 import img3 from "../../assets/images/onionG.png";
 import img4 from "../../assets/images/garlicG.png";
 import img5 from "../../assets/images/cardamomG.png";
-import Catering from "../../pages/Catering";
 
 export default function Hamburger() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,14 +22,14 @@ export default function Hamburger() {
   };
   const navigate = useNavigate();
   function handleHome() {
-    navigate('/')
+    navigate('/');
   };
   function handleContact() {
     navigate('/contact')
   };
-  // function handleCatering() {
-  //   navigate('/catering')
-  // };
+  function handleCatering() {
+    navigate('/catering')
+  };
   // function handleOrder() {
   //   navigate('/order')
   // };
@@ -312,9 +311,8 @@ export default function Hamburger() {
                   whileHover={{ scale: 1.1 }}
                   onMouseEnter={() => handleDivHover(2)}
                   onMouseLeave={handleDivLeave}
-                  // onClick={handleCatering}
-                  key={<Catering/>}
-                ><Link to="/catering">Catering</Link>
+                  onClick={handleCatering}
+                >Catering
                 </motion.li>
                 <motion.li
                   className="text-[#D8C29D] font-mari xl:mb-2 text-[3.4rem] xl:text-[3rem] list-none tracking-wide hover:cursor-pointer" variants={linkVariants}

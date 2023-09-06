@@ -63,16 +63,16 @@ export default function CateringMenu() {
     };
     return (
         <AnimatePresence>
-            <div className="gradient3 w-screen justify-center px-28 z-50 -mt-[17rem] xl:pb-[16rem]" id="menuComponent" >
+            <div className="gradient3 w-screen justify-center xl:px-28 px-10 z-50 -mt-[17rem] xl:pb-[16rem]" id="menuComponent" >
                 <motion.div className="container justify-center flex-wrap">
                     <motion.div className="aboutHero grid w-screen items-center justify-center">
-                        <div className="xl:mt-[5rem] -mt-10 xl:-mb-[1.5rem] text-center font-mari tracking-widest text-[3rem] xl:text-[8rem] text-black">
+                        <div className="xl:mt-[5rem] mt-10 xl:-mb-[1.5rem] text-center font-mari tracking-widest text-[3rem] xl:text-[8rem] text-black -ml-[3rem] lg:ml-0">
                             <motion.div
-                                className="flex flex-row gap-6 justify-center text-center -ml-[16rem]"
+                                className="flex flex-row gap-6 justify-center text-center xl:-ml-[16rem] mb-10"
                                 variants={pack}
                                 initial="initial"
                                 whileInView="animate">
-                                <svg className="mt-12 -mr-[5rem] xl:mr-0" version="1.0" xmlns="http://www.w3.org/2000/svg"
+                                <svg className="mt-12 invisible xl:visible xl:mr-0" version="1.0" xmlns="http://www.w3.org/2000/svg"
                                     width="64.000000pt" height="64.000000pt" viewBox="0 0 64.000000 64.000000"
                                     preserveAspectRatio="xMidYMid meet">
 
@@ -81,7 +81,7 @@ export default function CateringMenu() {
                                         <path d="M199 483 c-62 -82 -113 -155 -113 -163 0 -16 222 -310 234 -310 12 0
 234 294 234 310 0 16 -222 310 -234 310 -4 0 -59 -66 -121 -147z"/>
                                     </g>
-                                </svg> CATERING MENU <svg className="mt-12 xl:mr-0" version="1.0" xmlns="http://www.w3.org/2000/svg"
+                                </svg> CATERING MENU <svg className="mt-12 xl:mr-0 invisible xl:visible" version="1.0" xmlns="http://www.w3.org/2000/svg"
                                     width="64.000000pt" height="64.000000pt" viewBox="0 0 64.000000 64.000000"
                                     preserveAspectRatio="xMidYMid meet">
 
@@ -290,8 +290,8 @@ export default function CateringMenu() {
                                                 ENTREEZ
                                             </motion.div>
                                             <motion.ul variants={menuVariant} initial="initial" whileInView="animate" viewport={{ once: true }} className="mx-[2rem] my-[2rem]">
-                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem]">
-                                                    <div className="px-10 grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] gap-2">
+                                                    <div className="lg:px-10 grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
                                                     Grilled Kabob Plate (Choice of Beef Kefta or Marinated Chicken) 
                                                     </div>
                                                     
@@ -299,8 +299,8 @@ export default function CateringMenu() {
                                                     Comes with your choice of white rice, saffron rice or fries. Served with grilled tomato and onion and comes with your choice of sauce.    
                                                     </div>
                                                 </motion.li>
-                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem]">
-                                                <div className="px-10 grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="gap-2 grid grid-cols-2 mb-[2rem]">
+                                                <div className="lg:px-10 grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
                                                 Grilled Marinated Chicken Wings
                                                     </div>
                                                    
@@ -308,8 +308,8 @@ export default function CateringMenu() {
                                                     Seven marinated Moroccan flavored wings served with your choice of white rice, saffron rice or fries. Comes with grilled tomato and onion and served with a dipping sauce of your choice. 
                                                     </div>
                                                 </motion.li>
-                                                <motion.li variants={menuItem} initial={{ opacity: 0 }} className="grid grid-cols-2 mb-[2rem]">
-                                                <div className="px-10 grid-rows-2 px-10 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                <motion.li variants={menuItem} initial={{ opacity: 0 }} className="gap-2 grid grid-cols-2 mb-[2rem]">
+                                                <div className="lg:px-10 grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
                                                 Shawarma Rice Bowl (Choice of Beef and Lamb, or Chicken)
                                                     </div>
                                                     
@@ -318,8 +318,8 @@ export default function CateringMenu() {
                                                     </div>
                                                 </motion.li>
                                                 
-                                                <motion.li variants={menuItem} initial={{opacity: 0}} className="grid grid-cols-2 mb-[2rem]">
-                                                <div className="px-10 grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                <motion.li variants={menuItem} initial={{opacity: 0}} className="gap-2 grid grid-cols-2 mb-[2rem]">
+                                                <div className="lg:px-10 grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
                                                 Beef Tajine
                                                     </div>
                                                    
@@ -327,8 +327,8 @@ export default function CateringMenu() {
                                                     Slow cooked beef chunks simmered in a delicious sauce and served with carrots, peas, and olives. Comes with your choice of pita or rice.
                                                     </div>
                                                 </motion.li>
-                                                <motion.li variants={menuItem} initial={{opacity: 0}} className="grid grid-cols-2 mb-[2rem]">
-                                                <div className="px-10 grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                <motion.li variants={menuItem} initial={{opacity: 0}} className="gap-2 grid grid-cols-2 mb-[2rem]">
+                                                <div className="lg:px-10 grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
                                                 Chicken Tajine
                                                     </div>
                                                    
@@ -336,8 +336,8 @@ export default function CateringMenu() {
                                                    Chicken served with saffron and a preserved lemon sauce with olives and topped with fries. Comes with Pita or Rice.
                                                     </div>
                                                 </motion.li>
-                                                <motion.li variants={menuItem} initial={{opacity: 0}} className="grid grid-cols-2 mb-[2rem]">
-                                                <div className="px-10 flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                <motion.li variants={menuItem} initial={{opacity: 0}} className="gap-2 grid grid-cols-2 mb-[2rem]">
+                                                <div className="lg:px-10 flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
                                                     <div>Couscous with Tfaya</div>
                                                     </div>
                                                     
@@ -345,8 +345,8 @@ export default function CateringMenu() {
                                                     Sweet chicken topped with glazed onions, raisins, and chickpeas. Served over couscous. 
                                                     </div>
                                                 </motion.li>
-                                                <motion.li variants={menuItem} initial={{opacity: 0}} className="grid grid-cols-2 mb-[2rem]">
-                                                <div className="px-10 grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                <motion.li variants={menuItem} initial={{opacity: 0}} className="gap-2 grid grid-cols-2 mb-[2rem]">
+                                                <div className="lg:px-10 grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
                                                 Shrimp Masharmal
                                                     </div>
                                                     
@@ -354,8 +354,8 @@ export default function CateringMenu() {
                                                     Sauteed shrimp infused with a garlic tomato sauce served with fries and zaalouk. 
                                                     </div>
                                                 </motion.li>
-                                                <motion.li variants={menuItem} initial={{opacity: 0}} className="grid grid-cols-2 mb-[2rem]">
-                                                <div className="px-10 grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                <motion.li variants={menuItem} initial={{opacity: 0}} className="gap-2 grid grid-cols-2 mb-[2rem]">
+                                                <div className="lg:px-10 grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
                                                 Shwa
                                                     </div>
                                                     
@@ -363,8 +363,8 @@ export default function CateringMenu() {
                                                     Rotisserie cooked lamb shoulder served with a cumin rub.
                                                     </div>
                                                 </motion.li>
-                                                <motion.li variants={menuItem} initial={{opacity: 0}} className="grid grid-cols-2 mb-[2rem]">
-                                                <div className="px-10 grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                <motion.li variants={menuItem} initial={{opacity: 0}} className="gap-2 grid grid-cols-2 mb-[2rem]">
+                                                <div className="lg:px-10 grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
                                                 Lamb Shank Tanjia
                                                     </div>
                                                     
@@ -378,12 +378,12 @@ export default function CateringMenu() {
                                 </motion.div>
                             </div>
 
-                            <div className="px-20 mx-[2rem] mb-6 lg:mb-0 ">
+                            <div className="lg:px-20 lg:mx-[2rem] mb-6 lg:mb-0 ">
                                 <motion.div 
                                     variants={pack2}
                                     initial="initial"
                                     whileInView="animate" 
-                                    className="block w-[160%] xl:w-[100%] w-screen ml-1 border-solid border-[#000000] border-seperate border-2 rounded-lg shadow-lg py-[2rem] xl:my-[3rem] xl:h-auto bg-[#adb5bd]">
+                                    className="block xl:w-[100%] w-screen lg:ml-1 sm:px-4 border-solid border-[#000000] border-seperate border-2 rounded-lg shadow-lg py-[2rem] xl:my-[3rem] xl:h-auto bg-[#adb5bd]">
                                         <motion.div
                                             variants={pack}
                                             className="font-mari tracking-wide text-[2.5rem] mt-[.5rem] text-center text-[#000000]">
@@ -428,7 +428,6 @@ export default function CateringMenu() {
                                                     Couscous
                                                     </div>
                                                     </div>
-                                                    
                                                 </motion.li>
                                                 </motion.ul>
 

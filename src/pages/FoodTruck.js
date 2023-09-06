@@ -12,6 +12,7 @@ import SuccessTxt from "../components/SuccessTxt";
 import "./styles.css";
  import img from "../assets/images/eztruck.png"
  import imgWeb from "../assets/images/eztruck.png"
+ import Section5Mobile from "../components/Section5/mobile";
 const main = {
     initial: {
         clipPath: 'polygon(0 0, 0 0, 0 100%, 0% 100%)',
@@ -74,6 +75,14 @@ const FoodTruck = () => {
     const [isHover, setIsHover] = useState(false);
     const [isHoverReq, setIsHoverReq] = useState(false);
     const navigate = useNavigate();
+    const [width, setWidth] = React.useState(window.innerWidth);
+    const breakpoint = 1250;
+    React.useEffect(() => {
+        const handleWindowResize = () => setWidth(window.innerWidth)
+        window.addEventListener("resize", handleWindowResize);
+        // Return a function from the effect that removes the event listener
+        return () => window.removeEventListener("resize", handleWindowResize);
+    }, []);
     const handleHover = () => {
         setIsHover(true);
     };
@@ -109,8 +118,8 @@ const FoodTruck = () => {
                         <OrderButton />
                     </div>
                 </section>
-                <section className=" gradient3" >
-                    <div className="px-[9rem] py-[10rem]">
+                <section className="" >
+                    <div className="lg:px-[9rem] py-[10rem]">
                         <div
                             className="grid mt-[2rem] -mb-[4rem]">
                             <motion.h1
@@ -123,29 +132,29 @@ const FoodTruck = () => {
                     variants={containerVar1}
                     initial="hidden"
                     whileInView="visible"
-                    className="bg-transparent overflow-hidden px-[5rem] gap-[2rem] z-20"
+                    className="bg-transparent overflow-hidden lg:px-[5rem] gap-[2rem] z-20"
                     style={{y: fallY}}>
-            <div className="container mx-[8rem]">
+            <div className="container lg:mx-[8rem]">
                 <div className="flex flex-col lg:flex-row justify-center items-strech mx-4">
                     <div className="lg:w-4/12 flex justify-center items-center">
                         <div>
-                            <h1 className="lg:text-5xl xl:text-6xl tracking-wide font-mari text-[#D8C29D] w-7/12"><SuccessTxt text="Find Us."/></h1>
-                            <p className="lg:w-7/12 lg:w-11/12 xl:w-10/12 mt-4 lg:mt-5 font-rah font-bold tracking-wide leading-normal text-[2rem] tracking-wide text-[#D8C29D]">We humbly thank you for supporting us from the beginning. </p>
+                            <h1 className="lg:text-5xl xl:text-6xl tracking-wide font-mari text-[#D8C29D] w-7/12 lg:visible invisible"><SuccessTxt text="Find Us."/></h1>
+                            <p className="lg:w-7/12 lg:w-11/12 xl:w-10/12 lg:mt-5 -mt-[4rem] lg:mt-0 font-rah font-bold tracking-wide leading-normal text-[2rem] tracking-wide text-[#D8C29D]">We humbly thank you for supporting us from the beginning. </p>
                             <motion.p 
                                 initial={{opacity: 0}}
                                 animate={{opacity: 1, transition: {delay: 2, duration: 1.4}}}
                                 className="lg:w-7/12 lg:w-11/12 xl:w-10/12 mt-4 lg:mt-5 font-mari text-[2rem] font-bold tracking-wide text-[#D8C29D]">- YaYa</motion.p>
                         </div>
                     </div>
-                    <div className="lg:w-8/12 mt-6 lg:mt-8 lg:mt-0">
-                        <div className="relative w-full h-full">
+                    <div className="lg:w-8/12 mt-16 lg:mt-8">
+                        <div className="relative lg:w-full h-full">
                             <Image
                                 srcset={imgWeb}
                                 fallback={img}
                                 alt="food truck"
                                 className={isHover ? "z-10 opacity-25" : "z-10"}/>
                                 <motion.button
-                                    className="absolute z-20 top-1/2 right-1/2 font-mari text-[3rem] font-bold tracking-wide text-[#D8C29D] border-2 border-[#D8C29D] px-6 py-2 rounded-lg bg-[#07252d]"
+                                    className="absolute z-20 top-1/2 lg:right-1/2 right-[8rem] font-mari lg:text-[3rem] font-bold tracking-wide text-[#D8C29D] border-2 border-[#D8C29D] px-6 py-2 rounded-lg bg-[#07252d]"
                                     variants={header1}
                                     initial="initial"
                                     animate="animate"
@@ -164,9 +173,9 @@ const FoodTruck = () => {
                     variants={containerVar1}
                     initial="hidden"
                     whileInView="visible"
-                    className="bg-transparent overflow-hiden px-[5rem] gap-[2rem] z-20"
+                    className="bg-transparent overflow-hidden lg:px-[5rem] gap-[2rem] z-20"
                     style={{y: fallY}}>
-            <div className="container mx-[8rem]">
+            <div className="container lg:mx-[8rem]">
                 <div className="flex flex-col lg:flex-row justify-center items-strech mx-4">
                     <div className="lg:w-8/12 mt-6 lg:mt-8 lg:mt-0">
                     <Image
@@ -175,7 +184,7 @@ const FoodTruck = () => {
                                 alt="food truck alternate"
                                 className={isHoverReq ? "z-10 opacity-25" : "z-10"}/>
                                  <motion.button
-                                    className="absolute z-20 top-[50%] right-[56%] font-mari text-[3rem] font-bold tracking-wide text-[#D8C29D] border-2 border-[#D8C29D] px-6 py-2 rounded-lg bg-[#07252d]"
+                                    className="absolute z-20 lg:top-[50%] top-[10rem] right-[8rem] lg:right-[56%] font-mari lg:text-[3rem] font-bold tracking-wide text-[#D8C29D] border-2 border-[#D8C29D] px-6 py-2 rounded-lg bg-[#07252d]"
                                     variants={header1}
                                     initial="initial"
                                     animate="animate"
@@ -205,7 +214,7 @@ const FoodTruck = () => {
                 </motion.section>
                 <LazyLoadComponent>
                     <section className="mt-[2rem]">
-                        <Section5 />
+                    {width < breakpoint ? <Section5Mobile/> : <Section5/>}
                     </section>
                 </LazyLoadComponent>
                 <LazyLoadComponent>
