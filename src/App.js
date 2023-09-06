@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import AnimatedRoutes from './components/AnimatedRoutes';
 import ScrollTop from './components/ScrollTop';
 import Home from "./pages/Home";
@@ -8,13 +8,13 @@ import Catering from "./pages/Catering";
 import FoodTruck from "./pages/FoodTruck";
 import NotFound from "./pages/NotFound";
 function App() {
-  const location = useLocation();
+ 
   return (
     <>   
-      <BrowserRouter basename={process.env.PUBLIC_URL} >
+      <Router >
       <ScrollTop />
       {/* <AnimatedRoutes /> */}
-      <Routes location={location} key={location.pathname}>
+      <Routes >
                 <Route
                     path="/"
                     element={<Home />}
@@ -40,7 +40,7 @@ function App() {
                     element={<NotFound />}
                 />
             </Routes>
-    </BrowserRouter>
+    </Router>
     </>
   );
 }
