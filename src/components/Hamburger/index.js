@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // import "./hamburger.css";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import img from "../../assets/images/ezlogogreen.png";
 import img1 from "../../assets/images/arugulaG.png";
 import img2 from "../../assets/images/seedG.png";
