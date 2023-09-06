@@ -63,12 +63,12 @@ export default function CateringMenu() {
     };
     return (
         <AnimatePresence>
-            <div className="gradient3 w-screen z-50 -mt-[17rem] xl:pb-[16rem]" id="menuComponent" >
-                <motion.div className="container flex-wrap">
+            <div className="gradient3 w-screen justify-center px-28 z-50 -mt-[17rem] xl:pb-[16rem]" id="menuComponent" >
+                <motion.div className="container justify-center flex-wrap">
                     <motion.div className="aboutHero grid w-screen items-center justify-center">
                         <div className="xl:mt-[5rem] -mt-10 xl:-mb-[1.5rem] text-center font-mari tracking-widest text-[3rem] xl:text-[8rem] text-black">
                             <motion.div
-                                className="flex flex-row gap-6"
+                                className="flex flex-row gap-6 justify-center text-center -ml-[16rem]"
                                 variants={pack}
                                 initial="initial"
                                 whileInView="animate">
@@ -93,135 +93,353 @@ export default function CateringMenu() {
                                 </svg></motion.div>
                         </div>
                     </motion.div>
-                    <section className="container py-[1rem] xl:w-5/6 bg-[#32cd32] shadow-[1px_35px_35px_2px_rgba(0,0,0,0.5)] mt-[2rem] md:mt-[3rem] md:mx-auto items-center justify-center text-center h-auto md:h-[117rem] md:ml-[15rem] rounded-xl z-50 bg-fixed bg-deco">
-                        <div className="container my-20 px-6 mx-auto text-xl">
+                    
+                    <section className="py-[1rem] xl:w-[100%] bg-[#32cd32] shadow-[1px_35px_35px_2px_rgba(0,0,0,0.5)] -mt-[2rem] md:mt-[3rem] md:mx-auto items-center justify-center text-center h-auto w-screen -ml-10 rounded-xl z-50 bg-fixed bg-deco">
+                    <div className=" my-20 xl:-px-3 xl:mx-auto text-xl">
+                    <motion.div
+                            variants={pack2}
+                            initial="initial"
+                            whileInView="animate" 
+                            className="block xl:mx-[15rem] bg-[#adb5bd] mt-[3rem] py-[2rem] mb-[2rem] border-seperate border-2 border-[#000000] rounded-lg shadow-lg">
                             <motion.div
-                                variants={pack2}
-                                initial="initial"
-                                whileInView="animate"
-                                className="block xl:mx-[18rem] bg-[#adb5bd] py-[2rem] mb-[2rem] border-seperate border-2 border-[#000000] rounded-lg shadow-lg">
-                                <h1 className="font-mari text-[2rem] mt-[.5rem] text-center text-black">Moroccan Family Style Chicken</h1>
-                                <h1 className="font-mari text-[1rem] mt-[.5rem] text-center text-black">2 Whole Chickens Per Platter</h1>
-                                <h1 className="font-mari text-[.7rem] mt-[.5rem] text-center text-black">Price Per Platter</h1>
-                                {/* <p className="font-rah text-[1rem] tracking-widest font-bold text-center text-black mt-8">Marinated moroccan style whole rotisserie chicken</p> 
-                            <p className="font-rah text-[1rem] tracking-widest font-bold text-center text-black mt-4">with sauce, 8 rolls, and  family style sides.</p>  */}
-                                <p className="font-mari text-[2rem] tracking-wide font-bold text-center text-black mt-4 mb-1">$ 20</p>
-                            </motion.div>
-                            <div className="grid gap-6 lg:gap-x-12">
-                                <div className="grid gap-4 grid-rows-2 mb-6 lg:mb-0">
-
-                                    <motion.div
-                                        variants={pack2}
-                                        initial="initial"
-                                        whileInView="animate"
-                                        className="block col-span-2 border-spacing-[3rem] bg-[#adb5bd] border-seperate border-2 border-solid border-[#000000] rounded-lg shadow-lg py-[2rem] xl:h-[50rem]">
-                                        {/* <div className="p-6 border-black border-gray-300 bordertext-center">
+                                            variants={pack}
+                                            initial="initial"
+                                            animate="animate"
+                                            className="font-mari tracking-wide text-[2.5rem] mt-[.5rem] text-center text-[#000000]">
+                                                Moroccan Family Style Catering Menu
+                                            </motion.div>
+                                            <motion.ul variants={menuVariant} initial="initial" whileInView="animate" viewport={{ once: true }} className="">
+                                            <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                    Package One
+                                                    </div>
+                                                    <div className="text-start font-rah text-[.9rem] tracking-widest font-bold text-[#000000]">
+                                                    1 Appetizer / 1 Entree / 1 Side
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#000000]">
+                                                    18$ Per Person
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                    Package Two
+                                                    </div>
+                                                    <div className="text-start font-rah text-[.9rem] tracking-widest font-bold text-[#000000]">
+                                                    2 Appetizers / 2 Entree's / 2 Sides
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#000000]">
+                                                    25$ Per Person
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                    Package Three
+                                                    </div>
+                                                    <div className="text-start font-rah text-[.9rem] tracking-widest font-bold text-[#000000]">
+                                                    4 Appetizers / 4 Entree's / 2 Sides
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-[#000000]">
+                                                    45$ Per Person
+                                                    </div>
+                                                </motion.li>
+                                                </motion.ul>
+                        </motion.div>
+                      
+                        <motion.div
+                            variants={pack2}
+                            initial="initial"
+                            whileInView="animate" 
+                            className="block xl:mx-[18rem] bg-[#adb5bd] py-[2rem] mb-[2rem] border-seperate border-2 border-[#000000] rounded-lg shadow-lg">
+                        <motion.div
+                                            variants={pack}
+                                            initial="initial"
+                                            animate="animate"
+                                            className="font-mari tracking-wide text-[2.5rem] mt-[.5rem] text-center text-[#000000]">
+                                                EZ BITEZ
+                                            </motion.div>
+                                            <motion.ul variants={menuVariant} initial="initial" whileInView="animate" viewport={{ once: true }} className="">
+                                            <motion.li variants={menuItem} initial={{opacity: 0}}  viewport={{ once: true }} className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                    Hummus<div> <svg xmlns="http://www.w3.org/2000/svg" shapeRendering="geometricPrecision" textRendering="geometricPrecision" imageRendering="optimizeQuality" fill="#000000" fillRule="evenodd" clipRule="evenodd" width="20px" height="20px" viewBox="0 0 512 512"><g fillRule="nonzero"><path d="M255.998 0c70.69 0 134.694 28.658 181.017 74.982C483.342 121.308 512 185.312 512 256.002c0 70.689-28.658 134.69-74.985 181.016C390.692 483.342 326.688 512 255.998 512c-70.689 0-134.687-28.658-181.017-74.982C28.657 390.689 0 326.691 0 256.002c0-70.69 28.657-134.694 74.981-181.017C121.308 28.658 185.309 0 255.998 0z"/><path fill="#fff" d="M283.004 162.24h63.307l-46.503 187.523h-87.61L165.691 162.24h63.307l25.505 119.116h2.7z"/></g></svg>
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-start font-rah text-[.9rem] tracking-widest font-bold text-[#000000]">
+                                                        Choice of Classic, Spicy, or Sun-Dried Tomato. Served with Pita.
+                                                    </div>
+                                                    </div>
+                                                    
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                    Zaalouk<div> <svg xmlns="http://www.w3.org/2000/svg" shapeRendering="geometricPrecision" textRendering="geometricPrecision" imageRendering="optimizeQuality" fill="#000000" fillRule="evenodd" clipRule="evenodd" width="20px" height="20px" viewBox="0 0 512 512"><g fillRule="nonzero"><path d="M255.998 0c70.69 0 134.694 28.658 181.017 74.982C483.342 121.308 512 185.312 512 256.002c0 70.689-28.658 134.69-74.985 181.016C390.692 483.342 326.688 512 255.998 512c-70.689 0-134.687-28.658-181.017-74.982C28.657 390.689 0 326.691 0 256.002c0-70.69 28.657-134.694 74.981-181.017C121.308 28.658 185.309 0 255.998 0z"/><path fill="#fff" d="M283.004 162.24h63.307l-46.503 187.523h-87.61L165.691 162.24h63.307l25.505 119.116h2.7z"/></g></svg>
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-start font-rah text-[.9rem] tracking-widest font-bold text-[#000000]">
+                                                    Eggplant dip infused with garlic tomato sauce. Served with pita.
+                                                    </div>
+                                                    </div>
+                                                    
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                    Shakshuka<div> <svg xmlns="http://www.w3.org/2000/svg" shapeRendering="geometricPrecision" textRendering="geometricPrecision" imageRendering="optimizeQuality" fill="#000000" fillRule="evenodd" clipRule="evenodd" width="20px" height="20px" viewBox="0 0 512 512"><g fillRule="nonzero"><path d="M255.998 0c70.69 0 134.694 28.658 181.017 74.982C483.342 121.308 512 185.312 512 256.002c0 70.689-28.658 134.69-74.985 181.016C390.692 483.342 326.688 512 255.998 512c-70.689 0-134.687-28.658-181.017-74.982C28.657 390.689 0 326.691 0 256.002c0-70.69 28.657-134.694 74.981-181.017C121.308 28.658 185.309 0 255.998 0z"/><path fill="#fff" d="M283.004 162.24h63.307l-46.503 187.523h-87.61L165.691 162.24h63.307l25.505 119.116h2.7z"/></g></svg>
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-start font-rah text-[.9rem] tracking-widest font-bold text-[#000000]">
+                                                    Sautéed bell pepper mix, seasoned with garlic tomato sauce and other Moroccan flavors. Served with pita.
+                                                    </div>
+                                                    </div>
+                                                   
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                    Olive Msharmal<div> <svg xmlns="http://www.w3.org/2000/svg" shapeRendering="geometricPrecision" textRendering="geometricPrecision" imageRendering="optimizeQuality" fill="#000000" fillRule="evenodd" clipRule="evenodd" width="20px" height="20px" viewBox="0 0 512 512"><g fillRule="nonzero"><path d="M255.998 0c70.69 0 134.694 28.658 181.017 74.982C483.342 121.308 512 185.312 512 256.002c0 70.689-28.658 134.69-74.985 181.016C390.692 483.342 326.688 512 255.998 512c-70.689 0-134.687-28.658-181.017-74.982C28.657 390.689 0 326.691 0 256.002c0-70.69 28.657-134.694 74.981-181.017C121.308 28.658 185.309 0 255.998 0z"/><path fill="#fff" d="M283.004 162.24h63.307l-46.503 187.523h-87.61L165.691 162.24h63.307l25.505 119.116h2.7z"/></g></svg>
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-start font-rah text-[.9rem] tracking-widest font-bold text-[#000000]">
+                                                    Olives infused with garlic and cilantro and served with pita. Choice of Mild or Spicy.
+                                                    </div>
+                                                    </div>
+                                                   
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                    Lentil Soup<div> <svg xmlns="http://www.w3.org/2000/svg" shapeRendering="geometricPrecision" textRendering="geometricPrecision" imageRendering="optimizeQuality" fill="#000000" fillRule="evenodd" clipRule="evenodd" width="20px" height="20px" viewBox="0 0 512 512"><g fillRule="nonzero"><path d="M255.998 0c70.69 0 134.694 28.658 181.017 74.982C483.342 121.308 512 185.312 512 256.002c0 70.689-28.658 134.69-74.985 181.016C390.692 483.342 326.688 512 255.998 512c-70.689 0-134.687-28.658-181.017-74.982C28.657 390.689 0 326.691 0 256.002c0-70.69 28.657-134.694 74.981-181.017C121.308 28.658 185.309 0 255.998 0z"/><path fill="#fff" d="M283.004 162.24h63.307l-46.503 187.523h-87.61L165.691 162.24h63.307l25.505 119.116h2.7z"/></g></svg>
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-start font-rah text-[.9rem] tracking-widest font-bold text-[#000000]">
+                                                    Lentils slow cooked with garlic, tomatoes, and carrots. Served with pita.
+                                                    </div>
+                                                    </div>
+                                                   
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                    Briwat
+                                                    </div>
+                                                    <div className="text-start font-rah text-[.9rem] tracking-widest font-bold text-[#000000]">
+                                                    Crispy Moroccan dough filled with your choice of protein and served with Honey Harissa sauce. Choice of Kefta or Seafood.
+                                                    </div>
+                                                    </div>
+                                                    
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                    Loubia Soup<div> <svg xmlns="http://www.w3.org/2000/svg" shapeRendering="geometricPrecision" textRendering="geometricPrecision" imageRendering="optimizeQuality" fill="#000000" fillRule="evenodd" clipRule="evenodd" width="20px" height="20px" viewBox="0 0 512 512"><g fillRule="nonzero"><path d="M255.998 0c70.69 0 134.694 28.658 181.017 74.982C483.342 121.308 512 185.312 512 256.002c0 70.689-28.658 134.69-74.985 181.016C390.692 483.342 326.688 512 255.998 512c-70.689 0-134.687-28.658-181.017-74.982C28.657 390.689 0 326.691 0 256.002c0-70.69 28.657-134.694 74.981-181.017C121.308 28.658 185.309 0 255.998 0z"/><path fill="#fff" d="M283.004 162.24h63.307l-46.503 187.523h-87.61L165.691 162.24h63.307l25.505 119.116h2.7z"/></g></svg>
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-start font-rah text-[.9rem] tracking-widest font-bold text-[#000000]">
+                                                   Traditional Moroccan stew slow cooked with white beans and infused with garlic tomato sauce. Served with pita.
+                                                    </div>
+                                                    </div>
+                                                    
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                    The EZ Salad<div> <svg xmlns="http://www.w3.org/2000/svg" shapeRendering="geometricPrecision" textRendering="geometricPrecision" imageRendering="optimizeQuality" fill="#000000" fillRule="evenodd" clipRule="evenodd" width="20px" height="20px" viewBox="0 0 512 512"><g fillRule="nonzero"><path d="M255.998 0c70.69 0 134.694 28.658 181.017 74.982C483.342 121.308 512 185.312 512 256.002c0 70.689-28.658 134.69-74.985 181.016C390.692 483.342 326.688 512 255.998 512c-70.689 0-134.687-28.658-181.017-74.982C28.657 390.689 0 326.691 0 256.002c0-70.69 28.657-134.694 74.981-181.017C121.308 28.658 185.309 0 255.998 0z"/><path fill="#fff" d="M283.004 162.24h63.307l-46.503 187.523h-87.61L165.691 162.24h63.307l25.505 119.116h2.7z"/></g></svg>
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-start font-rah text-[.9rem] tracking-widest font-bold text-[#000000]">
+                                                    Lettuce, Tomatoes, Cucumbers, and Red Onions served with a Moroccan Vinaigrette.
+                                                    </div>
+                                                    </div>
+                                                   
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem] px-8 mt-8">
+                                                <div className="grid-rows-2">
+                                                    <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                    Carrot Msharmal<div> <svg xmlns="http://www.w3.org/2000/svg" shapeRendering="geometricPrecision" textRendering="geometricPrecision" imageRendering="optimizeQuality" fill="#000000" fillRule="evenodd" clipRule="evenodd" width="20px" height="20px" viewBox="0 0 512 512"><g fillRule="nonzero"><path d="M255.998 0c70.69 0 134.694 28.658 181.017 74.982C483.342 121.308 512 185.312 512 256.002c0 70.689-28.658 134.69-74.985 181.016C390.692 483.342 326.688 512 255.998 512c-70.689 0-134.687-28.658-181.017-74.982C28.657 390.689 0 326.691 0 256.002c0-70.69 28.657-134.694 74.981-181.017C121.308 28.658 185.309 0 255.998 0z"/><path fill="#fff" d="M283.004 162.24h63.307l-46.503 187.523h-87.61L165.691 162.24h63.307l25.505 119.116h2.7z"/></g></svg>
+                                                    </div>
+                                                    </div>
+                                                    <div className="text-start font-rah text-[.9rem] tracking-widest font-bold text-[#000000]">
+                                                    Carrots cooked in a flavor packed garlic cilantr sauce. Served with pita.
+                                                    </div>
+                                                    </div>
+                                                    
+                                                </motion.li>
+                                                </motion.ul>
+                        </motion.div>
+                        <div className="h-auto">
+                            <div className="px-1 mb-6 lg:mb-0 xl:mx-[8rem] py-[2rem]">
+                               
+                                <motion.div 
+                                    variants={pack2}
+                                    initial="initial"
+                                    whileInView="animate" 
+                                    className="block col-span-3 border-spacing-[3rem] bg-[#adb5bd] border-seperate border-2 border-solid border-[#000000] rounded-lg shadow-lg py-[2rem] sl:h-[50rem]">
+                                    {/* <div className="p-6 border-black border-gray-300 bordertext-center">
 
                                     </div> */}
+                                     <motion.div
+                                            variants={pack}
+                                            className="font-mari tracking-wide text-[2rem] xl:text-[3rem] mt-[.5rem] text-center text-[#000000]">
+                                                ENTREEZ
+                                            </motion.div>
+                                            <motion.ul variants={menuVariant} initial="initial" whileInView="animate" viewport={{ once: true }} className="mx-[2rem] my-[2rem]">
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem]">
+                                                    <div className="px-10 grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                    Grilled Kabob Plate (Choice of Beef Kefta or Marinated Chicken) 
+                                                    </div>
+                                                    
+                                                    <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-[#000000]">
+                                                    Comes with your choice of white rice, saffron rice or fries. Served with grilled tomato and onion and comes with your choice of sauce.    
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="grid grid-cols-2 mb-[2rem]">
+                                                <div className="px-10 grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                Grilled Marinated Chicken Wings
+                                                    </div>
+                                                   
+                                                    <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-[#000000]">
+                                                    Seven marinated Moroccan flavored wings served with your choice of white rice, saffron rice or fries. Comes with grilled tomato and onion and served with a dipping sauce of your choice. 
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{ opacity: 0 }} className="grid grid-cols-2 mb-[2rem]">
+                                                <div className="px-10 grid-rows-2 px-10 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                Shawarma Rice Bowl (Choice of Beef and Lamb, or Chicken)
+                                                    </div>
+                                                    
+                                                    <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-[#000000]">
+                                                    Marinated meat served with your choice of white rice or saffron rice. Comes with tomato cucumber salad and your choice of sauce.  
+                                                    </div>
+                                                </motion.li>
+                                                
+                                                <motion.li variants={menuItem} initial={{opacity: 0}} className="grid grid-cols-2 mb-[2rem]">
+                                                <div className="px-10 grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                Beef Tajine
+                                                    </div>
+                                                   
+                                                    <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-[#000000]">
+                                                    Slow cooked beef chunks simmered in a delicious sauce and served with carrots, peas, and olives. Comes with your choice of pita or rice.
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}} className="grid grid-cols-2 mb-[2rem]">
+                                                <div className="px-10 grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                Chicken Tajine
+                                                    </div>
+                                                   
+                                                    <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-[#000000]">
+                                                   Chicken served with saffron and a preserved lemon sauce with olives and topped with fries. Comes with Pita or Rice.
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}} className="grid grid-cols-2 mb-[2rem]">
+                                                <div className="px-10 flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                    <div>Couscous with Tfaya</div>
+                                                    </div>
+                                                    
+                                                    <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-[#000000]">
+                                                    Sweet chicken topped with glazed onions, raisins, and chickpeas. Served over couscous. 
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}} className="grid grid-cols-2 mb-[2rem]">
+                                                <div className="px-10 grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                Shrimp Masharmal
+                                                    </div>
+                                                    
+                                                    <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-[#000000]">
+                                                    Sauteed shrimp infused with a garlic tomato sauce served with fries and zaalouk. 
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}} className="grid grid-cols-2 mb-[2rem]">
+                                                <div className="px-10 grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                Shwa
+                                                    </div>
+                                                    
+                                                    <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-[#000000]">
+                                                    Rotisserie cooked lamb shoulder served with a cumin rub.
+                                                    </div>
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}} className="grid grid-cols-2 mb-[2rem]">
+                                                <div className="px-10 grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                Lamb Shank Tanjia
+                                                    </div>
+                                                    
+                                                    <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-[#000000]">
+                                                    Slow cooked lamb shank infused with saffron and preserved lemon sauce. Served with Pita.     
+                                                    </div>
+                                                </motion.li>
+                                                
+                                            </motion.ul>
+
+                                </motion.div>
+                            </div>
+
+                            <div className="px-20 mx-[2rem] mb-6 lg:mb-0 ">
+                                <motion.div 
+                                    variants={pack2}
+                                    initial="initial"
+                                    whileInView="animate" 
+                                    className="block w-[160%] xl:w-[100%] w-screen ml-1 border-solid border-[#000000] border-seperate border-2 rounded-lg shadow-lg py-[2rem] xl:my-[3rem] xl:h-auto bg-[#adb5bd]">
                                         <motion.div
                                             variants={pack}
-                                            className="font-mari tracking-wide text-[3rem] mt-[.5rem] text-center text-black">
-                                            Mains
-                                        </motion.div>
-                                        <motion.ul variants={menuVariant} initial="initial" whileInView="animate" className="mx-[2rem] my-[2rem]">
-                                            <motion.li variants={menuItem} initial={{ opacity: 0 }} className="grid grid-cols-2 mb-[2rem]">
-                                                <div className="grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-black">
-                                                    Steak Kabobs
-                                                </div>
-                                                <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-black">
-                                                    20$
-                                                </div>
-                                                <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-black">
-                                                    Saffron rice, Hummus, Pickled Cucumbers
-                                                </div>
-                                            </motion.li>
-                                            <motion.li variants={menuItem} initial={{ opacity: 0 }} className="grid grid-cols-2 mb-[2rem]">
-                                                <div className="grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-black">
-                                                    Chicken Kabobs
-                                                </div>
-                                                <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-black">
-                                                    20$
-                                                </div>
-                                                <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-black">
-                                                    Saffron rice, Hummus, Pickled Cucumbers
-                                                </div>
-                                            </motion.li>
-                                            <motion.li variants={menuItem} initial={{ opacity: 0 }} className="grid grid-cols-2 mb-[2rem]">
-                                                <div className="grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-black">
-                                                    Grilled Salmon
-                                                </div>
-                                                <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-black">
-                                                    20$
-                                                </div>
-                                                <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-black">
-                                                    Saffron rice, Hummus, Pickled Cucumbers
-                                                </div>
-                                            </motion.li>
-                                            <motion.li variants={menuItem} initial={{ opacity: 0 }} className="grid grid-cols-2 mb-[2rem]">
-                                                <div className="grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-black">
-                                                    Broiled Seabass
-                                                </div>
-                                                <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-black">
-                                                    20$
-                                                </div>
-                                                <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-black">
-                                                    Saffron rice, Hummus, Pickled Cucumbers
-                                                </div>
-                                            </motion.li>
-                                            <motion.li variants={menuItem} initial={{ opacity: 0 }} className="grid grid-cols-2 mb-[2rem]">
-                                                <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-black">
-                                                    <div>Grilled Tempeh</div><div> <svg xmlns="http://www.w3.org/2000/svg" shapeRendering="geometricPrecision" textRendering="geometricPrecision" imageRendering="optimizeQuality" fill="#000000" fillRule="evenodd" clipRule="evenodd" width="20px" height="20px" viewBox="0 0 512 512"><g fillRule="nonzero"><path d="M255.998 0c70.69 0 134.694 28.658 181.017 74.982C483.342 121.308 512 185.312 512 256.002c0 70.689-28.658 134.69-74.985 181.016C390.692 483.342 326.688 512 255.998 512c-70.689 0-134.687-28.658-181.017-74.982C28.657 390.689 0 326.691 0 256.002c0-70.69 28.657-134.694 74.981-181.017C121.308 28.658 185.309 0 255.998 0z" /><path fill="#fff" d="M283.004 162.24h63.307l-46.503 187.523h-87.61L165.691 162.24h63.307l25.505 119.116h2.7z" /></g></svg>
+                                            className="font-mari tracking-wide text-[2.5rem] mt-[.5rem] text-center text-[#000000]">
+                                                SIDEZ
+                                            </motion.div>
+                                            <motion.ul variants={menuVariant} initial="initial" whileInView="animate" viewport={{ once: true }} className="text-center">
+                                            <motion.li variants={menuItem} initial={{opacity: 0}}  className="text-center mb-[2rem] mt-8">
+                                                <div className="text-center">
+                                                    <div className="text-center font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                    Pita
                                                     </div>
-                                                </div>
-
-                                                <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-black">
-                                                    20$
-                                                </div>
-                                                <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-black">
-                                                    Saffron rice, Hummus, Pickled Cucumbers
-                                                </div>
-                                            </motion.li>
-                                            <motion.li variants={menuItem} initial={{ opacity: 0 }} className="grid grid-cols-2 mb-[2rem]">
-                                                <div className="grid-rows-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-black">
-                                                    Steak Kabobs
-                                                </div>
-                                                <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-black">
-                                                    20$
-                                                </div>
-                                                <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-black">
-                                                    Saffron rice, Hummus, Pickled Cucumbers
-                                                </div>
-                                            </motion.li>
-                                            <motion.li variants={menuItem} initial={{ opacity: 0 }} className="grid grid-cols-2 mb-[2rem]">
-                                                <div className="flex flex-row gap-2 text-start font-rah text-[1.5rem] tracking-widest font-bold text-black">
-                                                    <div>Plant Based Protein Balls</div><div> <svg xmlns="http://www.w3.org/2000/svg" shapeRendering="geometricPrecision" textRendering="geometricPrecision" imageRendering="optimizeQuality" fill="#000000" fillRule="evenodd" clipRule="evenodd" width="20px" height="20px" viewBox="0 0 512 512"><g fillRule="nonzero"><path d="M255.998 0c70.69 0 134.694 28.658 181.017 74.982C483.342 121.308 512 185.312 512 256.002c0 70.689-28.658 134.69-74.985 181.016C390.692 483.342 326.688 512 255.998 512c-70.689 0-134.687-28.658-181.017-74.982C28.657 390.689 0 326.691 0 256.002c0-70.69 28.657-134.694 74.981-181.017C121.308 28.658 185.309 0 255.998 0z" /><path fill="#fff" d="M283.004 162.24h63.307l-46.503 187.523h-87.61L165.691 162.24h63.307l25.505 119.116h2.7z" /></g></svg>
                                                     </div>
-                                                </div>
+                                                    
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="mb-[2rem] mt-8">
+                                                <div className="">
+                                                    <div className="text-center font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                    White Rice
+                                                    </div>
+                                                    </div>
+                                                   
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="mb-[2rem] mt-8">
+                                                <div className="">
+                                                    <div className="text-center font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                    Saffron Rice
+                                                    </div>
+                                                    </div>
+                                                    
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="mb-[2rem] mt-8">
+                                                <div className="">
+                                                    <div className="text-center font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                    Fries
+                                                    </div>
+                                                    </div>
+                                                    
+                                                </motion.li>
+                                                <motion.li variants={menuItem} initial={{opacity: 0}}  className="mb-[2rem] mt-8">
+                                                <div className="">
+                                                    <div className="text-center font-rah text-[1.5rem] tracking-widest font-bold text-[#000000]">
+                                                    Couscous
+                                                    </div>
+                                                    </div>
+                                                    
+                                                </motion.li>
+                                                </motion.ul>
 
-                                                <div className="text-end font-mari text-[1.3rem] tracking-widest font-bold text-black">
-                                                    20$
-                                                </div>
-                                                <div className="text-start font-rah text-[1rem] tracking-widest font-bold text-black">
-                                                    Saffron rice, Hummus, Pickled Cucumbers
-                                                </div>
-                                            </motion.li>
-                                        </motion.ul>
-
-                                    </motion.div>
-                                </div>
-
+                                </motion.div>
+                               
                             </div>
-                            <motion.div
-                                variants={pack2}
-                                initial="initial"
-                                whileInView="animate"
-                                className="block mx-[1rem] bg-[#adb5bd] -mt-[45rem] py-[2rem] mb-[2rem] border-seperate border-2 border-[#000000] rounded-lg shadow-lg">
-                                <h1 className="font-mari text-[2rem] mt-[.5rem] text-center text-black">Sides</h1>
-                                <p className="font-rah text-[1rem] tracking-widest font-bold text-center text-black mt-8">Moroccan Bread, Raisins, Streussel Topping</p>
-                                <p className="font-rah text-[1rem] tracking-widest font-bold text-center text-black mt-4">with Saffron Ice Cream</p>
-                                <p className="font-mari text-[2rem] tracking-wide font-bold text-center text-black mt-4 mb-1">$ 10</p>
-                            </motion.div>
-                            <motion.div
+
+                        </div>
+                       
+                    </div>
+                    <motion.div
                                 variants={wordVariants}
                                 whileHover="hovered"
                                 >
@@ -253,8 +471,7 @@ export default function CateringMenu() {
                                 </div>
                             </motion.div>
                             </motion.div>
-                        </div>
-                    </section>
+                </section>
                 </motion.div>
             </div>
         </AnimatePresence>

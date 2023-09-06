@@ -157,7 +157,7 @@ const Catering = () => {
                             onClick={handleContact}>CONTACT US</p>
                     </div>
                 </section>
-                    <section className="-mb-[20rem] lg:mb-0">
+                    <section className="-mb-[20rem] lg:mb-20">
                     <CarouselPage/>
                     </section>
                     <section>
