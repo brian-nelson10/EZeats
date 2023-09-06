@@ -1,5 +1,5 @@
 import React from 'react';
-// import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import AnimatedRoutes from './components/AnimatedRoutes';
 import ScrollTop from './components/ScrollTop';
 
@@ -7,8 +7,10 @@ function App() {
   
   return (
     <>   
-      <AnimatedRoutes />
+      <Router basename={process.env.PUBLIC_URL} >
       <ScrollTop />
+      <AnimatedRoutes />
+    </Router>
     </>
   );
 }
