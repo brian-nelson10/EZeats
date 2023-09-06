@@ -7,7 +7,7 @@ function App() {
   
   return (
     <>   
-      <BrowserRouter basename={process.env.PUBLIC_URL} forceRefresh={true} keyLength={12} >
+      <BrowserRouter basename={window.location.pathname.replace(/(\/[^/]+)$/, "")} >
       <ScrollTop />
       <AnimatedRoutes />
     </BrowserRouter>
