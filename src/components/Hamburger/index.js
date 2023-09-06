@@ -314,7 +314,7 @@ export default function Hamburger() {
                   onMouseLeave={handleDivLeave}
                   // onClick={handleCatering}
                   key={<Catering/>}
-                ><Link to={<Catering/>}>Catering</Link>
+                ><Link to="/catering">Catering</Link>
                 </motion.li>
                 <motion.li
                   className="text-[#D8C29D] font-mari xl:mb-2 text-[3.4rem] xl:text-[3rem] list-none tracking-wide hover:cursor-pointer" variants={linkVariants}
