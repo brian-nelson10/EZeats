@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // import "./hamburger.css";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import img from "../../assets/images/ezlogogreen.png";
 import img1 from "../../assets/images/arugulaG.png";
 import img2 from "../../assets/images/seedG.png";
@@ -20,22 +20,22 @@ export default function Hamburger() {
   const handleDivLeave = () => {
     setHoveredDiv(null);
   };
-  const navigate = useNavigate();
-  function handleHome() {
-    navigate('/');
-  };
-  function handleContact() {
-    navigate('/contact')
-  };
+  // const navigate = useNavigate();
+  // function handleHome() {
+  //   navigate('/');
+  // };
+  // function handleContact() {
+  //   navigate('/contact')
+  // };
   // function handleCatering() {
   //   navigate('/catering')
   // };
   // function handleOrder() {
   //   navigate('/order')
   // };
-  function handleFoodTruck() {
-    navigate('/foodtruck')
-  };
+  // function handleFoodTruck() {
+  //   navigate('/foodtruck')
+  // };
   const child1 = {
     visible: {
       opacity: 1,
@@ -238,7 +238,7 @@ export default function Hamburger() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
                 src={img}
-                className="xl:mt-0 -mt-[23rem] ml-10 xl:ml-0" />
+                className="xl:mt-0 -mt-[20rem] xl:ml-0" />
             )}
             {hoveredDiv === 0 && (
               <motion.img
@@ -247,7 +247,7 @@ export default function Hamburger() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
                 src={img1}
-                className="" />
+                className="sm:invisible" />
             )}
             {hoveredDiv === 1 && (
               <motion.img
@@ -256,7 +256,7 @@ export default function Hamburger() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
                 src={img2}
-                className="" />
+                className="sm:invisible" />
             )}
             {hoveredDiv === 2 && (
               <motion.img
@@ -265,7 +265,7 @@ export default function Hamburger() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
                 src={img3}
-                className="" />
+                className="sm:invisible" />
             )}
             {hoveredDiv === 3 && (
               <motion.img
@@ -274,7 +274,7 @@ export default function Hamburger() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
                 src={img4}
-                className="" />
+                className="sm:invisible" />
             )}
             {hoveredDiv === 4 && (
               <motion.img
@@ -283,23 +283,23 @@ export default function Hamburger() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
                 src={img5}
-                className="" />
+                className="sm:invisible" />
             )}
           </motion.div>
           {/* Right section */}
-          <div className="flex-shrink-0 w-full p-4 -mt-[34rem] xl:mt-0">
+          <div className="flex-shrink-0 w-full p-4 -mt-[28rem] xl:mt-0">
             <div className="text-center">
               <ul className="div-list">
                 <motion.li
                   whileHover={{ scale: 1.1 }}
                   onMouseEnter={() => handleDivHover(0)}
                   onMouseLeave={handleDivLeave}
-                  onClick={handleHome}
-                  className="text-[#D8C29D] font-mari sl:mb-2 text-[3.5rem] xl:text-[3rem] list-none tracking-wide hover:cursor-pointer" variants={linkVariants}
-                >Home
+                  // onClick={handleHome}
+                  className="text-[#D8C29D] font-mari xl:mb-2 text-[2.5rem] xl:text-[3rem] list-none tracking-wide hover:cursor-pointer" variants={linkVariants}
+                ><a href="https://www.ezeatzjax.com">Home</a>
                 </motion.li>
                 <motion.li
-                  className="text-[#D8C29D] font-mari xl:mb-2 text-[3.4rem] xl:text-[3rem] list-none tracking-wide hover:cursor-pointer" variants={linkVariants}
+                  className="text-[#D8C29D] font-mari xl:mb-2 text-[2.5rem] xl:text-[3rem] list-none tracking-wide hover:cursor-pointer" variants={linkVariants}
                   whileHover={{ scale: 1.1 }}
                   onMouseEnter={() => handleDivHover(1)}
                   onMouseLeave={handleDivLeave}
@@ -307,7 +307,7 @@ export default function Hamburger() {
                 >Order Online
                 </motion.li>
                 <motion.li
-                  className="text-[#D8C29D] font-mari xl:mb-2 text-[3.5rem] xl:text-[3rem] list-none tracking-wide hover:cursor-pointer" variants={linkVariants}
+                  className="text-[#D8C29D] font-mari xl:mb-2 text-[2.5rem] xl:text-[3rem] list-none tracking-wide hover:cursor-pointer" variants={linkVariants}
                   whileHover={{ scale: 1.1 }}
                   onMouseEnter={() => handleDivHover(2)}
                   onMouseLeave={handleDivLeave}
@@ -315,20 +315,20 @@ export default function Hamburger() {
                 ><a href="https://www.ezeatzjax.com/catering">Catering</a>
                 </motion.li>
                 <motion.li
-                  className="text-[#D8C29D] font-mari xl:mb-2 text-[3.4rem] xl:text-[3rem] list-none tracking-wide hover:cursor-pointer" variants={linkVariants}
+                  className="text-[#D8C29D] font-mari xl:mb-2 text-[2.4rem] xl:text-[3rem] list-none tracking-wide hover:cursor-pointer" variants={linkVariants}
                   whileHover={{ scale: 1.1 }}
                   onMouseEnter={() => handleDivHover(3)}
                   onMouseLeave={handleDivLeave}
-                  onClick={handleFoodTruck}
-                >Food Truck
+                  // onClick={handleFoodTruck}
+                ><a href="https://www.ezeatzjax.com/foodtruck">Food Truck</a>
                 </motion.li>
                 <motion.li
-                  className="text-[#D8C29D] font-mari mb-2 text-[3.5rem] xl:text-[3rem] list-none tracking-wide hover:cursor-pointer" variants={linkVariants}
+                  className="text-[#D8C29D] font-mari mb-2 text-[2.5rem] xl:text-[3rem] list-none tracking-wide hover:cursor-pointer" variants={linkVariants}
                   whileHover={{ scale: 1.1 }}
                   onMouseEnter={() => handleDivHover(4)}
                   onMouseLeave={handleDivLeave}
-                  onClick={handleContact}
-                >Contact
+                  // onClick={handleContact}
+                ><a href="https://www.ezeatzjax.com/contact">Contact</a>
                 </motion.li>
               </ul>
             </div>
