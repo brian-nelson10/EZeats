@@ -27,9 +27,9 @@ export default function Hamburger() {
   function handleContact() {
     navigate('/contact')
   };
-  function handleCatering() {
-    navigate('/catering')
-  };
+  // function handleCatering() {
+  //   navigate('/catering')
+  // };
   // function handleOrder() {
   //   navigate('/order')
   // };
@@ -311,8 +311,8 @@ export default function Hamburger() {
                   whileHover={{ scale: 1.1 }}
                   onMouseEnter={() => handleDivHover(2)}
                   onMouseLeave={handleDivLeave}
-                  onClick={handleCatering}
-                >Catering
+                  // onClick={handleCatering}
+                ><a href="https://www.ezeatzjax.com/catering">Catering</a>
                 </motion.li>
                 <motion.li
                   className="text-[#D8C29D] font-mari xl:mb-2 text-[3.4rem] xl:text-[3rem] list-none tracking-wide hover:cursor-pointer" variants={linkVariants}
