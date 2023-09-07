@@ -247,7 +247,7 @@ export default function Hamburger() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
                 src={img1}
-                className="sm:invisible" />
+                className="sm:invisible md:visible" />
             )}
             {hoveredDiv === 1 && (
               <motion.img
@@ -256,7 +256,7 @@ export default function Hamburger() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
                 src={img2}
-                className="sm:invisible" />
+                className="sm:invisible md:visible" />
             )}
             {hoveredDiv === 2 && (
               <motion.img
@@ -265,7 +265,7 @@ export default function Hamburger() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
                 src={img3}
-                className="sm:invisible" />
+                className="sm:invisible md:visible" />
             )}
             {hoveredDiv === 3 && (
               <motion.img
@@ -274,7 +274,7 @@ export default function Hamburger() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
                 src={img4}
-                className="sm:invisible" />
+                className="sm:invisible md:visible" />
             )}
             {hoveredDiv === 4 && (
               <motion.img
@@ -283,7 +283,7 @@ export default function Hamburger() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
                 src={img5}
-                className="sm:invisible" />
+                className="sm:invisible md:visible" />
             )}
           </motion.div>
           {/* Right section */}
