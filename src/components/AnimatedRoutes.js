@@ -6,6 +6,7 @@ import Contact from '../pages/Contact';
 import Catering from "../pages/Catering";
 import FoodTruck from "../pages/FoodTruck";
 import NotFound from "../pages/NotFound";
+import Order from "../pages/Order";
 
 function AnimatedRoutes() {
     const location = useLocation();
@@ -32,6 +33,10 @@ function AnimatedRoutes() {
                 <Route
                     path="/foodtruck"
                     element={<FoodTruck />}
+                />
+                <Route
+                path="/order"
+                element={<Order />}
                 />
                 <Route
                     path="*"
