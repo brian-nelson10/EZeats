@@ -149,6 +149,7 @@ const Contact = () => {
                 </section>
                 <LazyLoadComponent>
                     <section className="h-auto overflow-hidden -mb-[12rem]">
+                    <form ref={form} onSubmit={sendEmail}>
                         <div className="px-[4rem] xl:px-[9rem] py-[10rem]">
                             <div
                                 className="grid mt-[2rem]">
@@ -163,31 +164,32 @@ const Contact = () => {
 
                             </div>
                         </div>
-                        <form ref={form} onSubmit={sendEmail}>
+                        
                         <motion.div variants={header1} className="flex flex-col justify-center items-center text-center -mt-[1rem] -ml-10 lg:ml-0">
                             <div className="contactForm py-8 px-[3rem] md:px-[15rem] relative grid grid-cols-2 gap-[7rem] z-20">
-                                <div className="relative">
-                                    <input autocomplete="off" id="firstName" name="fname" type="text" className="peer placeholder-transparent h-[4rem] bg-transparent md:w-full w-[13rem] border-b-2 text-[black] focus:outline-none focus:border-rose-600" placeholder="First Name" />
+                                <div className="relative form-group">
+                                    <input autocomplete="off" id="fname" name="fname" type="text" className="form-control peer placeholder-transparent h-[4rem] bg-transparent md:w-full w-[13rem] border-b-2 text-[black] focus:outline-none focus:border-rose-600" placeholder="First Name" />
                                     <label for="fname" className="left-0 text-[black] peer-placeholder-shown:text-[2rem] font-rah tracking-wide peer-placeholder-shown:text-[black] peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-[black]">First Name</label>
                                 </div>
-                                <div className="relative">
-                                    <input autocomplete="off" id="lastName" name="lname" type="text" className="peer placeholder-transparent h-[4rem] bg-transparent md:w-full border-b-2 text-[black] focus:outline-none focus:border-rose-600" placeholder="Email address" />
+                                <div className="relative form-group">
+                                    <input autocomplete="off" id="lname" name="lname" type="text" className="form-control peer placeholder-transparent h-[4rem] bg-transparent md:w-full border-b-2 text-[black] focus:outline-none focus:border-rose-600" placeholder="Email address" />
                                     <label for="lname" className=" left-0 text-[black] peer-placeholder-shown:text-[2rem] font-rah tracking-wide peer-placeholder-shown:text-[black] peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-[black]">Last Name</label>
                                 </div>
                             </div>
                         </motion.div>
                         <div className="relative grid grid-rows-2 gap-[2rem] mt-[6rem] justify-center z-20">
                             <motion.div variants={header} whileInView="animate" className="relative w-[48rem] justify-center text-center">
-                                <input autocomplete="off" id="email" name="email" type="text" className="peer placeholder-transparent h-[4rem] bg-transparent w-full md:px-[.5rem] px-[13rem] border-b-2 text-[black] focus:outline-none focus:border-rose-600" placeholder="First Name" />
+                                <input autocomplete="off" id="email" name="email" type="text" className="form-control peer placeholder-transparent h-[4rem] bg-transparent w-full md:px-[.5rem] px-[13rem] border-b-2 text-[black] focus:outline-none focus:border-rose-600" placeholder="First Name" />
                                 <label for="email" className="text-center text-[black] peer-placeholder-shown:text-[2rem] font-rah tracking-wide peer-placeholder-shown:text-[black] peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-[black]">Email Address</label>
                             </motion.div>
                             <motion.div variants={header1} whileInView="animate" className="relative w-[48rem] justify-center text-center">
-                                <input autocomplete="off" id="text" name="text" type="text" className="peer placeholder-transparent h-[4rem] bg-transparent w-full md:px-[.5rem] px-[13rem] border-b-2 text-[black] focus:outline-none focus:border-rose-600" placeholder="First Name" />
+                                <input autocomplete="off" id="body" name="body" type="text" className="form-control peer placeholder-transparent h-[4rem] bg-transparent w-full md:px-[.5rem] px-[13rem] border-b-2 text-[black] focus:outline-none focus:border-rose-600" placeholder="First Name" />
                                 <label for="text" className="text-center text-[black] peer-placeholder-shown:text-[2rem] font-rah tracking-wide peer-placeholder-shown:text-[black] peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-[black]">Let us know what you need!</label>
                             </motion.div>
                         </div>
-
-                        <div className="relative flex justify-center mt-[5rem] z-20">
+<div className="text-center justify-center flex-row flex">
+                        <button className="relative h-[3rem] w-[15rem] text-center mt-[5rem] z-20 overflow-hidden cursor-pointer rounded-lg items-center justify-center " type="submit" value="submit"  onClick={() => !isAnimating && animate()}>
+                        <input type="submit" value="submit"  onClick={() => !isAnimating && animate()} className="" />
                             <div className="submit-btn_dec left w-embed mr-4">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="50" viewBox="0 0 28.08 27.348">
                                     <g id="Group_73" data-name="Group 73" transform="translate(-504.919 -8455.826)">
@@ -198,15 +200,16 @@ const Contact = () => {
                                 </svg>
                             </div>
                             {/* <a type="submit" value="SUBMIT" data-back="SENT" data-front="SUBMIT" data-wait="Please wait..." className="btn-flip text-[black] font-mari tracking-widest text-[3rem] border-[black] hover:cursor-pointer " /> */}
-                            <input type="submit" className="wrapper overflow-hidden cursor-pointer rounded-lg relative items-center justify-center" onClick={() => !isAnimating && animate()}>
+                           
                                 <motion.div
                                     className="container1 bg-black z-10 top-0 cursor-pointer text-[#32cd32] text-[3rem] font-mari text-center px-3"
                                     animate={uploadControls}
                                     whileHover="hovered"
                                 >
+                                     
                                     <motion.div
                                         variants={wordVariants}
-                                        className="px-5 text-[#32cd32] text-[2rem] font-mari"
+                                        className="px-8 text-[#32cd32] text-[2rem] font-mari"
                                     >
                                         Submit
                                     </motion.div>
@@ -226,7 +229,7 @@ const Contact = () => {
                                 >
                                     <div>Sent!</div>
                                 </motion.div>
-                            </input>
+                            
                             <div className="submit-btn_dec right w-embed ml-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="50" viewBox="0 0 28.08 27.348">
                                     <g id="Group_74" data-name="Group 74" transform="translate(0 0)">
@@ -236,8 +239,9 @@ const Contact = () => {
                                     </g>
                                 </svg>
                             </div>
+                        </button>
                         </div>
-                        </form>
+                        {/* </form> */}
                         <div className="xl:-mt-[45rem] z-10">
                             <motion.div className="xl:-mt-[20rem] ml-2" style={{ y: fallY }}>
                                 <motion.img style={{ rotate: rotateYcard }} src={cardamom} className="xl:w-[15%] xl:h-[15%] w-[50%] h-[50%] items-center jusitfy-center xl:ml-[75rem] -ml-[3rem] -mt-[10rem]"
@@ -260,6 +264,7 @@ const Contact = () => {
                                 />
                             </motion.div>
                         </div>
+                        </form>
                     </section>
                     <section>
                         {width < breakpoint ? <Section5Mobile /> : <Section5 />}
