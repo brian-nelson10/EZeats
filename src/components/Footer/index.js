@@ -3,22 +3,22 @@ import { motion } from "framer-motion";
 import Image from "../Image";
 import img from "../../assets/carousel/2.JPG"
 import imgWeb from "../../assets/web/2.webp"
-import { useNavigate } from "react-router-dom";
-let url = "https://www.clover.com/online-ordering/ez-eatz-by-yaya-llc-jacksonville"
+// import { useNavigate } from "react-router-dom";
+let url = "https://www.ezeatzjax.com/order"
 export default function Footer() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   // function handleMenu() {
   //   navigate('/menu')
   // };
-  function handleJobs() {
-    navigate('/careers')
-  };
-  function handleCatering() {
-    navigate('/catering')
-  };
-  function handleFoodTruck() {
-    navigate('/foodtruck')
-  };
+  // function handleJobs() {
+  //   navigate('/careers')
+  // };
+  // function handleCatering() {
+  //   navigate('/catering')
+  // };
+  // function handleFoodTruck() {
+  //   navigate('/foodtruck')
+  // };
   return (
     <section className="bottom-0">
       <div className="z-10 bg-[#32cd32] xl:h-[20rem] xl:-mt-[25rem]" />
@@ -143,21 +143,27 @@ export default function Footer() {
                     </li>
 
                     <li>
-                      <div onClick={handleCatering} className="text-[#32cd32] text-[1.4rem] tracking-widest font-rah transition hover:opacity-75 hover:cursor-pointer">
+                    <a href="https://www.ezeatzjax.com/catering">
+                      <div className="text-[#32cd32] text-[1.4rem] tracking-widest font-rah transition hover:opacity-75 hover:cursor-pointer">
                         Private Events
                       </div>
+                      </a>
                     </li>
 
                     <li>
-                      <div onClick={handleFoodTruck} className="text-[#32cd32] text-[1.4rem] tracking-widest font-rah transition hover:opacity-75 hover:cursor-pointer">
+                    <a href="https://www.ezeatzjax.com/foodtruck">
+                      <div className="text-[#32cd32] text-[1.4rem] tracking-widest font-rah transition hover:opacity-75 hover:cursor-pointer">
                         Food Truck
                       </div>
+                      </a>
                     </li>
 
                     <li>
-                      <div onClick={handleJobs} className="text-[#32cd32] text-[1.4rem] tracking-widest font-rah transition hover:opacity-75 hover:cursor-pointer">
+                    <a href="https://www.ezeatzjax.com/contact">
+                      <div className="text-[#32cd32] text-[1.4rem] tracking-widest font-rah transition hover:opacity-75 hover:cursor-pointer">
                         Work With Us
                       </div>
+                      </a>
                     </li>
                   </ul>
                 </nav>

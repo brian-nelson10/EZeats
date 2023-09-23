@@ -11,7 +11,6 @@ import img2 from "../assets/carousel/1.JPG";
 import img3 from "../assets/carousel/2.JPG";
 import CateringMenu from "../components/Section2/cateringMenu";
 import CarouselPage from "../components/Carousel";
-import { useNavigate } from "react-router";
 import Section5Mobile from "../components/Section5/mobile";
 
 const main = {
@@ -70,11 +69,6 @@ const Catering = () => {
     }, []);
     const { scrollYProgress } = useScroll();
     const fallY = useTransform(scrollYProgress, [0, 1], [-100, 300]);
-    const navigate = useNavigate();
-
-    function handleContact() {
-        navigate("/contact")
-    };
     const [width, setWidth] = React.useState(window.innerWidth);
     const breakpoint = 1250;
     React.useEffect(() => {
@@ -151,10 +145,12 @@ const Catering = () => {
                     </section>
                 <section className="grid px-[10rem] py-[5rem] xl:-mt-[10rem] text-center justify-center items-center">
                     <div className="text-center justify-center flex-row flex">
+                        
                         <p className="font-rah text-[2rem] xl:text-[6rem] text-black">Questions?</p>
-                        <p 
-                            className="font-mari text-[2rem] xl:text-[6rem] text-black hover:cursor-pointer hover:opacity-[.5]"
-                            onClick={handleContact}>CONTACT US</p>
+                        <a href="https://www.ezeatzjax.com/contact">
+                        <p className="font-mari text-[2rem] xl:text-[6rem] text-black hover:cursor-pointer hover:opacity-[.5]"
+                            >CONTACT US</p>
+                            </a>
                     </div>
                 </section>
                     <section className="-mb-[20rem] lg:mb-20">
